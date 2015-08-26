@@ -57,4 +57,4 @@ Designed components, chunks of UI.
 Helpers and overrides.
 
 
-For more information on the contents of each folder checkout the table of contents at the top of style.scss
+For more information on the contents of each folder checkout the table of contents at the top of [style.scss](https://github.com/philyboysmith/xceptor-css/blob/master/scss/style.scss)
