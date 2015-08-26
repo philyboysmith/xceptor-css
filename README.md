@@ -26,4 +26,36 @@ On larger projects, naming conventions is vital. We're using BEM.
 
 ## Structure
 
-For more information on the structure of the project, see the table of contents at the top of style.scss
+The SCSS folder includes the following subfolder
+
+### Settings
+
+Global variables, config switches.
+
+### Tools
+
+Default mixins and functions.
+
+### Generic
+
+Ground-zero styles (Normalize.css, resets, box-sizing).
+
+### Base
+
+Unclassed HTML elements (type selectors).
+
+### Objects
+
+Cosmetic-free design patterns.
+
+### Components
+
+Designed components, chunks of UI.
+
+### Trumps
+
+Helpers and overrides.
+
+
+
+For more information on the contents of each folder checkout the table of contents at the top of style.scss
