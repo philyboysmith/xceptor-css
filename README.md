@@ -28,34 +28,33 @@ On larger projects, naming conventions is vital. We're using BEM.
 
 The SCSS folder includes the following subfolder
 
-### Settings
+### [Settings](https://github.com/philyboysmith/xceptor-css/tree/master/scss/settings)
 
 Global variables, config switches.
 
-### Tools
+### [Tools](https://github.com/philyboysmith/xceptor-css/tree/master/scss/tools)
 
 Default mixins and functions.
 
-### Generic
+### [Generic](https://github.com/philyboysmith/xceptor-css/tree/master/scss/generic)
 
 Ground-zero styles (Normalize.css, resets, box-sizing).
 
-### Base
+### [Base](https://github.com/philyboysmith/xceptor-css/tree/master/scss/base)
 
 Unclassed HTML elements (type selectors).
 
-### Objects
+### [Objects](https://github.com/philyboysmith/xceptor-css/tree/master/scss/objects)
 
 Cosmetic-free design patterns.
 
-### Components
+### [Components](https://github.com/philyboysmith/xceptor-css/tree/master/scss/components)
 
 Designed components, chunks of UI.
 
-### Trumps
+### [Trumps](https://github.com/philyboysmith/xceptor-css/tree/master/scss/trumps)
 
 Helpers and overrides.
-
 
 
 For more information on the contents of each folder checkout the table of contents at the top of style.scss
