@@ -3,6 +3,6 @@ html {
     line-height: $base-line-height / $base-font-size; /* [1] */
     padding: $base-spacing-unit;
     padding-bottom: 0;
-    background-color: #fff;
+    background-color: $base-background-color;
     color: $color-text;
 }

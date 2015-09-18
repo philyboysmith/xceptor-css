@@ -1,7 +1,8 @@
 // Color palette
-$color-brand:           #BADA55;
-$color-brand-highlight: lighten($color-brand, 15%);
-$color-brand-shadow:     darken($color-brand, 15%);
+$color-brand:           #0288D1;
+$color-brand-highlight: #03A9F4;
+$color-brand-shadow:    #0277BD;
+// or 039BE5
 
 $color-gray:            #666;
 $color-gray-light:      #ccc;
@@ -11,8 +12,8 @@ $color-highlight:       rgba(255, 255, 255, 0.05);
 $color-shadow:          rgba(0, 0, 0, 0.05);
 
 
-
-
+//Page
+$base-background-color: #FFFFFF;
 
 // UI
 $color-ui:          $color-gray-light;
