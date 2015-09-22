@@ -26,33 +26,33 @@ On larger projects, naming conventions is vital. We're using BEM.
 
 ## Structure
 
-The SCSS folder includes the following subfolder
+The SCSS folder includes the following subfolder. This is very important for dealing with CSS dependencies when using the ITCSS css way of thinking (see ITCSS section above).
 
-### [Settings](https://github.com/philyboysmith/xceptor-css/tree/master/scss/settings)
+### [1.Settings](https://github.com/philyboysmith/xceptor-css/tree/master/scss/settings)
 
 Global variables, config switches.
 
-### [Tools](https://github.com/philyboysmith/xceptor-css/tree/master/scss/tools)
+### [2.Tools](https://github.com/philyboysmith/xceptor-css/tree/master/scss/tools)
 
 Default mixins and functions.
 
-### [Generic](https://github.com/philyboysmith/xceptor-css/tree/master/scss/generic)
+### [3.Generic](https://github.com/philyboysmith/xceptor-css/tree/master/scss/generic)
 
 Ground-zero styles (Normalize.css, resets, box-sizing).
 
-### [Base](https://github.com/philyboysmith/xceptor-css/tree/master/scss/base)
+### [4.Elements-Base](https://github.com/philyboysmith/xceptor-css/tree/master/scss/base)
 
 Unclassed HTML elements (type selectors).
 
-### [Objects](https://github.com/philyboysmith/xceptor-css/tree/master/scss/objects)
+### [5.Objects](https://github.com/philyboysmith/xceptor-css/tree/master/scss/objects)
 
 Cosmetic-free design patterns.
 
-### [Components](https://github.com/philyboysmith/xceptor-css/tree/master/scss/components)
+### [6.Components](https://github.com/philyboysmith/xceptor-css/tree/master/scss/components)
 
 Designed components, chunks of UI.
 
-### [Trumps](https://github.com/philyboysmith/xceptor-css/tree/master/scss/trumps)
+### [7.Trumps](https://github.com/philyboysmith/xceptor-css/tree/master/scss/trumps)
 
 Helpers and overrides.
 
