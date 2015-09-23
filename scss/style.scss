@@ -54,33 +54,36 @@
  * 
  */
 
-@import 'settings/settings.colors';
-@import 'settings/settings.global';
-@import 'settings/settings.forms';
-@import 'settings/settings.typography';
+@import '1_settings/settings.colors';
+@import '1_settings/settings.global';
+@import '1_settings/settings.forms';
+@import '1_settings/settings.typography';
 
-@import 'tools/tools.mixins';
-@import 'tools/tools.functions';
-@import 'tools/tools.lists';
-@import 'tools/tools.media-queries';
+@import '2_tools/tools.mixins';
+@import '2_tools/tools.functions';
+@import '2_tools/tools.lists';
+@import '2_tools/tools.media-queries';
 
-@import 'generic/generic.normalize';
-@import 'generic/generic.box-sizing';
-@import 'generic/generic.reset';
-@import 'generic/generic.shared';
+@import '3_generic/generic.normalize';
+@import '3_generic/generic.box-sizing';
+@import '3_generic/generic.reset';
+@import '3_generic/generic.shared';
 
-@import 'elements/elements.headings';
-@import 'elements/elements.links';
-@import 'elements/elements.lists';
-@import 'elements/elements.page';
-@import 'elements/elements.forms';
-@import 'elements/elements.buttons';
-@import 'elements/elements.page';
+@import '4_elements/elements.headings';
+@import '4_elements/elements.links';
+@import '4_elements/elements.lists';
+@import '4_elements/elements.page';
+@import '4_elements/elements.forms';
+@import '4_elements/elements.buttons';
+@import '4_elements/elements.page';
 
-@import 'objects/objects.ui-content';
-@import 'objects/objects.ui-header-bar';
-@import 'objects/objects.ui-navigation';
-@import 'objects/objects.ui-wrapper';
+@import '5_objects/objects.content';
+@import '5_objects/objects.body';
+@import '5_objects/objects.header-bar';
+@import '5_objects/objects.navigation';
+@import '5_objects/objects.wrappers';
 
-@import 'components/components.icons';
-@import 'components/components.navigation-header';
+@import '6_components/components.icons';
+@import '6_components/components.navigation-header';
+
+@import 'shame';
