@@ -1,0 +1,55 @@
+.ui-panel {
+	border-top: 1px solid $color-ui;
+}
+
+.ui-panel-header {
+	border-bottom: 1px solid $color-ui;
+	padding: $small-spacing-unit * 1.5;
+	border-left: 4px solid $color-brand;
+}
+
+.ui-panel-header__title {
+	@extend .gamma;
+}
+
+.ui-panel-navigation-wrapper {
+	background-color: $panel-navigation-background-color;
+	width: $panel-navigation-width;
+	float:left;
+}
+
+.ui-panel-navigation {
+	@extend .unstyled-list;
+	position: relative;
+}
+
+.ui-panel-navigation::after {
+	position: absolute;
+	content: " ";
+	height: 100%;
+	right: 0;
+	width: 1px;
+	background-color: $panel-navigation-item-border-color;
+	top: 0;
+}
+
+.ui-panel-navigation__item a {
+	display: block;
+	border-bottom: 1px solid $panel-navigation-item-border-color;
+	padding: $panel-navigation-item-spacing;
+}
+
+.ui-panel-navigation__item--active a {
+	background-color: white;
+	position: relative;
+	z-index: 1;
+}
+
+.ui-panel-content {
+	position: relative;
+}
+.ui-panel-body {
+	padding: $base-spacing-unit;
+	margin-left: $panel-navigation-width;
+	height: 100%;
+}

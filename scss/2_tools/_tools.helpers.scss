@@ -1,0 +1,28 @@
+.inline-list,
+.unstyled-list {
+	list-style: none;
+	padding: 0;
+	margin:0;
+}
+
+.inline-list li {
+	display: inline-block;
+}
+
+.horizontal-list {
+	display: flex;
+}
+.horizontal-list li {
+	flex-grow: 1;
+	text-align: center;
+	display: flex;
+	a {
+		flex-grow: 1;
+	}
+}
+%box-shadow--right {
+	box-shadow: 4px 0 2px 0 $color-shadow;
+}
+%box-shadow--bottom {
+	box-shadow: 0 4px 2px 0 $color-shadow;
+}

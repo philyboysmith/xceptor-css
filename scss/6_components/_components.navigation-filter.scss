@@ -1,0 +1,19 @@
+.ui-navigation-filter {
+	border-bottom: 1px solid $color-ui;
+	@extend %box-shadow--bottom
+}
+.ui-navigation-filter__item {
+	@extend .gamma;
+}
+
+.ui-navigation-filter__item a{
+	padding: $top-bar-vertical-spacing $tiny-spacing-unit;
+	display: inline-block;
+	color: $color-text;
+	border-bottom: 2px solid transparent;
+	&:hover,
+	&.active {
+		color: $color-link;
+		border-bottom-color: inherit;
+	}
+}
