@@ -1,3 +1,15 @@
 .ui-navigation-header {
-	
+	background-color: $color-brand-highlight;
+	color: $color-text-overlay;
+	position: relative;
+	padding: 1em $header-icon-wrapper-width 1em 2em;
+	a {
+		color: inherit;
+	}
+}
+.ui-navigation-header__icons {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: $header-icon-wrapper-width;
 }

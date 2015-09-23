@@ -1,3 +1,23 @@
-.ui-object-list__item {
+.ui-object-list-wrapper{
 	
+}
+
+.ui-object-list,
+.ui-object-sublist{
+	@extend .unstyled-list;
+}
+
+%ui-object-list__item{
+	padding: $list-item-spacing;
+	display: block;
+	border-bottom: 1px solid $list-item-border-color;
+}
+.ui-object-list__item a{
+	@extend %ui-object-list__item;
+}
+
+.ui-object-sublist__item a{
+	@extend %ui-object-list__item;
+	background-color: $sublist-item-background-color;
+	padding-left: $sublist-item-indent;
 }
