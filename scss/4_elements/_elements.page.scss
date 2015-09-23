@@ -4,4 +4,13 @@ html {
     padding: 0;
     background-color: $base-background-color;
     color: $color-text;
+    font-family: $base-font-family;
+    font-weight: $base-font-weight;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;	
 }

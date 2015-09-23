@@ -1,4 +1,9 @@
 .o-body {
     float: left;
+    padding: $base-spacing-unit;
     width: 100%;
+}
+
+.o-body--collapse {
+	padding: 0;
 }

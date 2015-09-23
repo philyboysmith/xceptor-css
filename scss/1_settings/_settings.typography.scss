@@ -1,1 +1,40 @@
-$base-font-family: 'Helvetica', 'Arial', 'sans-serif';
+
+@mixin fontdef($FontType:"Regular") {
+  src:  url('../fonts/#{$FontType}/OpenSans-#{$FontType}.eot');
+  src:  url('../fonts/#{$FontType}/OpenSans-#{$FontType}.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/#{$FontType}/OpenSans-#{$FontType}.woff2') format('woff2'),
+        url('../fonts/#{$FontType}/OpenSans-#{$FontType}.woff') format('woff'),
+        url('../fonts/#{$FontType}/OpenSans-#{$FontType}.ttf') format('truetype'),
+        url('../fonts/#{$FontType}/OpenSans-#{$FontType}.svg##{$FontType}') format('svg');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  @include fontdef("Light");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  @include fontdef("Regular");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  @include fontdef("Semibold");
+  font-weight: 600;
+  font-style: normal;
+}
+
+$base-font-family: 'Open Sans', 'Arial', 'sans-serif';
+
+$light-font-weight: 300;
+$base-font-weight: normal;
+$bold-font-weight: 600;
+
+$h1-font-size:  20px;
+$h2-font-size:  16px;
+$h3-font-size:  12px;
+$h4-font-size:  12px;

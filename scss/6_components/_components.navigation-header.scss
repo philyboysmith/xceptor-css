@@ -2,10 +2,13 @@
 	background-color: $color-brand-highlight;
 	color: $color-text-overlay;
 	position: relative;
-	padding: 1em $header-icon-wrapper-width 1em 2em;
+	padding: $top-bar-vertical-spacing $header-icon-wrapper-width $top-bar-vertical-spacing 2em;
 	a {
 		color: inherit;
 	}
+}
+.ui-navigation-header__title {
+	@extend .gamma;
 }
 .ui-navigation-header__icons {
 	position: absolute;
