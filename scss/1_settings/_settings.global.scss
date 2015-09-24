@@ -13,3 +13,10 @@ $tiny-spacing-unit: $base-line-height / 4;
 $base-border: 1px solid $color-ui;
 
 $top-bar-vertical-spacing: $small-spacing-unit; 
+
+
+// spacing vars
+$left-space-vars: 	($base-spacing-unit left base, $small-spacing-unit left small, $tiny-spacing-unit left tiny);
+$right-space-vars: 	($base-spacing-unit right base, $small-spacing-unit right small, $tiny-spacing-unit right tiny);
+$bottom-space-vars: ($base-spacing-unit bottom base, $small-spacing-unit bottom small, $tiny-spacing-unit bottom tiny);
+$top-space-vars: 	($base-spacing-unit top base, $small-spacing-unit top small, $tiny-spacing-unit top tiny);

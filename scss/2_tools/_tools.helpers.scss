@@ -26,3 +26,34 @@
 %box-shadow--bottom {
 	box-shadow: 0 4px 2px 0 $color-shadow;
 }
+
+
+// ----- Positioning styles 
+
+.left        { float: left; }
+.right       { float: right; }
+
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }
+.text-center { text-align: center; }
+
+
+
+// ----- Spacing helper styles
+
+// $base-spacing-unit: $base-line-height;
+
+// $small-spacing-unit: $base-spacing-unit / 2;
+
+// $tiny-spacing-unit: $base-line-height / 4;
+// margins
+@include generate-margin-spacing-classes(); // left is default
+@include generate-margin-spacing-classes($right-space-vars);
+@include generate-margin-spacing-classes($bottom-space-vars);
+@include generate-margin-spacing-classes($top-space-vars);
+
+// Padding
+@include generate-padding-spacing-classes(); // left is default
+@include generate-padding-spacing-classes($right-space-vars);
+@include generate-padding-spacing-classes($bottom-space-vars);
+@include generate-padding-spacing-classes($top-space-vars);

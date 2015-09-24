@@ -1,6 +1,12 @@
+h1,h2,h3,h4,h5{
+	color: $colour-heading-text;
+	a{
+		text-decoration: none;
+	}
+}
 h1,
 .alpha {
-    @include font-size($h1-font-size);
+    @include rem(font-size, $h1-font-size);
     font-weight: $light-font-weight;
     margin-bottom: 0;
     line-height: 1em;
@@ -8,17 +14,20 @@ h1,
 
 h2,
 .beta {
-    @include font-size($h2-font-size);
+    @include rem(font-size, $h2-font-size);
+    //margin-bottom: $h2-font-size * 0.75;
 }
 
 h3,
 .gamma {
-    @include font-size($h3-font-size);
+    @include rem(font-size, $h3-font-size);
     font-weight: $base-font-weight;
+    //margin-bottom: $h3-font-size * 0.75;
 }
 
 h4,
 .delta {
-    @include font-size($h4-font-size);
+    @include rem(font-size, $h4-font-size);
     font-weight: $light-font-weight;
+    //margin-bottom: $h4-font-size * 0.75;
 }

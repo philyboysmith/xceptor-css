@@ -1,5 +1,5 @@
-$rem-baseline: 10px !default;
-$rem-fallback: true !default;
+$rem-baseline: $base-font-size !default; // set in the _settings.global partial
+$rem-fallback: false !default;
 $rem-px-only: false !default;
 
 // list-separator polyfill by Hugo Giraudel (https://sass-compatibility.github.io/#list_separator_function)

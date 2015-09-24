@@ -6,7 +6,7 @@ $color-brand-shadow:    #0277BD;
 
 $color-gray:            #666;
 $color-gray-light:      #ccc;
-$color-gray-dark:       #333;
+$color-gray-dark:       #333; //or #232323 ??
 
 $color-highlight:       rgba(255, 255, 255, 0.05);
 
@@ -21,8 +21,9 @@ $secondary-background-color: #f5f5f5;
 $color-ui:          	$color-gray-light;
 
 // Text
-$color-text:        	$color-gray-dark;
+$color-text:        	#999; //$color-gray-dark;
 $color-text-overlay:	#ffffff;
+$colour-heading-text:	#000; //$color-gray-dark;
 
 // Links
 $color-link:        	$color-brand;

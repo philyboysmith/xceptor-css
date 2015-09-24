@@ -18,4 +18,102 @@
 
     }
 
+};
+
+
+
+
+
+/*
+ * -------------------------------------------------------------
+ * Sass mixin and function to use rem units with pixel fallback.
+ * -------------------------------------------------------------
+ */
+
+ @import "libraries/_rem";
+
+ /* -------
+  * Usage
+  * -------
+
+# Import _rem.scss, set the root font-size with rem-baseline mixin and use the rem mixin or function.
+
+@import "rem";
+
+// **** Usage ****
+
+// **** SCSS:
+
+@import "rem";
+html {
+  @include rem-baseline;
 }
+
+h1 {
+  @include rem(font-size, 24px); // Simple
+  @include rem(border-bottom, 1px solid black); // Shorthand
+  @include rem(box-shadow, 0 0 2px #ccc, inset 0 0 5px #eee); // Multiple values
+  text-shadow: rem(1px 1px #eee, -1px -1px #eee); // Function and multiple values, warning: no fallback possible with rem function
+  // Map support (Sass 3.3+)
+  @include rem((
+    margin: 20px 1rem,
+    padding: 10px
+  ));
+}
+
+// **** Output CSS:
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  border-bottom: 1px solid black;
+  border-bottom: 0.1rem solid black;
+  box-shadow: 0 0 2px #ccc, inset 0 0 5px #eee;
+  box-shadow: 0 0 0.2rem #ccc, inset 0 0 0.5rem #eee;
+  text-shadow: 0.1rem 0.1rem #eee, -0.1rem -0.1rem #eee; // No fallback
+  margin: 20px 10px;
+  margin: 2rem 1rem;
+  padding: 10px;
+  padding: 1rem;
+}
+*/
+
+
+
+/*
+ * -------------------------------------------------------------
+ * Sass mixin for creating spacing helper classes
+ * -------------------------------------------------------------
+ */
+
+@mixin generate-margin-spacing-classes(
+  $default-space-amounts-with-direction: ($left-space-vars)
+) {
+  @each $space in $default-space-amounts-with-direction {
+    //$suffix : nth($space, 1);
+    $rem-value: rem(nth($space, 1));
+    .margin--#{nth($space, 2)}--#{nth($space, 3)} {
+        @include rem(margin-right, 2px);
+      //@include rem( margin-#{nth($space, 2)}, #{nth($space, 1)});
+      margin-#{nth($space, 2)} : $rem-value 
+    }
+  }
+}
+
+@mixin generate-padding-spacing-classes(
+  $default-space-amounts-with-direction: ($left-space-vars)
+) {
+  @each $space in $default-space-amounts-with-direction {
+    //$suffix : nth($space, 1);
+    .padding--#{nth($space, 2)}--#{nth($space, 3)} {
+      padding-#{nth($space, 2)}: #{nth($space, 1)};
+    }
+  }
+}
+
+
+
+
