@@ -1,0 +1,30 @@
+<h1 id="xceptor-4-0-css">Xceptor 4.0 CSS</h1>
+<h2 id="reading">Reading</h2>
+<p>If you&#39;re new to large CSS projects we&#39;d recommend that you take a look at the following resources before delving into any specifics:</p>
+<h3 id="-oocss-http-www-smashingmagazine-com-2011-12-an-introduction-to-object-oriented-css-oocss-"><a href="http://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/">OOCSS</a></h3>
+<p>The project uses a variant of OOCSS so it&#39;s worth getting your head around this for starters. If you&#39;re new to object orientated programming it&#39;s also worth exploring the <a href="http://csswizardry.com/2012/04/the-single-responsibility-principle-applied-to-css/">Single Responsibility Principle</a> when applied to CSS.</p>
+<h3 id="-atomic-web-design-http-atomicdesign-bradfrost-com-table-of-contents-"><a href="http://atomicdesign.bradfrost.com/table-of-contents/">Atomic Web Design</a></h3>
+<p>Although we&#39;re not explicitly using the Atomic Web Design terminology, the principles are the same.</p>
+<h3 id="-itcss-https-www-youtube-com-watch-v-1okzov-ilj4-"><a href="https://www.youtube.com/watch?v=1OKZOV-iLj4">ITCSS</a></h3>
+<p>The methodology we use throughout the project is based on ITCSS. <a href="https://www.youtube.com/watch?v=1OKZOV-iLj4">This video</a> will provide a good introduction. </p>
+<h3 id="-css-guidelines-http-cssguidelin-es-"><a href="http://cssguidelin.es/">CSS Guidelines</a></h3>
+<p>If you&#39;re unsure how to write something (comments, selectors, etc), take a look at CSS Guidelines. The <a href="http://cssguidelin.es/#architectural-principles">last section</a> also explains important OO princples further.</p>
+<h3 id="-bem-https-css-tricks-com-bem-101-"><a href="https://css-tricks.com/bem-101/">BEM</a></h3>
+<p>On larger projects, naming conventions is vital. We&#39;re using BEM.</p>
+<h2 id="structure">Structure</h2>
+<p>The SCSS folder includes the following subfolder. This is very important for dealing with CSS dependencies when using the ITCSS css way of thinking (see ITCSS section above).</p>
+<h3 id="-1-settings-https-github-com-philyboysmith-xceptor-css-tree-master-scss-settings-"><a href="https://github.com/philyboysmith/xceptor-css/tree/master/scss/settings">1.Settings</a></h3>
+<p>Global variables, config switches.</p>
+<h3 id="-2-tools-https-github-com-philyboysmith-xceptor-css-tree-master-scss-tools-"><a href="https://github.com/philyboysmith/xceptor-css/tree/master/scss/tools">2.Tools</a></h3>
+<p>Default mixins and functions.</p>
+<h3 id="-3-generic-https-github-com-philyboysmith-xceptor-css-tree-master-scss-generic-"><a href="https://github.com/philyboysmith/xceptor-css/tree/master/scss/generic">3.Generic</a></h3>
+<p>Ground-zero styles (Normalize.css, resets, box-sizing).</p>
+<h3 id="-4-elements-base-https-github-com-philyboysmith-xceptor-css-tree-master-scss-base-"><a href="https://github.com/philyboysmith/xceptor-css/tree/master/scss/base">4.Elements-Base</a></h3>
+<p>Unclassed HTML elements (type selectors).</p>
+<h3 id="-5-objects-https-github-com-philyboysmith-xceptor-css-tree-master-scss-objects-"><a href="https://github.com/philyboysmith/xceptor-css/tree/master/scss/objects">5.Objects</a></h3>
+<p>Cosmetic-free design patterns.</p>
+<h3 id="-6-components-https-github-com-philyboysmith-xceptor-css-tree-master-scss-components-"><a href="https://github.com/philyboysmith/xceptor-css/tree/master/scss/components">6.Components</a></h3>
+<p>Designed components, chunks of UI.</p>
+<h3 id="-7-trumps-https-github-com-philyboysmith-xceptor-css-tree-master-scss-trumps-"><a href="https://github.com/philyboysmith/xceptor-css/tree/master/scss/trumps">7.Trumps</a></h3>
+<p>Helpers and overrides.</p>
+<p>For more information on the contents of each folder checkout the table of contents at the top of <a href="https://github.com/philyboysmith/xceptor-css/blob/master/scss/style.scss">style.scss</a></p>
