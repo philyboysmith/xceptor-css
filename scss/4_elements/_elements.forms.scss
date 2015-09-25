@@ -24,7 +24,7 @@ label {
 #{$all-text-inputs},
 select[multiple=multiple],
 textarea {
-  width: 99.8%;
+  width: 100%;
   background-color: $base-background-color;
   @include rem(border, 1px solid transparent);
   border-bottom: $form-input-border;
@@ -67,6 +67,11 @@ input[type="file"] {
 
 select {
   max-width: 100%;
-  width: auto;
+  width: 99.8%;// auto;
+}
+
+abbr[attribute="required"]{
+  color: $color-red;
+  font-size: 90%;
 }
 
