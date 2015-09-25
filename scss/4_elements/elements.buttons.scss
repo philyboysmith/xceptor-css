@@ -1,28 +1,47 @@
-.button,a.button, input[type="button"], input[type="submit"], button{
+.button,a.button { //, input[type="button"], input[type="submit"], button{
 	@include button-base;
-
-	background-color: $color-brand;
 
 	// Hover
 	&:hover{
-		background-color: $color-brand-shadow;
 		cursor: pointer;
-		//border-bottom-color: darken($color-brand-shadow,20);
 	}
-}
-//for form button tags
-button.button{
-	
 }
 
+
 //-- modifiers
-	.button--block{
-		display: block;
+	.button--blue{
+		background-color: $color-brand;
+		border-color: $color-brand;
+    	border-bottom-color:$color-brand-shadow;
+    	color: #fff !important;
+		// Hover
+		&:hover{
+			background-color: $color-brand-shadow;
+		}
 	}
 	.button--white{
-		background-color: $color-brand;
+		background-color: #fff;
+		border-color: #979797;
+    	border-bottom-color:$color-gray;
+    	color: $color-gray;
+		&:hover{
+			color: $color-gray;
+			background-color: #D8D8D8;
+			border-color: #979797;
+		}
 
 	}
 	.button--gray{
+		background-color: $color-gray-light;
+		color: #fff !important;
+		border-bottom-color: $color-gray;
+		&:hover{
+			background-color: darken($color-gray-light, 10);
+			border-color: darken($color-gray-light, 10);
+			border-bottom-color: darken($color-gray, 10);
 
+		}
+	}
+	.button--block{
+		display: block;
 	}

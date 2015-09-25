@@ -7,15 +7,15 @@
 @mixin button-base() {
     display: inline-block;
     padding: $small-spacing-unit $base-spacing-unit $base-spacing-unit $base-spacing-unit;
-    border-radius: $base-radius;
+    @include rem(border-radius, 8px);
     text-align: center;
-    color: #fff;
+    
     font-weight: $bold-font-weight;
-    @include rem(border, 1px solid $color-brand);
-    @include rem(border-bottom, 3px solid $color-brand-shadow);
-
+    @include rem(border-width, 1px);
+    @include rem(border-bottom-width, 3px );
+    @include rem(border-bottom-width, 3px );
+    border-style: solid;
     // transitions
-    //transition: all 0.5s ease;
     @extend .transition-all;
 
 }
