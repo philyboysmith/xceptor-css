@@ -22,3 +22,5 @@ $all-text-inputs-focus:  assign-inputs($text-inputs-list, focus);
 $all-text-inputs-hover:  assign-inputs($text-inputs-list, hover);
 
 $form-input-border: 1px solid $form-border-color;
+
+$radio-check-input-size: 19px;

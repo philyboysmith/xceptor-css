@@ -46,7 +46,8 @@ textarea {
   &:hover,
   &:focus {
     //background-color: darken($base-background-color, 2);
-    transition: background-color 0.5s ease, border-color 0.6s ease;
+    //transition: background-color 0.5s ease, border-color 0.6s ease;
+    @extend .transition-all;
   }
 }
 
@@ -54,12 +55,6 @@ textarea {
   resize: vertical;
 }
 
-// checkboxes and radio button styles
-input[type="checkbox"],
-input[type="radio"] {
-  display: inline;
-  margin-right: $tiny-spacing-unit;
-}
 
 input[type="file"] {
   padding-bottom: $tiny-spacing-unit;
@@ -70,6 +65,149 @@ select {
   max-width: 100%;
   width: 99.8%;// auto;
 }
+
+// checkboxes and radio button styles
+
+
+  /* Checkbox and radio button base for label styling */
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked,
+  [type="radio"]:not(:checked),
+  [type="radio"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label,
+  [type="radio"]:not(:checked) + label,
+  [type="radio"]:checked + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    border-bottom: 1px solid transparent; // needed to stop job on :focus
+  }
+
+
+    /* checkbox and radio aspect */
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before,
+  [type="radio"]:not(:checked) + label:before,
+  [type="radio"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left:0; 
+    top: 50%;
+    margin-top: -9px;
+    @include rem(width, $radio-check-input-size); 
+    @include rem(height, $radio-check-input-size);
+    @include rem(border, 2px solid $color-ui);
+    background: #fff;
+    border-radius: $base-radius;
+  }
+  [type="radio"]:not(:checked) + label:before,
+  [type="radio"]:checked + label:before {
+    border-radius: $radio-check-input-size;
+  }
+
+
+  /* Checkboxes- checked mark aspect */
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="checkbox"]:checked + label:after,
+  [type="radio"]:not(:checked) + label:after,
+  [type="radio"]:checked + label:after {
+    content: '\2713';
+    position: absolute;
+    top: 0; 
+    left:0;
+    //@include rem(left, 4px);
+    font-size: 14px;
+    @include rem(width, $radio-check-input-size); 
+    @include rem(height, $radio-check-input-size);
+    text-align: center;
+    color: $color-brand-highlight;
+    //transition: all .2s;
+    @extend .transition-all;
+  }
+  //option 2
+  /* Checkboxes- checked mark aspect */
+  .o1 [type="checkbox"]:not(:checked) + label:after,
+  .o1 [type="checkbox"]:checked + label:after {
+    content: '\203B'; //
+  }
+  //option 3
+  /* Checkboxes- checked mark aspect */
+  .o2 [type="checkbox"]:not(:checked) + label:after,
+  .o2 [type="checkbox"]:checked + label:after {
+    content: '\25A0'; //square
+    line-height: 1.6rem;
+
+  }
+
+  /* Radio- checked mark aspect */
+  [type="radio"]:not(:checked) + label:after,
+  [type="radio"]:checked + label:after {
+    content: "\25CF"; // circle 
+  }
+  //option 2
+/* Radio- checked mark aspect */
+  .o1 [type="radio"]:not(:checked) + label:after,
+  .o1 [type="radio"]:checked + label:after {
+    content: '\25C9'; // circle with outline
+    line-height: 1.95rem;
+  }
+  //option 3
+/* Radio- checked mark aspect */
+  .o2 [type="radio"]:not(:checked) + label:after,
+  .o2 [type="radio"]:checked + label:after {
+    content: "\273B";
+  }
+
+
+
+  
+  /* checked mark aspect changes */
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+  }
+  [type="checkbox"]:checked + label:after,
+  [type="radio"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* disabled checkbox */
+  [type="checkbox"]:disabled:not(:checked) + label:before,
+  [type="checkbox"]:disabled:checked + label:before,
+  [type="radio"]:disabled:not(:checked) + label:before,
+  [type="radio"]:disabled:checked + label:before {
+    border-color: #bbb;
+    background-color: #ddd;
+  }
+  [type="checkbox"]:disabled:checked + label:after,
+  [type="radio"]:disabled:checked + label:after {
+    color: #999;
+  }
+  [type="checkbox"]:disabled + label,
+  [type="radio"]:disabled + label {
+    color: #aaa;
+  }
+  /* accessibility */
+  [type="checkbox"]:checked:focus + label,
+  [type="checkbox"]:not(:checked):focus + label,
+  [type="radio"]:checked:focus + label,
+  [type="radio"]:not(:checked):focus + label {
+    border-bottom: 1px dotted $color-ui;
+  }
+
+  /* hover style just for information */
+  label:hover:before {
+    border-color: $form-border-color-hover;
+    
+  }
+
+
 
 abbr[title="Required"], abbr[title="required"]{
   color: $color-red;

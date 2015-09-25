@@ -1,0 +1,28 @@
+.button,a.button, input[type="button"], input[type="submit"], button{
+	@include button-base;
+
+	background-color: $color-brand;
+
+	// Hover
+	&:hover{
+		background-color: $color-brand-shadow;
+		cursor: pointer;
+		//border-bottom-color: darken($color-brand-shadow,20);
+	}
+}
+//for form button tags
+button.button{
+	
+}
+
+//-- modifiers
+	.button--block{
+		display: block;
+	}
+	.button--white{
+		background-color: $color-brand;
+
+	}
+	.button--gray{
+
+	}

@@ -150,8 +150,10 @@
                                 <div>
                                     <label for="checkbox">Single Checkbox</label>
                                     
+
                                     <input id="checkbox" class="checkbox" type="checkbox"> 
                                     <label for="checkbox" class="check">Label</label>
+                                    
                                 </div>
                                 <div class="breakafter">
                                     <label for="select">Select</label>
@@ -169,17 +171,103 @@
                                 <fieldset class="options">
                                     <legend>Checkbox <abbr title="Required">*</abbr></legend>
                                     <ul class="checks">
-                                        <li><label for="checkbox1"><input id="checkbox1" name="checkbox" checked="checked" type="checkbox"> Choice A</label></li>
-                                        <li><label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox"> Choice B</label></li>
-                                        <li><label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Choice C</label></li>
+                                        <li>
+                                            <input id="checkbox1" name="checkbox" checked="checked" type="checkbox"> 
+                                            <label for="checkbox1">Choice A</label>
+                                        </li>
+                                        <li>
+                                            <input id="checkbox2" name="checkbox" type="checkbox"> 
+                                            <label for="checkbox2">Choice B</label>
+                                        </li>
+                                        <li>
+                                            <input id="checkbox3" name="checkbox" type="checkbox">
+                                            <label for="checkbox3"> Choice C</label>
+                                        </li>
+
+                                    </ul>
+                                    <ul class="checks o1">
+                                        <li>
+                                            <input id="checkbox1b" name="checkboxb" checked="checked" type="checkbox"> 
+                                            <label for="checkbox1b">Choice A - using a different ascii code option</label>
+                                        </li>
+                                        <li>
+                                            <input id="checkbox2b" name="checkboxb" type="checkbox"> 
+                                            <label for="checkbox2b">Choice B - using a different ascii code option</label>
+                                        </li>
+
+                                    </ul>
+                                    <ul class="checks o2">
+                                        <li>
+                                            <input id="checkbox1c" name="checkboxc" checked="checked" type="checkbox"> 
+                                            <label for="checkbox1c">Choice A - using a different ascii code option</label>
+                                        </li>
+                                        <li>
+                                            <input id="checkbox2c" name="checkboxc" type="checkbox"> 
+                                            <label for="checkbox2c">Choice B - using a different ascii code option</label>
+                                        </li>
+
+                                    </ul>
+                                    <ul class="checks">
+                                        <li>
+                                            <input id="checkbox1a" name="checkboxd" type="checkbox" disabled> 
+                                            <label for="checkbox1a">Choice A</label>
+                                        </li>
+                                        <li>
+                                            <input id="checkbox2a" name="checkboxd" type="checkbox" disabled> 
+                                            <label for="checkbox2a">Choice B</label>
+                                        </li>
+                                        <li>
+                                            <input id="checkbox3a" name="checkboxd" type="checkbox" disabled>
+                                            <label for="checkbox3a"> Choice C</label>
+                                        </li>
 
                                     </ul>
                                 </fieldset>
                                 <fieldset class="options">
                                     <legend>Radio</legend>
-                                    <ul class="checks">
-                                        <li><label for="radio1"><input id="radio1" name="radio" class="radio" checked="checked" type="radio"> Option 1</label></li>
-                                        <li><label for="radio2"><input id="radio2" name="radio" class="radio" type="radio"> Option 2</label></li>
+                                    <ul class="radio">
+                                        <li>
+                                            <input id="radio1" name="radio" class="radio" checked="checked" type="radio"> 
+                                            <label for="radio1">Option 1</label>
+                                        </li>
+                                        <li>
+                                            <input id="radio2" name="radio" class="radio" type="radio">
+                                            <label for="radio2"> Option 2</label>
+                                        </li>
+
+                                    </ul>
+                                    <ul class="radio o1">
+                                        <li>
+                                            <input id="radio1b" name="radio1" class="radio" checked="checked" type="radio"> 
+                                            <label for="radio1b">Option 1 - using a different ascii code option</label>
+                                        </li>
+                                        <li>
+                                            <input id="radio2b" name="radio1" class="radio" type="radio">
+                                            <label for="radio2b"> Option 2 - using a different ascii code option</label>
+                                        </li>
+
+                                    </ul>
+                                    <ul class="radio o2">
+                                        <li>
+                                            <input id="radio1d" name="radio1d" class="radio" checked="checked" type="radio"> 
+                                            <label for="radio1d">Option 1 - using a different ascii code option</label>
+                                        </li>
+                                        <li>
+                                            <input id="radio2d" name="radio1d" class="radio" type="radio">
+                                            <label for="radio2d"> Option 2 - using a different ascii code option</label>
+                                        </li>
+
+                                    </ul>
+                                    
+                                    <ul class="radio">
+                                        <li>
+                                            <input id="radio1a" name="radio2" class="radio" c type="radio" disabled> 
+                                            <label for="radio1a">Option 1 - Disabled</label>
+                                        </li>
+                                        <li>
+                                            <input id="radio2a" name="radio2" class="radio" type="radio" disabled>
+                                            <label for="radio2a"> Option 2 - Disabled</label>
+                                        </li>
 
                                     </ul>
                                 </fieldset>
@@ -189,12 +277,19 @@
                                 </div>
                             </fieldset>
                         </form>
+
                         <h2 id="buttons">Buttons</h2>
                         <p>Buttons come in all kinds of shapes and sizes. Here is a few:</p>
                         <button>Button element</button>
                         <input type="submit" value="Form Submit">
-                        <a class="button">A link with a class of button</a>
                         <input type="button" value="Input button">
+
+                        <p class="clearfix"><a class="button margin--right--tiny">A link with a class of button</a> <a class="button button--white">A link with a class of button</a> <a class="button button--gray margin--right--tiny">A link with a class of button</a> </p>
+
+                        <p class="clearfix"><a class="button button--large button--large margin--right--tiny">A link with a class of button</a> <a class="button button--large button--white">A link with a class of button</a> <a class="button button--large button--gray margin--right--tiny">A link with a class of button</a> </p>
+                        
+
+                        
                     </div>
                 </div>
             </div>

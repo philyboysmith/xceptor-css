@@ -1,24 +1,81 @@
-@mixin font-size($font-size, $line-height: auto) {
-    font-size: $font-size;
-    font-size: ($font-size / $base-font-size) * 1rem;
 
-    @if $line-height == auto {
-        line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+/*
+ * -------------------------------------------------------------
+ * Sass mixin for default and shared button styles.
+ * -------------------------------------------------------------
+ */
+@mixin button-base() {
+    display: inline-block;
+    padding: $small-spacing-unit $base-spacing-unit $base-spacing-unit $base-spacing-unit;
+    border-radius: $base-radius;
+    text-align: center;
+    color: #fff;
+    font-weight: $bold-font-weight;
+    @include rem(border, 1px solid $color-brand);
+    @include rem(border-bottom, 3px solid $color-brand-shadow);
+
+    // transitions
+    //transition: all 0.5s ease;
+    @extend .transition-all;
+
+}
+
+/*
+ * -------------------------------------------------------------
+ * Default Transition 
+ * -------------------------------------------------------------
+ */
+@mixin transition-all() {
+    transition: all 0.4s ease;
+}
+
+
+/*
+ * -------------------------------------------------------------
+ * Sass mixin clearfix class
+ * -------------------------------------------------------------
+ */
+ //NOTE: This is used for the .clearfix helper class. 
+  // If you want other elements and classes to inherit the clearfix clearing methods
+  // please us @extend and not repeat include the Mixin as it bloats css code
+  // e.g. .row{
+  //  @extend .clearfix;
+  //  } 
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
     }
-
-    @else {
-
-        @if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
-            line-height: $line-height;
-        }
-
-        @elseif ($line-height != none and $line-height != false) {
-            @warn "'#{$line-height}' is not a valid value for 'line-height'."
-        }
-
+    &:after {
+        clear: both;
     }
+}
 
-};
+
+
+
+// @mixin font-size($font-size, $line-height: auto) {
+//     font-size: $font-size;
+//     font-size: ($font-size / $base-font-size) * 1rem;
+
+//     @if $line-height == auto {
+//         line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+//     }
+
+//     @else {
+
+//         @if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
+//             line-height: $line-height;
+//         }
+
+//         @elseif ($line-height != none and $line-height != false) {
+//             @warn "'#{$line-height}' is not a valid value for 'line-height'."
+//         }
+
+//     }
+
+// };
 
 
 
