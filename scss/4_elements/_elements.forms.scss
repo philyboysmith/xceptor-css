@@ -10,7 +10,8 @@ label,
 select {
   display: block;
   font-family: $base-font-family;
-  font-size: $base-font-size;
+  @include rem(font-size, $base-font-size);
+  
 }
 
 label {
@@ -23,16 +24,29 @@ label {
 #{$all-text-inputs},
 select[multiple=multiple],
 textarea {
+  width: 99.8%;
   background-color: $base-background-color;
-  border: $base-border;
-  border-radius: $base-radius;
+  @include rem(border, 1px solid transparent);
+  border-bottom: $form-input-border;
+  //border-radius: $base-radius;
   font-family: $base-font-family;
-  @include font-size($base-font-size);
-  padding: $tiny-spacing-unit;
+  @include rem(font-size, 14px);
+  color: $form-input-text-color;
+  padding: $tiny-spacing-unit +2 $tiny-spacing-unit;
   &:hover {
+    border-color: lighten($form-border-color,16);
+    border-bottom-color: darken($form-border-color, 18);
   }
   &:focus {
     outline: none;
+    border-color: transparent;
+    background-color: darken($base-background-color, 2);
+    border-bottom-color: $color-brand-highlight;
+  }
+  &:hover,
+  &:focus {
+    //background-color: darken($base-background-color, 2);
+    transition: background-color 0.5s ease, border-color 0.6s ease;
   }
 }
 

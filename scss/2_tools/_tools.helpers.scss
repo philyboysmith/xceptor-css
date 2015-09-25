@@ -40,12 +40,6 @@
 
 
 // ----- Spacing helper styles
-
-// $base-spacing-unit: $base-line-height;
-
-// $small-spacing-unit: $base-spacing-unit / 2;
-
-// $tiny-spacing-unit: $base-line-height / 4;
 // margins
 @include generate-margin-spacing-classes(); // left is default
 @include generate-margin-spacing-classes($right-space-vars);

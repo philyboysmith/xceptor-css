@@ -5,13 +5,15 @@ $color-brand-shadow:    #0277BD;
 // or 039BE5
 
 $color-gray:            #666;
-$color-gray-light:      #ccc;
+$color-gray-light:      #C2C2C2;
+$color-gray-lighter:	#F5F5F5;
 $color-gray-dark:       #333; //or #232323 ??
 
 $color-highlight:       rgba(255, 255, 255, 0.05);
 
 $color-shadow:          rgba(0, 0, 0, 0.05);
 
+$color-red:				red;
 
 //Page
 $base-background-color: #FFFFFF;
@@ -19,6 +21,10 @@ $secondary-background-color: #f5f5f5;
 
 // UI
 $color-ui:          	$color-gray-light;
+
+// Form
+$form-border-color:		$color-gray-light; 
+$form-input-text-color:	#4D4D4E; //?? this is picked from Sketch mock-up but should it match up with one of the grey sass vars?
 
 // Text
 $color-text:        	#999; //$color-gray-dark;
