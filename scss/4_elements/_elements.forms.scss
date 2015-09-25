@@ -54,6 +54,7 @@ textarea {
   resize: vertical;
 }
 
+// checkboxes and radio button styles
 input[type="checkbox"],
 input[type="radio"] {
   display: inline;
@@ -70,8 +71,9 @@ select {
   width: 99.8%;// auto;
 }
 
-abbr[attribute="required"]{
+abbr[title="Required"], abbr[title="required"]{
   color: $color-red;
+  border-bottom: none;
   font-size: 90%;
 }
 
