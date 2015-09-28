@@ -19,18 +19,20 @@ $color-red:				#D0021B;
 $base-background-color: #FFFFFF;
 $secondary-background-color: #f5f5f5;
 
+// Text
+$color-text:        	#999; //$color-gray-dark;
+$color-text-dark:		#4D4D4E;
+$color-text-overlay:	#ffffff;
+$colour-heading-text:	#000; //$color-gray-dark;
+
 // UI
 $color-ui:          	$color-gray-light;
 
 // Form
 $form-border-color:		$color-gray-light; 
 $form-border-color-hover: darken($form-border-color, 18);
-$form-input-text-color:	#4D4D4E; //?? this is picked from Sketch mock-up but should it match up with one of the grey sass vars?
+$form-input-text-color:	$color-text-dark; //?? this is picked from Sketch mock-up but should it match up with one of the grey sass vars?
 
-// Text
-$color-text:        	#999; //$color-gray-dark;
-$color-text-overlay:	#ffffff;
-$colour-heading-text:	#000; //$color-gray-dark;
 
 // Links
 $color-link:        	$color-brand;

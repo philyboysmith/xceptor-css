@@ -86,7 +86,8 @@
                         <p>Tables should be used for information that is accurately represented in this way - for example something that would make sense in a spreadsheet. Tables should be correctly marked up using table heading (th) elements where appropriate.</p>
 
                         <table>
-                            <tbody><tr>
+                            <tbody>
+                            <tr>
                                 <th>Table Header</th>
                                 <th>Table Header</th>
                                 <th>Table Header</th>
@@ -103,9 +104,65 @@
                                 <td>Table Detail (even)</td>
                                 <td>Table Detail (even)</td>
                             </tr>
+                            <tr>
+                                <td>Table Detail (odd)</td>
+                                <td>Table Detail (odd)</td>
+                                <td>Table Detail (odd)</td>
+                            </tr>
 
+                            <tr>
+                                <td>Table Detail (even)</td>
+                                <td>Table Detail (even)</td>
+                                <td>Table Detail (even)</td>
+                            </tr>
+                            <tr>
+                                <td>Table Detail (odd)</td>
+                                <td>Table Detail (odd)</td>
+                                <td>Table Detail (odd)</td>
+                            </tr>
+                            <tr>
+                                <td>Table Detail (even)</td>
+                                <td>Table Detail (even)</td>
+                                <td>Table Detail (even)</td>
+                            </tr>
+                            </tbody>
+                        </table>
 
-                        </tbody></table>
+                        <table>
+                        <caption>Table using 'thead' tag</caption>
+                        <thead>
+                            <tr>
+                                <th>Table Header</th>
+                                <th>Table Header</th>
+                                <th>Table Header</th>
+                            </tr>
+                        </thead>
+                            <tbody>
+                            <tr>
+                                <td>Table Detail (odd)</td>
+                                <td>Table Detail (odd)</td>
+                                <td>Table Detail (odd)</td>
+                            </tr>
+
+                            <tr>
+                                <td>Table Detail (even)</td>
+                                <td>Table Detail (even)</td>
+                                <td>Table Detail (even)</td>
+                            </tr>
+                            <tr>
+                                <td>Table Detail (odd)</td>
+                                <td>Table Detail (odd)</td>
+                                <td>Table Detail (odd)</td>
+                            </tr>
+
+                            <tr>
+                                <td>Table Detail (even)</td>
+                                <td>Table Detail (even)</td>
+                                <td>Table Detail (even)</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
                         <h2 id="forms">Forms</h2>
 
                         <p>The default form type is used for any forms on the user facing part of the site. Examples of form input elements are below.</p>
@@ -272,8 +329,8 @@
                                     </ul>
                                 </fieldset>
                                 <div class="submit">
-                                    <input id="remark-preview" value="Post Comment" type="submit">
-                                    <a href="#">Cancel</a>
+                                    <input id="remark-preview" value="Post Comment" type="submit" class="button button--blue">
+                                    <a href="#" class="button button--white">Cancel</a>
                                 </div>
                             </fieldset>
                         </form>

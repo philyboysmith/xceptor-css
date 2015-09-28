@@ -1,0 +1,21 @@
+table {
+  border-collapse: collapse;
+  border: 1px solid $color-ui;
+  color: $color-text-dark;
+}
+
+td, th{
+	@include rem(padding, $small-spacing-unit $base-spacing-unit);
+	text-align: left;
+	border: 1px solid $color-ui;
+}
+
+// table header
+thead td, thead th, th{
+	background-color: $color-gray-lighter;
+	font-weight: $bold-font-weight;
+}
+
+tr:nth-child(odd){
+	background-color: lighten($color-gray-lighter,1);
+}
