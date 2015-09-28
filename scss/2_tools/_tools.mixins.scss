@@ -153,8 +153,6 @@ h1 {
     //$suffix : nth($space, 1);
     $rem-value: rem(nth($space, 1));
     .margin--#{nth($space, 2)}--#{nth($space, 3)} {
-        @include rem(margin-right, 2px);
-      //@include rem( margin-#{nth($space, 2)}, #{nth($space, 1)});
       margin-#{nth($space, 2)} : $rem-value 
     }
   }
@@ -164,9 +162,10 @@ h1 {
   $default-space-amounts-with-direction: ($left-space-vars)
 ) {
   @each $space in $default-space-amounts-with-direction {
+    $rem-value: rem(nth($space, 1));
     //$suffix : nth($space, 1);
     .padding--#{nth($space, 2)}--#{nth($space, 3)} {
-      padding-#{nth($space, 2)}: #{nth($space, 1)};
+      padding-#{nth($space, 2)}: $rem-value;
     }
   }
 }
