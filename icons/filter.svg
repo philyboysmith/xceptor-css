@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>filter</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Xceptor-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="filter" sketch:type="MSArtboardGroup" fill="#0A0B09">
+            <g sketch:type="MSLayerGroup" transform="translate(4.000000, 4.000000)" id="Fill-113">
+                <path d="M-0.0683529412,1.18018803 L5.01447059,6.35073504 L5.01447059,11.4450598 C5.01447059,11.6335214 5.08858824,11.783453 5.21788235,11.9149573 L7.84329412,14.6036752 C7.97258824,14.7351795 8.12,14.7921368 8.30529412,14.7921368 C8.39752941,14.7921368 8.47164706,14.7728718 8.56388235,14.7544444 C8.84141176,14.6229402 8.97070588,14.4160513 8.97070588,14.1337778 L8.97070588,6.35073504 L14.0535294,1.18018803 C14.2758824,0.973299145 14.3129412,0.728717949 14.2017647,0.428017094 C14.0905882,0.165008547 13.8871765,0.0335042735 13.5915294,0.0335042735 L0.393647059,0.0335042735 C0.098,0.0335042735 -0.105411765,0.165008547 -0.216588235,0.428017094 C-0.326941176,0.728717949 -0.290705882,0.973299145 -0.0683529412,1.18018803" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

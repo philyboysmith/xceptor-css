@@ -1,4 +1,12 @@
 .o-content {
 	height: 100%;
-    margin-left: 160px;
+    margin-left: $navigation-width;
+    @include transition-all();
+    z-index:10000;
+    background: white;
+    position: relative;
+}
+
+.o-content--full-screen {
+	margin-left: 0;
 }

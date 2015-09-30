@@ -3,7 +3,8 @@
     top: 0;
     bottom: 0;
     z-index: $z-navigation;
-    width: 160px;
+    width: $navigation-width;
     border-right: 1px solid $color-ui;
     @extend %box-shadow--right;
+    @include transition-all();
 }

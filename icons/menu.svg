@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>menu</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Xceptor-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="menu" sketch:type="MSArtboardGroup" fill="#0A0B09">
+            <path d="M10.6213969,18 C11.5168698,18 12.2427939,17.2724627 12.2427939,16.375 C12.2427939,15.4775373 11.5168698,14.75 10.6213969,14.75 C9.72592414,14.75 9,15.4775373 9,16.375 C9,17.2724627 9.72592414,18 10.6213969,18 Z M10.6213969,13.125 C11.5168698,13.125 12.2427939,12.3974627 12.2427939,11.5 C12.2427939,10.6025373 11.5168698,9.875 10.6213969,9.875 C9.72592414,9.875 9,10.6025373 9,11.5 C9,12.3974627 9.72592414,13.125 10.6213969,13.125 Z M10.6213969,8.25 C11.5168698,8.25 12.2427939,7.52246272 12.2427939,6.625 C12.2427939,5.72753728 11.5168698,5 10.6213969,5 C9.72592414,5 9,5.72753728 9,6.625 C9,7.52246272 9.72592414,8.25 10.6213969,8.25 Z" id="more-vert" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

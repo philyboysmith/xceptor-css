@@ -1,9 +1,15 @@
 .o-header-bar {
     height: 32px;
-    //position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     min-width: 600px;
     z-index: 99999;
+}
+
+.o-header-bar__icons {
+	position: absolute;
+	top: 0;
+	right: 0;
 }

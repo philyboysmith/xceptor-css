@@ -2,6 +2,7 @@
 	background-color: $color-brand-shadow;
     padding: $top-bar-vertical-spacing $header-icon-wrapper-width $top-bar-vertical-spacing $base-spacing-unit;
 	@extend .inline-list;
+	display: inline-block;
 }
 .ui-breadcrumbs__item {
 	@extend .gamma;
@@ -19,13 +20,9 @@
 	padding-left: 0;
 }
 
-.ui-breadcrumbs__item::after {
+.ui-breadcrumbs__item:not(:last-child)::after {
 	content: '>';
     display: inline-block;
 	position: relative;
 	left: $small-spacing-unit;
-}
-
-.ui-breadcrumbs__item:last-child::after {
-	transform: rotate(90deg);
 }
