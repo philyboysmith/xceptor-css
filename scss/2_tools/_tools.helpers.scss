@@ -20,6 +20,19 @@
 		flex-grow: 1;
 	}
 }
+
+.multi-column {
+	column-count: 2;
+	column-gap: $base-spacing-unit;
+	-webkit-column-count: 2;
+	-webkit-column-gap: $base-spacing-unit;
+	> * {
+		-webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
+               break-inside: avoid;
+	}
+}
+
 %box-shadow--right {
 	box-shadow: 4px 0 2px 0 $color-shadow;
 }
