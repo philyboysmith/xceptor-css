@@ -66,8 +66,8 @@ select {
   width: 99.8%;// auto;
 }
 
-// checkboxes and radio button styles
 
+// checkboxes and radio button styles
 
   /* Checkbox and radio button base for label styling */
   [type="checkbox"]:not(:checked),
@@ -101,7 +101,9 @@ select {
     @include rem(margin-top, - $radio-check-input-size/2);
     @include rem(width, $radio-check-input-size); 
     @include rem(height, $radio-check-input-size);
+
     @include rem(border, 2px solid $color-ui);
+
     background: #fff;
     border-radius: $base-radius;
   }
@@ -207,12 +209,17 @@ select {
   }
 
   /* hover style just for information */
-  label:hover:before {
+  [type="radio"]:not(:checked) + label:hover:before,
+  [type="radio"]:checked + label:hover:before {
     border-color: $form-border-color-hover;
     
   }
 
 
+[placeholder] {
+  color: lighten($form-input-text-color,20);
+  font-style: italic;
+}
 
 abbr[title="Required"], abbr[title="required"]{
   color: $color-red;
