@@ -27,6 +27,18 @@
 	box-shadow: 0 4px 2px 0 $color-shadow;
 }
 
+.text--blue {
+	color: $color-brand;
+}
+
+.text--black {
+	color: $color-heading-text;
+}
+
+.text--grey {
+	color: $color-ui;
+}
+
 // ----- Clearfix class
 .clearfix {
   @include clearfix;

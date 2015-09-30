@@ -15,7 +15,7 @@ select {
 }
 
 label {
-  margin-bottom: $tiny-spacing-unit;
+  margin-bottom: $label-spacing;
   &.required::after {
     content: "*";
   }

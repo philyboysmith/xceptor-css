@@ -1,5 +1,7 @@
 .ui-panel {
 	border-top: 1px solid $color-ui;
+	@include clearfix();
+	background: white;
 }
 
 .ui-panel-header {

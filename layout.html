@@ -52,6 +52,23 @@
                 </ol>
             </div>
             <div class="o-body  o-body--collapse">
+                <div class="ui-item-header">
+                    <div class="ui-item-header__details">
+                        <h1 class="text--blue">Bank View London <span class="gamma text--black">Created June 9th 2015</span></h1>
+                        <div class="text--grey">
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                        </div>
+                    </div>
+                    <div class="ui-item-header__links">
+                        <ul class="ui-button-list">
+                            <li class="ui-button-list__item">Approved</li>
+                            <li class="ui-button-list__item"><a href="#" class="button button--blue">Edit</a></li>
+                            <li class="ui-button-list__item"><a href="#" class="button button--white">Test</a></li>
+                            <li class="ui-button-list__item"><a href="#" class="button button--white">Review Changes</a></li>
+                            <li class="ui-button-list__item"><a href="#" class="button button--white button--dropdown">Review Changes<span class="caret"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="ui-panel">
                     <div class="ui-panel-header">
                         <h1 class="ui-panel-header__title">
@@ -69,7 +86,71 @@
                             </ul>
                         </div>
                         <div class="ui-panel-body">
-                            <p>Content</p>
+                            <form class="ui-form" action="">
+                                <fieldset>
+                                    <div class="ui-form__item">
+                                        <label for="text">Text Input <abbr title="Required">*</abbr></label>
+                                        <input id="text" type="text">
+                                    </div>
+                                    <div class="ui-form__item">
+                                        <label for="text">Text Input</label>
+                                        <input id="text" type="text" placeholder="this is a placeholder">
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Dynamic Column Settings</legend>
+                                    <div class="ui-form__item">
+                                        <input id="checkbox" class="checkbox" type="checkbox"> 
+                                        <label for="checkbox" class="check">Copy from cell above if blank</label>
+                                    </div>
+                                    <div class="ui-form__item">
+                                        <input id="merge" class="checkbox" type="checkbox"> 
+                                        <label for="merge" class="check">Merge with Cell below</label>
+                                    </div>
+                                    <div class="ui-form__item">
+                                        <table>
+                                            <tr>
+                                                <td>OR</td>
+                                                <td>row</td>
+                                                <td>1</td>
+                                                <td>matches value</td>
+                                                <td>A</td>
+                                            </tr>
+                                            <tr>
+                                                <td>AND</td>
+                                                <td>row</td>
+                                                <td>2</td>
+                                                <td>matches value</td>
+                                                <td>B</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="ui-form__item">
+                                        <label for="text">If a column has already been selected</label>
+                                        <input id="text" type="text" placeholder="this is a placeholder" value="Find the next matching value">
+                                    </div>
+                                    <div class="ui-form__item">
+                                        <label for="text">If not matching column can be found</label>
+                                        <input id="text" type="text" placeholder="this is a placeholder" value="Report an error">
+                                    </div>
+                                </fieldset>
+
+                                <fieldset>
+                                    <legend>Cell Value Dependent Actions</legend>
+                                    <div class="ui-form__item">
+                                        <label for="text">Apply action</label>
+                                        <input id="text" type="text" placeholder="this is a placeholder" value="When cell is empty">
+                                    </div>
+                                    <div class="ui-form__item">
+                                        <label for="text">Match value</label>
+                                        <input id="text" type="text" placeholder="this is a placeholder" value="ABC">
+                                    </div>
+                                    <div class="ui-form__item">
+                                        <label for="text">Action to apply</label>
+                                        <input id="text" type="text" placeholder="this is a placeholder" value="Ignore the cell">
+                                    </div>
+                                </fieldset>
+                            </form>
                         </div>
                     
                     </div>
