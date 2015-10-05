@@ -14,35 +14,38 @@ a.button { //, {
 
 //-- modifiers
 	.button--blue{
-		background-color: $color-brand;
-		border-color: $color-brand;
-    	border-bottom-color:$color-brand-shadow;
-    	color: #fff !important;
+		background-color: $button-bg;
+		border-color: $button-border-color;
+    	border-bottom-color:$button-border-color-shadow;
+    	color: $button-text-color;
 		// Hover
 		&:hover{
-			background-color: $color-brand-shadow;
+			background-color: $button-bg-hover;
+			color: $button-text-color;
 		}
 	}
 	.button--white{
-		background-color: #fff;
-		border-color: #979797;
-    	border-bottom-color:$color-gray;
-    	color: $color-gray;
+		background-color: $button-bg--white;
+		border-color: $button-border-color--white;
+    	border-bottom-color:$button-border-color-shadow--white;
+    	color: $button-text-color--white;
 		&:hover{
-			color: $color-gray;
-			background-color: #D8D8D8;
-			border-color: #979797;
+			color: $button-text-color--white;
+			background-color: $button-bg-hover--white;
+			border-color: $button-border-color-hover--white;
 		}
 
 	}
 	.button--gray{
-		background-color: $color-gray-light;
-		color: #fff !important;
-		border-bottom-color: $color-gray;
+		background-color: $button-bg--gray;
+		color: $button-text-color--gray;
+		border-color: $button-border-color--gray;
+		border-bottom-color: $button-border-color-shadow--gray;
 		&:hover{
-			background-color: darken($color-gray-light, 10);
-			border-color: darken($color-gray-light, 10);
-			border-bottom-color: darken($color-gray, 10);
+			color: $button-text-color;
+			background-color: $button-bg-hover--gray;
+			border-color: $button-border-color-hover--gray;
+			border-bottom-color: $button-border-color-shadow-hover--gray;
 
 		}
 	}

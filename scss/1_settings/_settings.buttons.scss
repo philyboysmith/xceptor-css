@@ -1,4 +1,38 @@
-// Buttons variables
-// Border widths
-// Colors
-// Radius (which should probably use $base-radius)
+@import '_settings.colors';
+@import '_settings.global';
+
+// Base button settings
+$button-line-height:		15px;
+$button-border-width:		1px;
+$button-border-bottom-width:3px;
+$button-border-style:		solid; 
+$button-radius:				$base-radius;
+
+
+
+//Blue button styles
+$button-text-color:			#ffffff;
+$button-bg:					$color-brand;
+$button-bg-hover:			$color-brand-shadow;
+$button-border-color:		$button-bg;
+$button-border-color-shadow:darken($color-brand-shadow, 5);
+
+
+
+// White button settings
+$button-text-color--white:			#999999;
+$button-bg--white:					#ffffff;
+$button-bg-hover--white:			lighten($color-gray-light, 18);
+$button-border-color--white:		#D8D8D8;
+$button-border-color-shadow--white:	#979797;
+$button-border-color-hover--white:	$button-border-color-shadow--white;
+
+
+// Gray button settings
+$button-text-color--gray:				$button-text-color;
+$button-bg--gray:						$color-gray-light;
+$button-bg-hover--gray:					darken($color-gray-light, 10);
+$button-border-color--gray:				$color-gray-light;
+$button-border-color-shadow--gray:		#979797;//$color-gray;
+$button-border-color-hover--gray:			darken($color-gray-light, 10);
+$button-border-color-shadow-hover--gray:	darken($color-gray, 10);

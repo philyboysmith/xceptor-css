@@ -8,14 +8,13 @@
 @mixin button-base() {
     display: inline-block;
     @include rem(padding, $small-spacing-unit $base-spacing-unit $small-spacing-unit $base-spacing-unit);
-    @include rem(border-radius, 8px);
+    @include rem(border-radius, $button-radius);
     text-align: center;
-    line-height: 1.3rem;
+    @include rem(line-height, $button-line-height);
     font-weight: $bold-font-weight;
-    @include rem(border-width, 1px);
-    @include rem(border-bottom-width, 3px );
-    @include rem(border-bottom-width, 3px );
-    border-style: solid;
+    @include rem(border-width, $button-border-width);
+    @include rem(border-bottom-width, $button-border-bottom-width);
+    border-style: $button-border-style;
     // transitions
     @extend .transition-all;
 
