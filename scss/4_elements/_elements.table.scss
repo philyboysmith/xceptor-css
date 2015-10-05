@@ -1,21 +1,20 @@
 table {
   border-collapse: collapse;
-  border: 1px solid $color-ui;
-  color: $color-text-dark;
+  border: $table-border;
+  color: $table-text-color;
 }
 
 td, th{
-	@include rem(padding, $small-spacing-unit $base-spacing-unit);
+	@include rem(padding, $table-cell-padding);
 	text-align: left;
-	border: 1px solid $color-ui;
+	border: $table-cell-border;
 }
 
 // table header
 thead td, thead th, th{
-	background-color: $color-gray-lighter;
-	font-weight: $bold-font-weight;
+	@include header-cell;
 }
 
 tr:nth-child(odd){
-	background-color: lighten($color-gray-lighter,1);
+	background-color: $table-zebra-stripe;
 }

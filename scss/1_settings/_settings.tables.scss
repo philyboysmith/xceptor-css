@@ -1,0 +1,12 @@
+
+$table-border: 			1px solid $color-ui;
+$table-text-color:		$color-text-dark;
+$table-cell-padding:	$small-spacing-unit $base-spacing-unit;
+$table-cell-border:		$table-border;
+$table-zebra-stripe:	lighten($color-gray-lighter,2);
+
+//-- Table header cell setting styles
+@mixin header-cell{
+	background-color: $color-gray-lighter;
+	font-weight: $bold-font-weight;
+}
