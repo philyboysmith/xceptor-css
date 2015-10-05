@@ -1,4 +1,14 @@
-$fieldset-background: transparent;
+//Fieldset and legend settings
+$legend-font-size:            $h3-font-size;
+$legend-font-color:           $color-heading-text;
+$legend-border:               2px solid $form-border-color;
+$legend-padding:              0 0 $small-spacing-unit;
+$legend-margin:               0 0 $small-spacing-unit;
+$fieldset-background:         transparent;
+$fieldset-border:             none;
+$fieldset-margin:             0 0 $small-spacing-unit;
+$fieldset-padding:            0;//$base-spacing-unit;
+
 
 $text-inputs-list: 'input[type="color"]',
                    'input[type="date"]',
@@ -48,6 +58,7 @@ $check-radio-border--disabled: #bbb;
 $check-radio-bg--disabled:    #ddd;
 $check-radio-label--disabled: #aaa;
 $check-radio-label-checked--disabled: #999;
+
 
 
 $required-asterix:            $color-red;

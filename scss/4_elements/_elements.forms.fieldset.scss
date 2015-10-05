@@ -1,0 +1,17 @@
+
+fieldset {
+  background-color: $fieldset-background;
+  border: $fieldset-border;
+  margin: $fieldset-margin;
+  padding: $fieldset-padding;
+}
+
+legend{
+	font-size: $legend-font-size;
+	color: $legend-font-color;
+	padding: $legend-padding;
+	margin: $legend-margin;
+	width: 100%;
+	border-bottom: $legend-border;
+	position: relative;
+}

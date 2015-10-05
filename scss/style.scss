@@ -54,16 +54,17 @@
  * 
  */
 
-@import '1_settings/settings.buttons';
-@import '1_settings/settings.colors';
-@import '1_settings/settings.global';
-@import '1_settings/settings.forms';
-@import '1_settings/settings.typography';
+
+@import '1_settings/_settings.colors';
+@import '1_settings/_settings.global';
+@import '1_settings/_settings.typography';
 @import '1_settings/_settings.navigation';
 @import '1_settings/_settings.objects-list';
 @import '1_settings/_settings.z-index';
 @import '1_settings/_settings.panel';
 @import '1_settings/_settings.tables';
+@import '1_settings/_settings.buttons';
+@import '1_settings/_settings.forms';
 
 @import '2_tools/tools.mixins';
 @import '2_tools/tools.functions';
@@ -76,14 +77,13 @@
 @import '3_generic/generic.reset';
 @import '3_generic/generic.shared';
 
+@import '4_elements/elements.buttons';
 @import '4_elements/elements.headings';
 @import '4_elements/elements.links';
 @import '4_elements/elements.lists';
-@import '4_elements/elements.page';
-@import '4_elements/elements.forms';
-@import '4_elements/elements.buttons';
 @import '4_elements/elements.table';
 @import '4_elements/elements.page';
+@import '4_elements/elements.forms';
 
 @import '5_objects/objects.content';
 @import '5_objects/objects.body';

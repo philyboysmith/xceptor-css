@@ -1,9 +1,8 @@
-fieldset {
-  background-color: $fieldset-background;
-  border: $base-border;
-  margin: 0 0 $small-spacing-unit;
-  padding: $base-spacing-unit;
-}
+// The form styles
+
+// Import the fieldset styles
+@import 'elements.forms.fieldset';
+
 
 input,
 label,
