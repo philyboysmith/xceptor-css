@@ -2,24 +2,24 @@
 @import '_settings.global';
 
 // Base button settings
-$button-line-height:		15px;
-$button-border-width:		1px;
-$button-border-bottom-width:3px;
-$button-border-style:		solid; 
-$button-radius:				$base-radius;
-$button-padding-top:		$small-spacing-unit;
-$button-padding-right:		$base-spacing-unit;
-$button-padding-bottom:		$small-spacing-unit + 4;
-$button-padding-left:		$button-padding-right;
+$button-line-height:			15px;
+$button-border-width:			1px;
+$button-border-bottom-width:	3px;
+$button-border-style:			solid; 
+$button-radius:					$base-radius;
+$button-padding-top:			$small-spacing-unit;
+$button-padding-right:			$base-spacing-unit;
+$button-padding-bottom:			$small-spacing-unit + 5;
+$button-padding-left:			$button-padding-right;
 
 
 
 //Blue button styles
-$button-text-color:			#ffffff;
-$button-bg:					$color-brand;
-$button-bg-hover:			$color-brand-shadow;
-$button-border-color:		$button-bg;
-$button-border-color-shadow:darken($color-brand-shadow, 5);
+$button-text-color:				#ffffff;
+$button-bg:						$color-brand;
+$button-bg-hover:				$color-brand-shadow;
+$button-border-color:			$button-bg;
+$button-border-color-shadow:	darken($color-brand-shadow, 5);
 
 
 
