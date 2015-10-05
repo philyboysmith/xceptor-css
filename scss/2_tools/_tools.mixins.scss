@@ -7,7 +7,7 @@
 
 @mixin button-base() {
     display: inline-block;
-    @include rem(padding, $small-spacing-unit $base-spacing-unit $small-spacing-unit $base-spacing-unit);
+    @include rem(padding, $button-padding-top $button-padding-right $button-padding-bottom $button-padding-left);
     @include rem(border-radius, $button-radius);
     text-align: center;
     @include rem(line-height, $button-line-height);
