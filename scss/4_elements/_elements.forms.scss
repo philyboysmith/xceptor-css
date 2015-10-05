@@ -27,34 +27,27 @@ select[multiple=multiple],
 textarea {
   width: 100%;
   background-color: $base-background-color;
-  @include rem(border, 1px solid transparent);
+  @include rem(border, $form-input-border-base);
   border-bottom: $form-input-border;
-  //border-radius: $base-radius;
   font-family: $base-font-family;
-  @include rem(font-size, 14px);
+  @include rem(font-size, $form-text-size);
   color: $form-input-text-color;
-  padding: $tiny-spacing-unit +2 $tiny-spacing-unit;
+  padding: $form-input-padding;
   &:read-only{
-    border-bottom-color: transparent;
+    border-bottom-color: $readonly-border-color;
   }
   &:hover:not(:read-only) {
-    border-color: lighten($form-border-color,16);
-    border-bottom-color: darken($form-border-color, 18);
+    @include form-hover;
   }
   &:focus:not(:read-only) {
-    outline: none;
-    border-color: transparent;
-    background-color: darken($base-background-color, 2);
-    border-bottom-color: $color-brand-highlight;
+    @include form-focus;
   }
   &:hover,
   &:focus {
-    //background-color: darken($base-background-color, 2);
-    //transition: background-color 0.5s ease, border-color 0.6s ease;
     @extend .transition-all;
   }
   &:read-only{
-    border-color: transparent;
+    border-color: $readonly-border-color;
   }
 }
 
@@ -89,8 +82,9 @@ select {
   [type="radio"]:not(:checked) + label,
   [type="radio"]:checked + label {
     position: relative;
-    padding-left: 25px;
-    @include rem(padding-bottom, 3px); 
+    //padding-left: 25px;
+    @include rem(padding-left, $check-radio-spacing); 
+    @include rem(padding, $check-radio-padding); 
     cursor: pointer;
     border-bottom: 1px solid transparent; // needed to stop job on :focus
   }
@@ -109,10 +103,10 @@ select {
     @include rem(width, $radio-check-input-size); 
     @include rem(height, $radio-check-input-size);
 
-    @include rem(border, 2px solid $color-ui);
+    @include rem(border, $check-radio-border);
 
-    background: #fff;
-    border-radius: $base-radius;
+    background: $check-radio-bg;
+    border-radius: $checkbox-radius;
   }
   [type="radio"]:not(:checked) + label:before,
   [type="radio"]:checked + label:before {
@@ -125,12 +119,8 @@ select {
   [type="checkbox"]:checked + label:after,
   [type="radio"]:not(:checked) + label:after,
   [type="radio"]:checked + label:after {
-    content: '\2713';
+    content: $checkbox-input-icon;
     position: absolute;
-    //top: 0; 
-    //left:0;
-    //@include rem(left, 4px);
-    //font-size: 14px;
     left:0; 
     top: 50%;
     @include rem(margin-top, - $radio-check-input-size/2);
@@ -160,8 +150,9 @@ select {
   /* Radio- checked mark aspect */
   [type="radio"]:not(:checked) + label:after,
   [type="radio"]:checked + label:after {
-    content: "\25CF"; // circle 
+    content: $radio-input-icon // circle 
   }
+
   //option 2
 /* Radio- checked mark aspect */
   .o1 [type="radio"]:not(:checked) + label:after,
@@ -196,23 +187,23 @@ select {
   [type="checkbox"]:disabled:checked + label:before,
   [type="radio"]:disabled:not(:checked) + label:before,
   [type="radio"]:disabled:checked + label:before {
-    border-color: #bbb;
-    background-color: #ddd;
+    border-color: $check-radio-border--disabled;
+    background-color: $check-radio-bg--disabled;
   }
   [type="checkbox"]:disabled:checked + label:after,
   [type="radio"]:disabled:checked + label:after {
-    color: #999;
+    color: $check-radio-label-checked--disabled;
   }
   [type="checkbox"]:disabled + label,
   [type="radio"]:disabled + label {
-    color: #aaa;
+    color: $check-radio-label--disabled;
   }
   /* accessibility */
   [type="checkbox"]:checked:focus + label,
   [type="checkbox"]:not(:checked):focus + label,
   [type="radio"]:checked:focus + label,
   [type="radio"]:not(:checked):focus + label {
-    border-bottom: 1px dotted $color-ui;
+    @include form-check-radio-focus;
   }
 
   /* hover style just for information */
@@ -224,13 +215,10 @@ select {
 
 
 [placeholder] {
-  color: lighten($form-input-text-color,20);
-  font-style: italic;
+  @include placeholder-styles;
 }
 
 abbr[title="Required"], abbr[title="required"]{
-  color: $color-red;
-  border-bottom: none;
-  font-size: 90%;
+  @include required-asterix;
 }
 

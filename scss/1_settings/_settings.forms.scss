@@ -16,13 +16,73 @@ $text-inputs-list: 'input[type="color"]',
                    'input[type="week"]',
                    'textarea';
 
+
 $all-text-inputs:        assign-inputs($text-inputs-list);
 $all-text-inputs-active: assign-inputs($text-inputs-list, active);
 $all-text-inputs-focus:  assign-inputs($text-inputs-list, focus);
 $all-text-inputs-hover:  assign-inputs($text-inputs-list, hover);
 
-$form-input-border: 1px solid $form-border-color;
-
-$radio-check-input-size: 19px;
+$form-text-size:              14px;
+$form-input-border-base:      1px solid transparent;
+$form-input-border:           1px solid $form-border-color;
+$form-input-padding:          $tiny-spacing-unit +2 $tiny-spacing-unit;
 
 $label-spacing: 0;
+
+
+// Read only settings
+$readonly-border-color:       transparent;
+
+
+// Checkbox and Radio button seettings
+$radio-check-input-size:      19px;
+$check-radio-spacing:         25px;
+$check-radio-padding:         0 0 3px 25px;
+$check-radio-border:          2px solid $form-border-color;
+$check-radio-bg:              #fff;
+$checkbox-radius:             5px;
+$checkbox-input-icon:         "\2713";
+$radio-input-icon:            "\25CF";
+//disabled 
+$check-radio-border--disabled: #bbb;
+$check-radio-bg--disabled:    #ddd;
+$check-radio-label--disabled: #aaa;
+$check-radio-label-checked--disabled: #999;
+
+
+$required-asterix:            $color-red;
+
+
+//-- form input hover styles
+@mixin form-hover {
+      border-color: lighten($form-border-color,16);
+      border-bottom-color: darken($form-border-color, 18);
+}
+
+//-- form input focus styles
+@mixin form-focus {
+      outline: none;
+      border-color: transparent;
+      background-color: darken($base-background-color, 2);
+      border-bottom-color: $color-brand-highlight;
+}
+
+
+//-- form checkbox and radio input focus styles
+@mixin form-check-radio-focus {
+      border-bottom: 1px dotted $form-border-color;
+}
+
+
+//-- Input plceholder settings styles
+@mixin placeholder-styles{
+      color: lighten($form-input-text-color,20);
+      font-style: italic;
+}
+
+//-- Required form field asterix setting styles
+@mixin required-asterix{
+      color: $color-red;
+      border-bottom: none;
+      font-size: 90%;
+}

@@ -29,7 +29,7 @@ $color-heading-text:	#000; //$color-gray-dark;
 $color-ui:          	$color-gray-light;
 
 // Form
-$form-border-color:		$color-gray-light; 
+$form-border-color:		$color-ui; 
 $form-border-color-hover: darken($form-border-color, 18);
 $form-input-text-color:	$color-text-dark; //?? this is picked from Sketch mock-up but should it match up with one of the grey sass vars?
 
