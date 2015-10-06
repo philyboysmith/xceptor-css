@@ -1,9 +1,18 @@
 // The form styles
 
-// Import the fieldset styles
+/*
+ * -------------------------------------------------------------
+ * Fieldset and legend styles
+ * -------------------------------------------------------------
+ */
 @import 'elements.forms.fieldset';
 
 
+/*
+ * -------------------------------------------------------------
+ * Base form input styles
+ * -------------------------------------------------------------
+ */
 input,
 label,
 select {
@@ -66,8 +75,12 @@ select {
 }
 
 
-// checkboxes and radio button styles
 
+/*
+ * -------------------------------------------------------------
+ * checkboxes and radio button styles
+ * -------------------------------------------------------------
+ */
   /* Checkbox and radio button base for label styling */
   [type="checkbox"]:not(:checked),
   [type="checkbox"]:checked,
@@ -213,6 +226,11 @@ select {
   }
 
 
+/*
+ * -------------------------------------------------------------
+ * Placeholders and form attributes
+ * -------------------------------------------------------------
+ */
 [placeholder] {
   @include placeholder-styles;
 }

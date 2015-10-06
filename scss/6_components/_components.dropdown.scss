@@ -1,5 +1,6 @@
 .ui-dropdown {
 	position: relative;
+	z-index:5;
 	max-width: 200px;
 }
 
@@ -16,8 +17,7 @@
 //drop down icon button color specifics
 .button--blue .ui-dropdown__toggle__icon{border-color: lighten($button-border-color-shadow, 3)}
 .button--white .ui-dropdown__toggle__icon{border-color: $button-border-color--white; }
-.button--gray .ui-dropdown__toggle__icon{border-color: lighten($button-border-color-shadow--gray,3); }
-
+.button--gray .ui-dropdown__toggle__icon{border-color: $button-border-color-shadow--gray; }
 
 
 .ui-dropdown-list {
@@ -63,4 +63,37 @@
 
 [role="separator"] {
   border-top: 1px solid darken($form-border-color,25);
+}
+
+
+/*
+ * -------------------------------------------------------------
+ * Hide show drop down functionality
+ * -------------------------------------------------------------
+ */
+
+.ui-dropdown > .ui-dropdown-list{
+    background:#fff; /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+    background:rgba(255,255,255,0); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+    
+    position:absolute;
+    left:-9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+    opacity: 0; //css transition reasons
+    
+}
+.ui-dropdown > .ui-dropdown__toggle:hover + ul{ /* Display the dropdown on hover */
+    left:0; /* Bring back on-screen when needed */
+    opacity: 1;
+    @include transition-all(opacity);
+    //transition: opacity 0.7s ease;
+}
+//--- style the icon on active hover -- NEED TO SORT THIS OUT WHEN WE GET ICONS
+.ui-dropdown__toggle:hover {
+	.ui-dropdown__toggle__icon{
+		@include transition-all(color, 0.3s);
+	}
+	&.button--blue .ui-dropdown__toggle__icon { color: darken($button-text-color,20);}
+	&.button--white .ui-dropdown__toggle__icon { color: darken($button-text-color--white,20);}
+	&.button--gray .ui-dropdown__toggle__icon { color: darken($button-text-color--gray,20);}
+	
 }

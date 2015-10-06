@@ -25,8 +25,9 @@
  * Default Transition 
  * -------------------------------------------------------------
  */
-@mixin transition-all() {
-    transition: all 0.4s ease;
+@mixin transition-all($type: all, $speed: 0.5s, $effect: ease-in) {
+    //transition: all 0.4s ease;
+    transition: $type $speed $effect;
 }
 
 
