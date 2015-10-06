@@ -2,17 +2,38 @@
 	background-color: $color-brand-highlight;
 	color: $color-text-overlay;
 	position: relative;
-	padding: $top-bar-vertical-spacing $header-icon-wrapper-width $top-bar-vertical-spacing 2em;
+	@include rem(padding, $top-bar-vertical-spacing $header-icon-wrapper-width $top-bar-vertical-spacing $base-spacing-unit+$icon-base-width--large+5);
 	a {
 		color: inherit;
 	}
 }
 .ui-navigation-header__title {
-	@extend .gamma;
+	color: #fff;
+	@include rem(font-size, $h3-font-size);
+
 }
 .ui-navigation-header__icons {
 	position: absolute;
 	top: 0;
 	right: 0;
+	bottom: 0;
 	width: $header-icon-wrapper-width;
+
+	//$icon-base-height
+
+	svg{
+		position: absolute;
+		top: 50%;
+		left: 5px;
+		margin-top: - $icon-base-height--large /2;
+	}
+}
+
+.ui-navigation-header__logo{
+	position: absolute;
+	top: 50%;
+	left:$base-spacing-unit;
+	width:$icon-base-width--large;
+	height: $icon-base-height--large;
+	margin-top: - $icon-base-height--large /2;
 }

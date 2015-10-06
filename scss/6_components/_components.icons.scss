@@ -20,26 +20,29 @@
  * Icons
  * -------------------------------------------------------------
  */
-
+#dropdown-dropdown{
+	fill: darken($color-brand-shadow, 10); //$icon-color-base
+}
+#icon-xceptor{
+	fill: #ffffff;
+}
 
 
 use.brand-color{ // this does not work
 	fill:$icon-color-base;
 }
 
-#dropdown-caret-down{
-	fill: darken($color-brand-shadow, 10); //$icon-color-base
-}
-.icon--gray-light #dropdown-caret-down{
-	fill: $color-gray-light
-}
+
+
+
 .icon--white{
 	fill: #fff;
 }
 
 
 
-//svg > g,
+
+svg g,
 svg path {
   fill: inherit;
 }
