@@ -6,16 +6,30 @@
 
 .ui-dropdown__toggle {
 	//padding-right: 0;
-	padding-right: 0;
+	padding-right: $button-padding-right + $icon-base-width*2;
 
 }
 .ui-dropdown__toggle__icon {
-	@include rem(padding, $button-padding-top $button-padding-right/2 $button-padding-bottom);
+	position: absolute;
+	right:0;
+	top:0;
+	bottom: 0;
+	width: $icon-base-width*2;
+	//@include rem(padding, $button-padding-top $button-padding-right/2 $button-padding-bottom);
 	border-left: 1px solid;
-	@include rem(margin-left, $button-padding-right);
+	//@include rem(margin-left, $button-padding-right);
+	.#{$icon-prefix}{
+		position: absolute;
+		right: 50%;
+		margin-right: - $icon-base-width/2;
+		top: $button-padding-top;
+	}
 }
 //drop down icon button color specifics
-.button--blue .ui-dropdown__toggle__icon{border-color: lighten($button-border-color-shadow, 3)}
+.button--blue .ui-dropdown__toggle__icon{
+	border-color: lighten($button-border-color-shadow, 3);
+	.icon{ color: lighten($button-border-color-shadow, 3)}
+}
 .button--white .ui-dropdown__toggle__icon{border-color: $button-border-color--white; }
 .button--gray .ui-dropdown__toggle__icon{border-color: $button-border-color-shadow--gray; }
 

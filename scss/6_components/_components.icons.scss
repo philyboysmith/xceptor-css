@@ -1,10 +1,45 @@
-.icon {
+// class prefix is defined in the _settings.icons.scss file
+
+.#{$icon-prefix} {
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: $icon-base-width;
+  height: $icon-base-height;
+  speak: none; // screen readers
+  line-height: 1;
 }
 
-.icon--large {
-  width: 22px;
-  height: 22px;
+//--- modifiers
+.#{$icon-prefix}--large {
+  width: $icon-base-width--large;
+  height: $icon-base-height--large;
+}
+
+
+/*
+ * -------------------------------------------------------------
+ * Icons
+ * -------------------------------------------------------------
+ */
+
+
+
+use.brand-color{ // this does not work
+	fill:$icon-color-base;
+}
+
+#dropdown-caret-down{
+	fill: darken($color-brand-shadow, 10); //$icon-color-base
+}
+.icon--gray-light #dropdown-caret-down{
+	fill: $color-gray-light
+}
+.icon--white{
+	fill: #fff;
+}
+
+
+
+//svg > g,
+svg path {
+  fill: inherit;
 }
