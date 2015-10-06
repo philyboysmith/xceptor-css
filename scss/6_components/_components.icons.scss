@@ -23,17 +23,11 @@
 #dropdown-dropdown{
 	fill: darken($color-brand-shadow, 10); //$icon-color-base
 }
-#icon-xceptor{
-	fill: #ffffff;
-}
 
 
-use.brand-color{ // this does not work
+.icon--brand-color{ // this does not work
 	fill:$icon-color-base;
 }
-
-
-
 
 .icon--white{
 	fill: #fff;
@@ -42,7 +36,13 @@ use.brand-color{ // this does not work
 
 
 
-svg g,
-svg path {
+// svg g,
+// svg path {
+//   fill: inherit;
+// }
+
+* {
   fill: inherit;
+  stroke: inherit;
+  /* any other styles, such as stroke-width, that you want to override */
 }
