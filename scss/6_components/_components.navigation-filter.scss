@@ -1,4 +1,5 @@
 .ui-navigation-filter {
+	height: 50px;//$header-filter-height;
 	border-bottom: 1px solid $color-ui;
 	@extend %box-shadow--bottom
 }

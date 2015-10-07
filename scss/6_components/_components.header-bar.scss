@@ -6,11 +6,9 @@
 
 .ui-header-bar__expander {
 	@extend .ui-navigation-header__icons;
-	right: auto;
 	left: 0;
 	border: none;
 	background-color: transparent;
-
 }
 
 .ui-header-bar__expander--closed {

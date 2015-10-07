@@ -1,5 +1,9 @@
 .ui-object-list-wrapper{
-	
+	overflow-y: auto;
+	position: fixed;
+	width: $navigation-width - 1px;
+	top: $header-filter-height;
+	bottom:0;
 }
 
 .ui-object-list,
@@ -11,9 +15,14 @@
 	padding: $list-item-spacing;
 	display: block;
 	border-bottom: 1px solid $list-item-border-color;
+
 }
+
 .ui-object-list__item a{
 	@extend %ui-object-list__item;
+	color: $list-item-text-color;
+	line-height: 1;
+	position: relative;
 }
 
 .ui-object-sublist__item a{
@@ -21,3 +30,20 @@
 	background-color: $sublist-item-background-color;
 	padding-left: $sublist-item-indent;
 }
+
+
+.ui-object-list__item--folder{
+
+}
+
+.ui-object-list__icon{
+	width: $list-item-icon-width;
+	margin-left: - ($list-item-icon-width + $list-item-icon-to-text-space);
+}
+
+.ui-object-sublist__item--active{
+	a{
+		border-left: 2px solid $list-item-active-highlight-color;
+	}
+}
+

@@ -1,11 +1,19 @@
 // class prefix is defined in the _settings.icons.scss file
 
+
+
+
+
 .#{$icon-prefix} {
   display: inline-block;
   width: $icon-base-width;
   height: $icon-base-height;
   speak: none; // screen readers
+  vertical-align: text-top;
   line-height: 1;
+
+  //placeholdering style
+  background-color: pink;
 }
 
 //--- modifiers
@@ -13,10 +21,41 @@
   width: $icon-base-width--large;
   height: $icon-base-height--large;
 }
-
 .#{$icon-prefix}--no-text{
 	overflow: hidden;
 	text-indent: -9999px;
+}
+.#{$icon-prefix}--left-of-text {
+	margin-right: $icon-spacing-from-text;
+}
+.#{$icon-prefix}--right-of-text {
+	margin-left: $icon-spacing-from-text;
+}
+
+// set of styles to prevent the repeating of css value on common icon pos
+%absolute-positioning--full-height{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  
+}
+
+%absolute-positioning--vertical-middle{
+  position: absolute;
+  top: 50%;
+  margin-top: - $icon-base-height/2;
+}
+
+.#{$icon-prefix}--absolute-full-height {
+  @extend %absolute-positioning--full-height;
+}
+
+.#{$icon-prefix}--absolute-v-middle {
+  @extend %absolute-positioning--vertical-middle;
+
+  &.#{$icon-prefix}--large {
+    margin-top: - $icon-base-height--large/2;
+  }
 }
 
 /*

@@ -24,7 +24,7 @@
 .ui-breadcrumbs__item:first-child {
 	padding-left: 0;
 	a {
-		color: #81D4FA;
+		color: lighten($color-brand-highlight, 25);
 		
 	}
 	

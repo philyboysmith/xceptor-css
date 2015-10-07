@@ -14,10 +14,8 @@
 
 }
 .ui-navigation-header__icons {
-	position: absolute;
-	top: 0;
+	@extend %absolute-positioning--full-height;
 	right: 0;
-	bottom: 0;
 	width: $header-icon-wrapper-width;
 
 	//$icon-base-height
