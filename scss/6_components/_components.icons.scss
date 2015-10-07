@@ -14,6 +14,10 @@
   height: $icon-base-height--large;
 }
 
+.#{$icon-prefix}--no-text{
+	overflow: hidden;
+	text-indent: -9999px;
+}
 
 /*
  * -------------------------------------------------------------

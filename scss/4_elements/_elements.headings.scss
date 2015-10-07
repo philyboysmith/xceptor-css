@@ -22,7 +22,8 @@ h2,
 h3,
 .gamma {
     @include rem(font-size, $h3-font-size);
-    font-weight: $base-font-weight;
+    //font-weight: $base-font-weight;
+    font-weight: $light-font-weight;
     //margin-bottom: $h3-font-size * 0.75;
 }
 

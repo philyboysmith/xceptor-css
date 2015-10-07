@@ -9,7 +9,8 @@
 }
 .ui-navigation-header__title {
 	color: #fff;
-	@include rem(font-size, $h3-font-size);
+	@extend .gamma;
+	//include rem(font-size, $h3-font-size);
 
 }
 .ui-navigation-header__icons {
@@ -30,10 +31,6 @@
 }
 
 .ui-navigation-header__logo{
-	position: absolute;
-	top: 50%;
-	left:$base-spacing-unit;
-	width:$icon-base-width--large;
-	height: $icon-base-height--large;
-	margin-top: - $icon-base-height--large /2;
+	right: auto;
+	left:$small-spacing-unit;
 }

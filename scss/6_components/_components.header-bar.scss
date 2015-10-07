@@ -1,3 +1,26 @@
 .ui-header-bar {
 	background-color: $color-brand-shadow;
+	@include rem(padding, $top-bar-vertical-spacing $header-icon-wrapper-width $top-bar-vertical-spacing $base-spacing-unit+$icon-base-width--large+5);
+	position: relative;
+}
+
+.ui-header-bar__expander {
+	@extend .ui-navigation-header__icons;
+	right: auto;
+	left: 0;
+	border: none;
+	background-color: transparent;
+
+}
+
+.ui-header-bar__expander--closed {
+	
+}
+
+.ui-header-bar__icons{
+	@extend .ui-navigation-header__icons;
+}
+
+.ui-header-bar__info{
+	
 }

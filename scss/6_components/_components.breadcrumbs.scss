@@ -1,17 +1,20 @@
 .ui-breadcrumbs {
 	background-color: $color-brand-shadow;
-    padding: $top-bar-vertical-spacing $header-icon-wrapper-width $top-bar-vertical-spacing $base-spacing-unit;
+	line-height: 1;
+    //@include rem(padding, $top-bar-vertical-spacing $header-icon-wrapper-width $top-bar-vertical-spacing $base-spacing-unit);
+    //@include rem(padding, $top-bar-vertical-spacing $header-icon-wrapper-width $top-bar-vertical-spacing $base-spacing-unit+$icon-base-width--large+5);
 	@extend .inline-list;
 	display: inline-block;
 }
 .ui-breadcrumbs__item {
 	@extend .gamma;
 	color: white;
-	display: inline-block;
 	padding-left: $small-spacing-unit;
 	padding-right: $small-spacing-unit;
+	line-height: 1;
 	a {
 		color: inherit;
+		//line-height: 
 		
 	}
 }
