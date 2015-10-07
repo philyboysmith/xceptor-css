@@ -22,5 +22,10 @@
 }
 
 .ui-header-bar__info{
-	
+	float: right;
+}
+
+.ui-header-bar__username{
+	color: $color-text-overlay;
+	line-height: 1;
 }
