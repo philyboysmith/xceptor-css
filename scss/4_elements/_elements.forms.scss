@@ -52,7 +52,7 @@ textarea {
   }
   &:hover,
   &:focus {
-    @extend .transition-all;
+    @extend .default-transition;
   }
   &:read-only{
     border-color: $readonly-border-color;
@@ -142,7 +142,7 @@ select {
     color: $color-brand-highlight;
     line-height: 1.5rem;
     //transition: all .2s;
-    @extend .transition-all;
+    @extend .default-transition;
   }
   //option 2
   /* Checkboxes- checked mark aspect */

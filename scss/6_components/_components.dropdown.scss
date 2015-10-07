@@ -98,13 +98,13 @@
 .ui-dropdown > .ui-dropdown__toggle:hover + ul{ /* Display the dropdown on hover */
     left:0; /* Bring back on-screen when needed */
     opacity: 1;
-    @include transition-all(opacity);
+    @include transition(opacity);
     //transition: opacity 0.7s ease;
 }
 //--- style the icon on active hover -- NEED TO SORT THIS OUT WHEN WE GET ICONS
 .ui-dropdown__toggle:hover {
 	.ui-dropdown__toggle__icon{
-		@include transition-all(color, 0.3s);
+		@include transition(color, 0.3s);
 	}
 	&.button--blue .ui-dropdown__toggle__icon { color: darken($button-text-color,20);}
 	&.button--white .ui-dropdown__toggle__icon { color: darken($button-text-color--white,20);}

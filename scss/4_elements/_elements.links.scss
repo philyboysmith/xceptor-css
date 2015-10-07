@@ -1,7 +1,7 @@
 a {
     text-decoration: none;
     color: $color-link;
-    @extend .transition-all;
+    @extend .default-transition;
     @include rem(border-bottom, 1px solid transparent);
   
     &:visited{

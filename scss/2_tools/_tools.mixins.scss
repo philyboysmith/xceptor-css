@@ -16,7 +16,7 @@
     @include rem(border-bottom-width, $button-border-bottom-width);
     border-style: $button-border-style;
     // transitions
-    @extend .transition-all;
+    @extend .default-transition;
 
 }
 
@@ -25,10 +25,16 @@
  * Default Transition 
  * -------------------------------------------------------------
  */
-@mixin transition-all($type: all, $speed: 0.5s, $effect: ease-in) {
+@mixin transition($type: all, $speed: 0.5s, $effect: ease-in) {
     //transition: all 0.4s ease;
     transition: $type $speed $effect;
 }
+
+
+@mixin transform-rotate($degrees: 180deg) {
+    transform: rotate($degrees);
+}
+
 
 
 /*

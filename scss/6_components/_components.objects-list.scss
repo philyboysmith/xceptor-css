@@ -33,14 +33,35 @@
 
 
 .ui-object-list__item--folder{
+	a{
+		padding-right: $base-spacing-unit + $small-spacing-unit;
+	}
+	
+	//hide the sublist
+	> .ui-object-sublist{
+		display: none;
+	}
+}
+.ui-object-list__item--folder--open{
+	.ui-object-list__toggle{
+		@extend .rotate-90;
+	}
 
+	//Open sublist on page load
+	> .ui-object-sublist{
+		display: block;
+	}
 }
 
 .ui-object-list__icon{
 	width: $list-item-icon-width;
 	margin-left: - ($list-item-icon-width + $list-item-icon-to-text-space);
 }
-
+.ui-object-list__toggle{
+	right: $small-spacing-unit;
+	@include transition(all, 0.3s);
+	
+}
 .ui-object-sublist__item--active{
 	a{
 		border-left: 2px solid $list-item-active-highlight-color;

@@ -9,5 +9,5 @@
     	}
     border-right: 1px solid $color-ui;
     @extend %box-shadow--right;
-    @include transition-all();
+    @include transition;
 }

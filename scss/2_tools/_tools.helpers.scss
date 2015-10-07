@@ -52,10 +52,13 @@
 	color: $color-ui;
 }
 
+
 // ----- Clearfix class
 .clearfix {
   @include clearfix;
 }
+
+
 
 // ----- Positioning styles 
 
@@ -70,9 +73,18 @@
 .inline--block {display: inline-block;}
 .hide {display:none !important}
 
-// transitions
-.transition-all{
-	@include transition-all;
+//----- transitions
+.default-transition{
+	@include transition;
+}
+.rotate-180{
+	@include transform-rotate(180deg);
+}
+.rotate-90{
+	@include transform-rotate(90deg);
+}
+.rotate-90--counter{
+	@include transform-rotate(90deg);
 }
 
 // ----- Spacing helper styles
