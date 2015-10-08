@@ -36,9 +36,13 @@
  * OBJECTS
  * No cosmetic attributes. The words color and shadow should 
  * never appear
+ * Grid..................Grid layout classes
  *
  *
  * COMPONENTS
+ * Astectics of UI components. The look and feel of the UI is 
+ * styled up in here. Colour, type styles , etc.
+ *
  * Icons.................Icons specific styles
  *
  *
@@ -87,6 +91,7 @@
 @import '4_elements/elements.page';
 @import '4_elements/elements.forms';
 
+@import '5_objects/objects.grid';
 @import '5_objects/objects.content';
 @import '5_objects/objects.body';
 @import '5_objects/objects.header-bar';
