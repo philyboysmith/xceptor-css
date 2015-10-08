@@ -10,12 +10,12 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script>
-    var ajax = new XMLHttpRequest();
-    ajax.open("GET", "img/svg-defs.svg", true);
-    ajax.send();
-    ajax.onload = function(e) {
-        $('#svg').append(ajax.responseText);  
-    }
+        var ajax = new XMLHttpRequest();
+        ajax.open("GET", "img/svg-defs.svg", true);
+        ajax.send();
+        ajax.onload = function(e) {
+            $('#svg').append(ajax.responseText);  
+        }
     </script>
 </head>
 <body>
@@ -57,7 +57,7 @@
                         <li class="ui-object-sublist__item">
                                 <a href="#">
                                 <svg class="icon -absolute-v-middle ui-object-list__icon">
-                          <use xlink:href="#menu"></use>
+                          <use xlink:href="#input-excel"></use>
                         </svg> File within</a></li>
                             <li class="ui-object-sublist__item ui-object-sublist__item--active">
                                 <a href="#">
