@@ -5,13 +5,24 @@
 }
 
 .ui-panel-header {
-	border-bottom: 1px solid $color-ui;
-	padding: $small-spacing-unit * 1.5;
-	border-left: 4px solid $color-brand;
+
 }
 
-.ui-panel-header__title {
-	@extend .gamma;
+.ui-panel-header__title {	
+	a{	
+		@extend .gamma;
+		color: $panel-header-color;
+		padding: $small-spacing-unit * 1.5;
+		display: block;
+		border-bottom: 1px solid $color-ui;
+		border-left: 4px solid $color-brand;
+		&:visited{
+			color: $panel-header-color;
+		}
+		&:hover{
+			border-bottom-color: $color-brand-highlight;
+		}
+	}
 }
 
 .ui-panel-navigation-wrapper {
@@ -27,6 +38,7 @@
 
 .ui-panel-navigation::after {
 	position: absolute;
+	display: block;
 	content: " ";
 	height: 100%;
 	right: 0;
@@ -52,6 +64,9 @@
 }
 .ui-panel-body {
 	padding: $base-spacing-unit;
-	margin-left: $panel-navigation-width;
+	
 	height: 100%;
+}
+.ui-panel-navigation-wrapper + .ui-panel-body {
+	margin-left: $panel-navigation-width;
 }
