@@ -58,6 +58,16 @@
   @include clearfix;
 }
 
+// ----- Clear floats
+.clear-left{
+	clear: left;
+}
+.clear-right{
+	clear: right;
+}
+.clear-both{
+	clear: both;
+}
 
 
 // ----- Positioning styles 
@@ -65,12 +75,12 @@
 .left        { float: left; }
 .right       { float: right; }
 
-.text--left   { text-align: left; }
-.text--right  { text-align: right; }
-.text--center { text-align: center; }
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }
+.text-center { text-align: center; }
 
 .inline {display: inline;}
-.inline--block {display: inline-block;}
+.inline-block {display: inline-block;}
 .hide {display:none !important}
 
 //----- transitions

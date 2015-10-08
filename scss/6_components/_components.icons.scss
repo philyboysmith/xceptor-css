@@ -12,7 +12,7 @@
   vertical-align: text-top;
   line-height: 1;
 
-  //placeholdering style
+  //placeholdering style -- PLEASE REMOVE
   background-color: pink;
 }
 
@@ -21,6 +21,11 @@
   width: $icon-base-width--large;
   height: $icon-base-height--large;
 }
+.#{$icon-prefix}--x-large {
+  width: $icon-base-width--x-large;
+  height: $icon-base-height--x-large;
+}
+
 .#{$icon-prefix}--no-text{
 	overflow: hidden;
 	text-indent: -9999px;

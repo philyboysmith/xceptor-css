@@ -5,6 +5,7 @@
  * Global...............Global variables.
  * Colour...............Colour variables.
  * Typography...........Type variables (sizes)
+ * Grid.................Setting varibles for the custom grid
  *
  *
  * TOOLS
@@ -40,7 +41,7 @@
  *
  *
  * COMPONENTS
- * Astectics of UI components. The look and feel of the UI is 
+ * Aesthetics of UI components. The look and feel of the UI is 
  * styled up in here. Colour, type styles , etc.
  *
  * Icons.................Icons specific styles
@@ -71,6 +72,8 @@
 @import '1_settings/_settings.buttons';
 @import '1_settings/_settings.forms';
 @import '1_settings/_settings.breakpoints';
+@import '1_settings/_settings.grid';
+
 
 @import '2_tools/tools.mixins';
 @import '2_tools/tools.functions';
@@ -108,6 +111,8 @@
 @import '6_components/components.button-list';
 @import '6_components/components.dropdown';
 @import '6_components/components.header-bar';
+@import '6_components/components.item-header';
+
 
 @import '7_trumps/trumps.state';
 
