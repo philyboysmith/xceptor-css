@@ -5,18 +5,19 @@ module.exports = function(grunt) {
   	pkg: grunt.file.readJSON('package.json'),
   	svgstore: {
   		options: {
-          prefix : 'icon-', // This will prefix each ID
-          svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG
-            xmlns: 'http://www.w3.org/2000/svg',
-            includedemo: true
-          }
-    },
-    default : {
-      files: {
-        'img/svg-defs.svg': ['icons/*.svg'],
+        cleanup: true,
+        cleanupdefs: true,
+        formatting : {
+          indent_size : 2
+        }
+      },
+      default : {
+        files: {
+          'img/svg-defs.svg': ['icons/*.svg'],
+        }
       }
     }
-  }
+
 
   });
   grunt.loadNpmTasks('grunt-svgstore');
