@@ -41,7 +41,7 @@
 
 .ui-object-sublist__item a{
 	@extend %ui-object-list__item;
-	background-color: $color-ui;
+	background-color: $color-gray-lighter;
 	padding-left: $sublist-item-indent;
 }
 
