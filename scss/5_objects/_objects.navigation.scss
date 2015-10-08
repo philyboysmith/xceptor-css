@@ -7,7 +7,7 @@
     	@media screen and (max-width: $tablet-and-lower) {
     		width: $navigation-width--tablet
     	}
-    border-right: 1px solid $color-ui;
+    border-right: 1px solid $color-gray-light;
     @extend %box-shadow--right;
     @include transition;
 }

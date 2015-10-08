@@ -2,7 +2,7 @@
 	height: 100%;
     margin-left: $navigation-width;
     @extend .default-transition;
-    z-index:10000;
+    z-index: $z-content;
     background: white;
     position: relative;
 }

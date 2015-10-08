@@ -4,12 +4,12 @@ $list-item-icon-to-text-space: $small-spacing-unit;
 $list-item-spacing: $small-spacing-unit $base-spacing-unit $small-spacing-unit $base-spacing-unit+$list-item-icon-width+$list-item-icon-to-text-space ;
 //$list-item-spacing--folder: $small-spacing-unit $base-spacing-unit+ $small-spacing-unit$small-spacing-unit;
 
-$list-item-border-color: #DDDDDD;//$color-gray;
+$list-item-border-color: $color-gray-light;
 $list-item-text-color: $color-heading-text;
 
 $list-item-active-highlight-l-border: 3px;
 $list-item-active-highlight-color: $color-teal;
 
 
-$sublist-item-background-color: $color-gray-lighter;//$color-ui;
+$sublist-item-background-color: $color-gray-lighter;
 $sublist-item-indent: ($base-spacing-unit + $small-spacing-unit) + ($small-spacing-unit + $list-item-icon-width + $list-item-icon-to-text-space);

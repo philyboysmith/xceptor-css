@@ -1,11 +1,13 @@
 .ui-panel {
-	border-top: 1px solid $color-ui;
+	border-top: 1px solid $color-gray-light;
 	@include clearfix();
 	background: white;
 }
 
 .ui-panel-header {
-
+	border-bottom: 1px solid $color-gray-light;
+	padding: $small-spacing-unit * 1.5;
+	border-left: 4px solid $color-brand;
 }
 
 .ui-panel-header__title {	
@@ -61,12 +63,15 @@
 
 .ui-panel-content {
 	position: relative;
+	background-color: $panel-navigation-background-color;
 }
 .ui-panel-body {
 	padding: $base-spacing-unit;
-	
+	background-color: $panel-body-background-color;
 	height: 100%;
+
 }
 .ui-panel-navigation-wrapper + .ui-panel-body {
 	margin-left: $panel-navigation-width;
+
 }
