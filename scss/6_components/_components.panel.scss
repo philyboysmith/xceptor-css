@@ -1,11 +1,11 @@
 .ui-panel {
-	border-top: 1px solid $color-ui;
+	border-top: 1px solid $color-gray-light;
 	@include clearfix();
 	background: white;
 }
 
 .ui-panel-header {
-	border-bottom: 1px solid $color-ui;
+	border-bottom: 1px solid $color-gray-light;
 	padding: $small-spacing-unit * 1.5;
 	border-left: 4px solid $color-brand;
 }
@@ -49,9 +49,11 @@
 
 .ui-panel-content {
 	position: relative;
+	background-color: $panel-navigation-background-color;
 }
 .ui-panel-body {
 	padding: $base-spacing-unit;
 	margin-left: $panel-navigation-width;
 	height: 100%;
+	background-color: $panel-body-background-color;
 }

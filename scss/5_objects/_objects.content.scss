@@ -1,8 +1,8 @@
 .o-content {
 	height: 100%;
     margin-left: $navigation-width;
-    @include transition();
-    z-index:10000;
+    @extend .default-transition;
+    z-index: $z-content;
     background: white;
     position: relative;
 }

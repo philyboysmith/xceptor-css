@@ -8,3 +8,15 @@
 .ui-item-header__links {
 
 }
+
+.ui-item-header__icon {
+	width: $icon-base-width--x-large;
+	height: $icon-base-height--x-large;
+	background-color: $color-green;
+}
+
+.ui-item-header__status {
+	float: right;
+	font-weight: $light-font-weight;
+	margin-top: $small-spacing-unit;
+}

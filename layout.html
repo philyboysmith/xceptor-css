@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <script src="bower_components/modernizr/modernizr.js"></script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
     <script>
         var ajax = new XMLHttpRequest();
         ajax.open("GET", "img/svg-defs.svg", true);
@@ -20,20 +21,21 @@
 </head>
 <body>
     <div id="svg" class="hide"></div>
+
     <div class="o-wrapper">
         <div class="o-navigation" role="navigation" aria-label="Main navigation">
             <header class="ui-navigation-header">
                 <i class="ui-navigation-header__logo ui-navigation-header__icons">
-                    <svg class="icon -large xceptor -white">
+                    <svg class="icon icon--large icon-xceptor icon--white">
                       <use xlink:href="#xceptor"></use>
                     </svg>
                 </i>
                 <h1 class="ui-navigation-header__title">Configure</h1>
                 <div class="ui-navigation-header__icons">
-                    <svg class="icon -large menu -white">
+                    <svg class="icon icon--large icon-menu icon--white">
                       <use xlink:href="#menu"></use>
                     </svg>
-                    <!-- <svg class="icon search">
+                    <!-- <svg class="icon icon-search">
                       <use xlink:href="#search"></use>
                     </svg> -->
                 </div>
@@ -48,170 +50,169 @@
                 <ul class="ui-object-list margin--bottom--small">
                     
                     <li class="ui-object-list__item  ui-object-list__item--folder"><a href="#">
-                        <svg class="icon -absolute-v-middle ui-object-list__icon">
+                        <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                           <use xlink:href="#menu"></use>
-                        </svg> Folder 1<svg class="icon -absolute-v-middle ui-object-list__toggle">
+                        </svg> Folder 1<svg class="icon icon--absolute-v-middle ui-object-list__toggle">
                           <use xlink:href="#chevron-right"></use>
                         </svg></a>
                         <ul class="ui-object-sublist">
                         <li class="ui-object-sublist__item">
                                 <a href="#">
-                                <svg class="icon -absolute-v-middle ui-object-list__icon">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                           <use xlink:href="#input-excel"></use>
                         </svg> File within</a></li>
                             <li class="ui-object-sublist__item ui-object-sublist__item--active">
                                 <a href="#">
-                                <svg class="icon -absolute-v-middle ui-object-list__icon">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                           <use xlink:href="#menu"></use>
                         </svg> File within a folder</a></li>
                             <li class="ui-object-sublist__item"><a href="#">
-                                <svg class="icon -absolute-v-middle ui-object-list__icon">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                                   <use xlink:href="#menu"></use>
                                 </svg>  File name that is really really looooooongggg</a></li>
                             <li class="ui-object-sublist__item"><a href="#">
-                                <svg class="icon -absolute-v-middle ui-object-list__icon">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                                   <use xlink:href="#menu"></use>
                                 </svg> File</a></li> 
                         </ul>
                     </li>
                     <li class="ui-object-list__item  ui-object-list__item--folder ui-object-list__item--folder--open"><a href="#">
-                        <svg class="icon -absolute-v-middle ui-object-list__icon">
+                        <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                           <use xlink:href="#menu"></use>
-                        </svg> Folder 2<svg class="icon -absolute-v-middle ui-object-list__toggle">
+                        </svg> Folder 2<svg class="icon icon--absolute-v-middle ui-object-list__toggle">
                           <use xlink:href="#chevron-right"></use>
                         </svg></a>
                         <ul class="ui-object-sublist">
                             <li class="ui-object-sublist__item">
-                                    <a href="#">
-                                    <svg class="icon -absolute-v-middle ui-object-list__icon">
-                              <use xlink:href="#menu"></use>
-                            </svg> File within</a></li>
-                                <li class="ui-object-sublist__item ui-object-sublist__item--active">
-                                    <a href="#">
-                                    <svg class="icon -absolute-v-middle ui-object-list__icon">
-                              <use xlink:href="#menu"></use>
-                            </svg> File within a folder</a>
-
+                                <a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                                  <use xlink:href="#menu"></use>
+                                </svg> File within</a></li>
+                            <li class="ui-object-sublist__item ui-object-sublist__item--active">
+                                <a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                                  <use xlink:href="#menu"></use>
+                                </svg> File within a folder</a>
                             </li>
-
-                            <li class="ui-object-sublist__item"><a href="#">
-                                <svg class="icon -absolute-v-middle ui-object-list__icon">
+                            <li class="ui-object-sublist__item">
+                                <a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                                   <use xlink:href="#menu"></use>
                                 </svg>  File name that is really really looooooongggg</a></li>
-                            <li class="ui-object-sublist__item"><a href="#">
-                                <svg class="icon -absolute-v-middle ui-object-list__icon">
+                            <li class="ui-object-sublist__item">
+                                <a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                                   <use xlink:href="#menu"></use>
                                 </svg> File</a></li>
-                            
                         </ul>
                     </li>
                     <li class="ui-object-list__item  ui-object-list__item--folder"><a href="#">
-                        <svg class="icon -absolute-v-middle ui-object-list__icon">
+                        <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                           <use xlink:href="#menu"></use>
-                        </svg> Folder 3<svg class="icon -absolute-v-middle ui-object-list__toggle">
+                        </svg> Folder 3<svg class="icon icon--absolute-v-middle ui-object-list__toggle">
                           <use xlink:href="#chevron-right"></use>
                         </svg></a>
                         <ul class="ui-object-sublist">
                         <li class="ui-object-sublist__item">
                                 <a href="#">
-                                <svg class="icon -absolute-v-middle ui-object-list__icon">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                           <use xlink:href="#menu"></use>
                         </svg> File within</a></li>
-                            <li class="ui-object-sublist__item ui-object-sublist__item--active">
+                            <li class="ui-object-sublist__item">
                                 <a href="#">
-                                <svg class="icon -absolute-v-middle ui-object-list__icon">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                           <use xlink:href="#menu"></use>
                         </svg> File within a folder</a></li>
                             <li class="ui-object-sublist__item"><a href="#">
-                                <svg class="icon -absolute-v-middle ui-object-list__icon">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                                   <use xlink:href="#menu"></use>
                                 </svg>  File name</a></li>
                                 <li class="ui-object-list__item  ui-object-list__item--folder"><a href="#">
-                                <svg class="icon -absolute-v-middle ui-object-list__icon">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                                   <use xlink:href="#menu"></use>
-                                </svg> Folder 3a<svg class="icon -absolute-v-middle ui-object-list__toggle">
+                                </svg> Folder 3a<svg class="icon icon--absolute-v-middle ui-object-list__toggle">
                                   <use xlink:href="#chevron-right"></use>
                                 </svg></a>
                                 <ul class="ui-object-sublist">
                                 <li class="ui-object-sublist__item">
                                         <a href="#">
-                                        <svg class="icon -absolute-v-middle ui-object-list__icon">
+                                        <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                                   <use xlink:href="#menu"></use>
                                 </svg> File within</a></li>
-                                    <li class="ui-object-sublist__item ui-object-sublist__item--active">
+                                    <li class="ui-object-sublist__item">
                                         <a href="#">
-                                        <svg class="icon -absolute-v-middle ui-object-list__icon">
+                                        <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                                   <use xlink:href="#menu"></use>
                                 </svg> File within a folder</a></li>
                                     <li class="ui-object-sublist__item"><a href="#">
-                                        <svg class="icon -absolute-v-middle ui-object-list__icon">
+                                        <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                                           <use xlink:href="#menu"></use>
                                         </svg>  File name</a></li>
                                     <li class="ui-object-sublist__item"><a href="#">
-                                        <svg class="icon -absolute-v-middle ui-object-list__icon">
+                                        <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                                           <use xlink:href="#menu"></use>
                                         </svg> Filename</a></li> 
                                 </ul>
                             </li>
                             <li class="ui-object-sublist__item"><a href="#">
-                                <svg class="icon -absolute-v-middle ui-object-list__icon">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                                   <use xlink:href="#menu"></use>
                                 </svg> Filename</a></li> 
                         </ul>
                     </li>
                     <li class="ui-object-list__item  ui-object-list__item--folder"><a href="#">
-                        <svg class="icon -absolute-v-middle ui-object-list__icon">
+                        <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                           <use xlink:href="#menu"></use>
-                        </svg> Folder 4 <svg class="icon -absolute-v-middle ui-object-list__toggle">
+                        </svg> Folder 4 <svg class="icon icon--absolute-v-middle ui-object-list__toggle">
                           <use xlink:href="#chevron-right"></use>
                         </svg></a>
                         <ul class="ui-object-sublist">
                             <li class="ui-object-sublist__item">
                                 <a href="#">
-                                <svg class="icon -absolute-v-middle ui-object-list__icon">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                           <use xlink:href="#menu"></use>
                         </svg> File</a></li>
                             <li class="ui-object-sublist__item">
                                 <a href="#">
-                                <svg class="icon -absolute-v-middle ui-object-list__icon">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                           <use xlink:href="#menu"></use>
                         </svg> Filename</a></li>
                         </ul>
                     </li>
                     <li class="ui-object-list__item  ui-object-list__item--folder"><a href="#">
-                        <svg class="icon -absolute-v-middle ui-object-list__icon">
+                        <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                           <use xlink:href="#menu"></use>
-                        </svg> Folder 5 <svg class="icon -absolute-v-middle ui-object-list__toggle">
+                        </svg> Folder 5 <svg class="icon icon--absolute-v-middle ui-object-list__toggle">
                           <use xlink:href="#chevron-right"></use>
                         </svg></a>
                         <ul class="ui-object-sublist">
                             <li class="ui-object-sublist__item">
                                 <a href="#">
-                                <svg class="icon -absolute-v-middle ui-object-list__icon">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                           <use xlink:href="#menu"></use>
                         </svg> File</a></li>
                             <li class="ui-object-sublist__item">
                                 <a href="#">
-                                <svg class="icon -absolute-v-middle ui-object-list__icon">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                           <use xlink:href="#menu"></use>
                         </svg> Filename</a></li>
                         </ul>
                     </li>
                     <li class="ui-object-list__item  ui-object-list__item--folder"><a href="#">
-                        <svg class="icon -absolute-v-middle ui-object-list__icon">
+                        <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                           <use xlink:href="#menu"></use>
-                        </svg> Folder 6 <svg class="icon -absolute-v-middle ui-object-list__toggle">
+                        </svg> Folder 6 <svg class="icon icon--absolute-v-middle ui-object-list__toggle">
                           <use xlink:href="#chevron-right"></use>
                         </svg></a>
                         <ul class="ui-object-sublist">
                             <li class="ui-object-sublist__item">
                                 <a href="#">
-                                <svg class="icon -absolute-v-middle ui-object-list__icon">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                           <use xlink:href="#menu"></use>
                         </svg> File</a></li>
                             <li class="ui-object-sublist__item">
                                 <a href="#">
-                                <svg class="icon -absolute-v-middle ui-object-list__icon">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
                           <use xlink:href="#menu"></use>
                         </svg> Filename</a></li>
                         </ul>
@@ -224,7 +225,7 @@
             <div class="o-header-bar">
                 <div class="ui-header-bar">
                     <button class="ui-header-bar__expander " id="js-sidebar-trigger" title="Collapse / Expand Menu">
-                    <svg class="icon -large menu -white">
+                    <svg class="icon icon--large icon-menu icon--white">
                       <use xlink:href="#menu"></use>
                     </svg> 
                     </button>
@@ -234,34 +235,71 @@
                         <li class="ui-breadcrumbs__item"><a href="#item1">Item 3</a></li>
                     </ol>
                     <div class="ui-header-bar__info">
-                    <span class="ui-header-bar__username">Username</span>
+                   
                     <a href="#information" class="ui-header-bar__icons">
-                        <svg class="icon -large menu -white">
-                          <use xlink:href="#dropdown"></use>
+                        <svg class="icon icon--large icon-menu icon--white">
+                          <use xlink:href="#menu"></use>
                         </svg>
                     </a>
                         
                     </div>
                 </div>
             </div>
-            <div class="o-body  o-body--collapse">
-                <div class="ui-item-header">
-                    <div class="ui-item-header__details">
-                        <h1 class="text--blue">Bank View London <span class="gamma text--black">Created June 9th 2015</span></h1>
-                        <div class="text--grey">
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            <div class="o-body o-body--collapse">
+            <!-- ui-item-header -->
+                <div class="ui-item-header grid grid--padding">
+                    <div class="ui-item-header__details col--1-2">
+                        <div class="grid">
+                        
+                            <svg class="icon ui-item-header__icon icon--white icon--left-of-text left">
+                              <use xlink:href="#menu"></use>
+                            </svg> 
+                        
+                        <h1 class="text--blue margin-bottom--tiny">Bank View London </h1>
+                        <span class="gamma text--black ">Created June 9th 2015</span>
+                        <div class="ui-item-header__desc clear-left margin-top--base">
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. </p>
+                        </div>
                         </div>
                     </div>
-                    <div class="ui-item-header__links">
-                        <ul class="ui-button-list">
-                            <li class="ui-button-list__item">Approved</li>
-                            <li class="ui-button-list__item"><a href="#" class="button button--blue">Edit</a></li>
-                            <li class="ui-button-list__item"><a href="#" class="button button--white">Test</a></li>
-                            <li class="ui-button-list__item"><a href="#" class="button button--white">Review Changes</a></li>
-                            <li class="ui-button-list__item"><a href="#" class="button button--white button--dropdown">Review Changes<span class="caret"></span></a></li>
+                    <div class="ui-item-header__links col--1-2">
+                        <ul class="ui-button-list text-right">
+                            <li class="ui-button-list__item"><a href="#" class="button button--blue">    <svg class="icon icon--left-of-text icon-dropdown">
+                                  <use xlink:href="#dropdown" class="icon--white"></use>
+                                </svg>Edit</a></li>
+                            <li class="ui-button-list__item"><a href="#" class="button button--white">    <svg class="icon icon--left-of-text icon-dropdown">
+                                  <use xlink:href="#dropdown" class="icon--white"></use>
+                                </svg>Test</a></li>
+                            <li class="ui-button-list__item"><a href="#" class="button button--white">
+                                <svg class="icon icon--left-of-text icon-dropdown">
+                                  <use xlink:href="#dropdown" class="icon--white"></use>
+                                </svg>Review Changes</a></li>
+                            <li><div class="ui-dropdown inline--block">
+                            <button class="button button--white ui-dropdown__toggle">More <i class="ui-dropdown__toggle__icon">
+                                <svg class="icon icon-dropdown">
+                                  <use xlink:href="#dropdown" class="icon--white"></use>
+                                </svg>
+                            </i></button>
+                            <ul class="ui-dropdown-list">
+                                <li class="ui-dropdown-list__header">
+                                    <h3>Administrator</h3>
+                                    <h4><a href="#">Edit profile</a></h4>
+                                </li>
+                                <li class="ui-dropdown-list__item"><a href="#">Action</a></li>
+                                <li class="ui-dropdown-list__item"><a href="#">Another action</a></li>
+                                <li class="ui-dropdown-list__item"><a href="#">Something else here</a></li>
+                                <li class="ui-dropdown-list__item divider" role="separator"></li>
+                                <li class="ui-dropdown-list__item"><a href="#">Separated link</a></li>
+                            </ul>
+                        </div></li>
                         </ul>
+                        <div class="ui-item-header__status text--black">
+                        <svg class="icon icon--left-of-text">
+                            <use xlink:href="#dropdown" class="icon--white"></use>
+                            </svg>Approved</div>
                     </div>
                 </div>
+                <!-- END ui-item-header -->
                 <div class="ui-panel">
                     <div class="ui-panel-header">
                         <h1 class="ui-panel-header__title">
@@ -354,7 +392,6 @@
         </div>
     </div> 
 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script>
         $('#js-sidebar-trigger').click(function(){
             $('.o-content').toggleClass('o-content--full-screen');
