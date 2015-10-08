@@ -15,14 +15,28 @@
 	padding: $list-item-spacing;
 	display: block;
 	border-bottom: 1px solid $list-item-border-color;
+	border-left: $list-item-active-highlight-l-border solid transparent;
 
 }
 
-.ui-object-list__item a{
-	@extend %ui-object-list__item;
-	color: $list-item-text-color;
-	line-height: 1;
-	position: relative;
+%ui-object-sublist__item--active{
+	border-left: $list-item-active-highlight-l-border solid $list-item-active-highlight-color;
+	font-weight: $bold-font-weight;
+}
+
+// .ui-object-sublist{
+// 	border-left:2px solid darken($sublist-item-background-color, 15);
+// }
+
+
+.ui-object-list__item {
+	
+	a{
+		@extend %ui-object-list__item;
+		color: $list-item-text-color;
+		line-height: 1;
+		position: relative;
+	}
 }
 
 .ui-object-sublist__item a{
@@ -41,7 +55,27 @@
 	> .ui-object-sublist{
 		display: none;
 	}
+
+	// nested folder style
+	.ui-object-list__item--folder{
+		background-color: darken($sublist-item-background-color, 5);
+	}
 }
+
+
+
+
+//--- icons
+.ui-object-list__icon{
+	width: $list-item-icon-width;
+	margin-left: - ($list-item-icon-width + $list-item-icon-to-text-space);
+}
+.ui-object-list__toggle{
+	right: $small-spacing-unit;
+	@include transition(all, 0.3s);	
+}
+
+//--- item modifiers
 .ui-object-list__item--folder--open{
 	> a > .ui-object-list__toggle{
 		@extend .rotate-90;
@@ -52,19 +86,10 @@
 		display: block;
 	}
 }
-
-.ui-object-list__icon{
-	width: $list-item-icon-width;
-	margin-left: - ($list-item-icon-width + $list-item-icon-to-text-space);
-}
-.ui-object-list__toggle{
-	right: $small-spacing-unit;
-	@include transition(all, 0.3s);
-	
-}
 .ui-object-sublist__item--active{
+	
 	a{
-		border-left: 2px solid $list-item-active-highlight-color;
+		@extend %ui-object-sublist__item--active;
 	}
 }
 

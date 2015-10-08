@@ -7,7 +7,9 @@ $list-item-spacing: $small-spacing-unit $base-spacing-unit $small-spacing-unit $
 $list-item-border-color: #DDDDDD;//$color-gray;
 $list-item-text-color: $color-heading-text;
 
+$list-item-active-highlight-l-border: 3px;
 $list-item-active-highlight-color: $color-teal;
+
 
 $sublist-item-background-color: $color-gray-lighter;//$color-ui;
 $sublist-item-indent: ($base-spacing-unit + $small-spacing-unit) + ($small-spacing-unit + $list-item-icon-width + $list-item-icon-to-text-space);
