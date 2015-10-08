@@ -43,7 +43,7 @@
 	}
 }
 .ui-object-list__item--folder--open{
-	.ui-object-list__toggle{
+	> a > .ui-object-list__toggle{
 		@extend .rotate-90;
 	}
 
