@@ -2,6 +2,8 @@
     float: left;
     padding: $base-spacing-unit;
     width: 100%;
+    overflow: hidden;
+    border-left: 1px solid $color-gray-light;
 }
 
 .o-body--collapse {

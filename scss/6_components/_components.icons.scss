@@ -47,6 +47,7 @@
 
 %absolute-positioning--vertical-middle{
   position: absolute;
+  display: block;
   top: 50%;
   margin-top: - $icon-base-height/2;
 }

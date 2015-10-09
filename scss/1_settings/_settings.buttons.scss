@@ -6,10 +6,9 @@ $button-border-bottom-width:	3px;
 $button-border-style:			solid; 
 $button-radius:					$base-radius;
 $button-padding-top:			$small-spacing-unit;
-$button-padding-right:			$base-spacing-unit;
-$button-padding-bottom:			$small-spacing-unit;
+$button-padding-right:			$small-spacing-unit+2;
+$button-padding-bottom:			$button-padding-top+3;
 $button-padding-left:			$button-padding-right;
-
 
 
 

@@ -2,14 +2,15 @@
 	border-top: 1px solid $color-gray-light;
 	@include clearfix();
 	background: white;
+	@include rem(margin-bottom, 2px);
 }
 
 .ui-panel-header {
-	border-bottom: 1px solid $color-gray-light;
-	padding: $small-spacing-unit * 1.5;
+
+}
+%ui-panel-header__title--hover{
 	border-left: 4px solid $color-brand;
 }
-
 .ui-panel-header__title {	
 	a{	
 		@extend .gamma;
@@ -17,15 +18,46 @@
 		padding: $small-spacing-unit * 1.5;
 		display: block;
 		border-bottom: 1px solid $color-ui;
-		border-left: 4px solid $color-brand;
+		border-left: 4px solid transparent;
+		position: relative;
 		&:visited{
 			color: $panel-header-color;
 		}
 		&:hover{
-			border-bottom-color: $color-brand-highlight;
+			@extend %ui-panel-header__title--hover;
 		}
 	}
+	
 }
+
+.ui-panel-header__icon{
+	@extend %absolute-positioning--full-height;
+	right: $small-spacing-unit * 1.5;
+	width: $icon-base-width--large;
+	@extend .default-transition;
+
+	svg{
+		@extend %absolute-positioning--vertical-middle;
+		margin-top: - $icon-base-height--large/2;
+		
+	}
+}
+
+
+//class applied when the panel header is opened
+.ui-panel--open{
+	.ui-panel-header i{
+		@extend .rotate-90;
+	}
+	.ui-panel-content{
+		display: block;// need to remove this when goes into angular
+	}
+	.ui-panel-header__title a{
+		@extend %ui-panel-header__title--hover;
+	}
+}
+
+
 
 .ui-panel-navigation-wrapper {
 	background-color: $panel-navigation-background-color;
@@ -64,9 +96,11 @@
 .ui-panel-content {
 	position: relative;
 	background-color: $panel-navigation-background-color;
+	display: none;// need to remove this when goes into angular
 }
+
 .ui-panel-body {
-	padding: $base-spacing-unit;
+	@extend .content;
 	background-color: $panel-body-background-color;
 	height: 100%;
 

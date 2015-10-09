@@ -35,7 +35,7 @@ $all-text-inputs-hover:  assign-inputs($text-inputs-list, hover);
 $form-text-size:              14px;
 $form-input-border-base:      1px solid transparent;
 $form-input-border:           1px solid $form-border-color;
-$form-input-padding:          $tiny-spacing-unit +2 $tiny-spacing-unit;
+$form-input-padding:          $tiny-spacing-unit+2 $tiny-spacing-unit $tiny-spacing-unit+2 0;
 
 $label-spacing: 0;
 

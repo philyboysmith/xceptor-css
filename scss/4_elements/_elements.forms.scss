@@ -8,6 +8,9 @@
 @import 'elements.forms.fieldset';
 
 
+
+
+
 /*
  * -------------------------------------------------------------
  * Base form input styles
@@ -23,6 +26,7 @@ select {
 }
 
 label {
+  font-weight: $light-font-weight;
   margin-bottom: $label-spacing;
   position: relative;
   &.required::after {
@@ -231,10 +235,18 @@ select {
  * Placeholders and form attributes
  * -------------------------------------------------------------
  */
-[placeholder] {
-  @include placeholder-styles;
-}
 
+/* all */
+::-webkit-input-placeholder {@include placeholder-styles; }
+::-moz-placeholder {@include placeholder-styles; }/* firefox 19+ */
+:-ms-input-placeholder {@include placeholder-styles; } /* ie */
+input:-moz-placeholder {@include placeholder-styles; }
+
+/*
+ * -------------------------------------------------------------
+ * Required field asterix and validation
+ * -------------------------------------------------------------
+ */
 abbr[title="Required"], abbr[title="required"]{
   @include required-asterix;
 }

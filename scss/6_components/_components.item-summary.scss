@@ -1,0 +1,16 @@
+.ui-item-summary {
+
+	@media screen and (max-width: $large-monitor-and-lower){
+		.multi-column--3{
+			column-count: 2;
+			-webkit-column-count: 2;
+		}
+	}
+	
+}
+.ui-item-summary__textarea-description{
+	height: $base-spacing-unit*6;
+}
+.ui-item-summary__textarea-notes{
+	height: $base-spacing-unit*6;
+}

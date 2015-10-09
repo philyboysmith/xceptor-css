@@ -3,9 +3,12 @@
 }
 
 .ui-form__row {
-	margin-bottom: 0.5em;
+	margin-bottom: $base-spacing-unit;
 }
 
+.ui-form__item{
+	padding-bottom: $base-spacing-unit;
+}
 .ui-form__legend-link {
 	float:right;
 }

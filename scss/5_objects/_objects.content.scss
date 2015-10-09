@@ -1,10 +1,13 @@
 .o-content {
 	height: 100%;
+	//width:100%;
     margin-left: $navigation-width;
     @extend .default-transition;
     z-index: $z-content;
     background: white;
     position: relative;
+    float: left;
+    box-shadow: -3px 0 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .o-content--full-screen {

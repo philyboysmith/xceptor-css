@@ -1,11 +1,10 @@
 .ui-breadcrumbs {
 	background-color: $color-brand-shadow;
 	line-height: 1;
-    //@include rem(padding, $top-bar-vertical-spacing $header-icon-wrapper-width $top-bar-vertical-spacing $base-spacing-unit);
-    //@include rem(padding, $top-bar-vertical-spacing $header-icon-wrapper-width $top-bar-vertical-spacing $base-spacing-unit+$icon-base-width--large+5);
-	@extend .inline-list;
-	display: inline-block;
+ 	@extend .inline-list;
+	//display: inline;
 }
+.ui-breadcrumbs .ui-breadcrumbs__item{display: inline;}
 .ui-breadcrumbs__item {
 	@extend .gamma;
 	color: $color-text-overlay;

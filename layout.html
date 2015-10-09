@@ -33,7 +33,7 @@
                 <h1 class="ui-navigation-header__title">Configure</h1>
                 <div class="ui-navigation-header__icons">
                     <svg class="icon icon--large icon-menu icon--white">
-                      <use xlink:href="#menu"></use>
+                      <use xlink:href="#chevron-down"></use>
                     </svg>
                     <!-- <svg class="icon icon-search">
                       <use xlink:href="#search"></use>
@@ -225,8 +225,8 @@
             <div class="o-header-bar">
                 <div class="ui-header-bar">
                     <button class="ui-header-bar__expander " id="js-sidebar-trigger" title="Collapse / Expand Menu">
-                    <svg class="icon icon--large icon-menu icon--white">
-                      <use xlink:href="#menu"></use>
+                    <svg class="icon icon--large icon--white">
+                      <use xlink:href="#chevron-left"></use>
                     </svg> 
                     </button>
                     <ol class="ui-breadcrumbs">
@@ -247,7 +247,7 @@
             </div>
             <div class="o-body o-body--collapse">
             <!-- ui-item-header -->
-                <div class="ui-item-header grid grid--padding">
+                <div class="ui-item-header grid">
                     <div class="ui-item-header__details col--1-2">
                         <div class="grid">
                         
@@ -304,15 +304,17 @@
                 <article class="ui-item-summary ui-panel">
                     <div class="ui-panel-header">
                         <h1 class="ui-panel-header__title">
-                            <a href="#">Summary</a>
+                            <a href="#">Summary <i class="ic ui-panel-header__icon"><svg class="icon icon--large">
+                                  <use xlink:href="#chevron-right"></use>
+                                </svg></i></a>
                         </h1>
                     </div>
                     <div class="ui-panel-content">
                         <div class="ui-panel-body">
                             <form>
                                 <fieldset>
-                                    <legend>Cell Value Dependent Actions</legend>
-                                    <div class="multi-column">
+                                    
+                                    <div class="multi-column--3">
                                         <div class="ui-form__item">
                                             <label for="id">ID:</label>
                                             <input id="id" type="text" placeholder="this is a placeholder" value="679">
@@ -330,20 +332,35 @@
                                             <input id="refName" type="text" placeholder="this is a placeholder" value="Exercise/Enrichment Exercise">
                                         </div>
                                         <div class="ui-form__item">
-                                            <label for="description">Description:</label>
-                                            <input id="description" type="text" placeholder="this is a placeholder" value="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.">
-                                        </div>
-                                        <div class="ui-form__item">
-                                            <label for="notes">Notes:</label>
-                                            <input id="notes" type="text" placeholder="this is a placeholder" value="Notes of this Item goes in here">
-                                        </div>
-                                        <div class="ui-form__item">
                                             <label for="preprocessor">Preprocessor:</label>
                                             <input id="preprocessor" type="text" placeholder="this is a placeholder" value="No preprocessor selected">
                                         </div>
                                         <div class="ui-form__item">
                                             <label for="state">State:</label>
                                             <input id="state" type="text" placeholder="this is a placeholder" value="Approved">
+                                        </div>
+                                        <div class="ui-form__item">
+                                            <label for="ownerGroup">Owner group:</label>
+                                            <input id="ownerGroup" type="text" placeholder="this is a placeholder" value="Exercise">
+                                        </div>
+                                        <div class="ui-form__item">
+                                            <label for="created">Created:</label>
+                                            <input id="created" type="text" placeholder="this is a placeholder" value="29th Sep 2015, 10:09">
+                                        </div>
+                                        <div class="ui-form__item">
+                                            <label for="updated">Last updated:</label>
+                                            <input id="updated" type="text" placeholder="this is a placeholder" value="29th Sep 2015, 09:40 (AutoTestClient)">
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="multi-column--2">
+                                         <div class="ui-form__item">
+                                            <label for="description">Description:</label>
+                                            <textarea id="description" placeholder="this is a placeholder" class="ui-item-summary__textarea-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</textarea>
+                                        </div>
+                                        <div class="ui-form__item">
+                                            <label for="notes">Notes:</label>
+                                            <textarea id="notes" placeholder="Notes to go in here" class="ui-item-summary__textarea-notes"></textarea>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -353,10 +370,12 @@
                 </article>
                 <!-- END ui-item-summary -->
                 <article class="module">
-                <div class="ui-panel">
+                <div class="ui-panel ui-panel--open">
                     <div class="ui-panel-header">
                         <h1 class="ui-panel-header__title">
-                            <a href="#">Data Capture</a>
+                            <a href="#">Data Capture <i class="ic ui-panel-header__icon"><svg class="icon icon--large">
+                                  <use xlink:href="#chevron-right"></use>
+                                </svg></i></a>
                         </h1>
                     </div>
                     <div class="ui-panel-content">
@@ -448,21 +467,6 @@
     </div> 
 
 
-    <script>
-        $('#js-sidebar-trigger').click(function(){
-            $('.o-content').toggleClass('o-content--full-screen');
-        });
-
-        $('.ui-object-list__item--folder').on('click', function(e){
-            e.preventDefault();
-            var $folder = $(this);
-            $folder.children('.ui-object-sublist').slideToggle(300, function(){
-                $folder.toggleClass('ui-object-list__item--folder--open')
-            });
-            e.stopPropagation();
-        });
-
-
-        </script>
+<script src="js/mock-up-ui.js"></script>
 </body>
 </html>

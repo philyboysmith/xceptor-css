@@ -3,6 +3,7 @@
 	color: $color-text-overlay;
 	position: relative;
 	@include rem(padding, $top-bar-vertical-spacing $header-icon-wrapper-width $top-bar-vertical-spacing $base-spacing-unit+$icon-base-width--large+5);
+	border-right: 1px solid darken($color-brand-highlight, 5);
 	a {
 		color: inherit;
 	}
@@ -10,15 +11,12 @@
 .ui-navigation-header__title {
 	color: #fff;
 	@extend .gamma;
-	//include rem(font-size, $h3-font-size);
 
 }
 .ui-navigation-header__icons {
 	@extend %absolute-positioning--full-height;
 	right: 0;
 	width: $header-icon-wrapper-width;
-
-	//$icon-base-height
 
 	svg{
 		position: absolute;

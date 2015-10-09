@@ -1,6 +1,6 @@
 // the strategy is to use Desktop first and not mobile first because it is predominantly a desktop app.
 
-
-
+$large-monitor-and-lower: 1200px;
+$laptop-and-lower: 992px;
 $tablet-and-lower: 768px;
 $mobile-and-lower: 480px;
