@@ -30,15 +30,31 @@
                       <use xlink:href="#xceptor"></use>
                     </svg>
                 </i>
-                <h1 class="ui-navigation-header__title">Configure</h1>
+
+                <nav class="ui-navigation-header__nav">
+                    <h1 class="ui-navigation-header__title">
+                    <span>Config <i class="ui-navigation-header__icons"><svg class="icon icon--large icon-menu icon--white ">
+                          <use xlink:href="#dropdown1"></use>
+                        </svg></i></span>
+                    </h1>
+                <ul class="ui-navigation-header__nav-list">
+                    <li data-value="1" class="ui-navigation-header__nav-list-item">
+                        <span class="icon-monkey">Operations</span></li>
+                    <li data-value="2" class="ui-navigation-header__nav-list-item">
+                        <span class="icon-bear">Adminisitration</span></li>
+                    <li data-value="3" class="ui-navigation-header__nav-list-item">
+                        <span class="icon-squirrel">Section 3</span></li>
+                </ul>
+                </nav>
+                <!-- <h1 class="ui-navigation-header__title">Configure</h1>
                 <div class="ui-navigation-header__icons">
                     <svg class="icon icon--large icon-menu icon--white">
                       <use xlink:href="#chevron-down"></use>
                     </svg>
                     <!-- <svg class="icon icon-search">
                       <use xlink:href="#search"></use>
-                    </svg> -->
-                </div>
+                    </svg> ->
+                </div> -->
             </header>
             <nav class="ui-navigation-filter">
                 <ul class="inline-list horizontal-list">
@@ -50,8 +66,8 @@
                 <ul class="ui-object-list margin--bottom--small">
                     
                     <li class="ui-object-list__item  ui-object-list__item--folder"><a href="#">
-                        <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                          <use xlink:href="#menu"></use>
+                        <svg class="icon icon--absolute-v-middle ui-object-list__icon icon--gray">
+                          <use xlink:href="#field-types-folders"></use>
                         </svg> Folder 1<svg class="icon icon--absolute-v-middle ui-object-list__toggle">
                           <use xlink:href="#chevron-right"></use>
                         </svg></a>
@@ -64,21 +80,21 @@
                             <li class="ui-object-sublist__item ui-object-sublist__item--active">
                                 <a href="#">
                                 <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                          <use xlink:href="#menu"></use>
+                          <use xlink:href="#input-document"></use>
                         </svg> File within a folder</a></li>
                             <li class="ui-object-sublist__item"><a href="#">
                                 <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                                  <use xlink:href="#menu"></use>
+                                  <use xlink:href="#input-excel"></use>
                                 </svg>  File name that is really really looooooongggg</a></li>
                             <li class="ui-object-sublist__item"><a href="#">
                                 <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                                  <use xlink:href="#menu"></use>
+                                  <use xlink:href="#input-excel"></use>
                                 </svg> File</a></li> 
                         </ul>
                     </li>
                     <li class="ui-object-list__item  ui-object-list__item--folder ui-object-list__item--folder--open"><a href="#">
-                        <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                          <use xlink:href="#menu"></use>
+                        <svg class="icon icon--absolute-v-middle ui-object-list__icon icon--gray">
+                          <use xlink:href="#field-types-folders"></use>
                         </svg> Folder 2<svg class="icon icon--absolute-v-middle ui-object-list__toggle">
                           <use xlink:href="#chevron-right"></use>
                         </svg></a>
@@ -86,29 +102,29 @@
                             <li class="ui-object-sublist__item">
                                 <a href="#">
                                 <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                                  <use xlink:href="#menu"></use>
+                                  <use xlink:href="#input-pdf"></use>
                                 </svg> File within</a></li>
                             <li class="ui-object-sublist__item ui-object-sublist__item--active">
                                 <a href="#">
                                 <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                                  <use xlink:href="#menu"></use>
+                                  <use xlink:href="#input-xml"></use>
                                 </svg> File within a folder</a>
                             </li>
                             <li class="ui-object-sublist__item">
                                 <a href="#">
                                 <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                                  <use xlink:href="#menu"></use>
+                                  <use xlink:href="#input-delimited"></use>
                                 </svg>  File name that is really really looooooongggg</a></li>
                             <li class="ui-object-sublist__item">
                                 <a href="#">
                                 <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                                  <use xlink:href="#menu"></use>
+                                  <use xlink:href="#input-pdf"></use>
                                 </svg> File</a></li>
                         </ul>
                     </li>
                     <li class="ui-object-list__item  ui-object-list__item--folder"><a href="#">
-                        <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                          <use xlink:href="#menu"></use>
+                        <svg class="icon icon--absolute-v-middle ui-object-list__icon icon--gray">
+                          <use xlink:href="#field-types-folders"></use>
                         </svg> Folder 3<svg class="icon icon--absolute-v-middle ui-object-list__toggle">
                           <use xlink:href="#chevron-right"></use>
                         </svg></a>
@@ -116,20 +132,20 @@
                         <li class="ui-object-sublist__item">
                                 <a href="#">
                                 <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                          <use xlink:href="#menu"></use>
+                          <use xlink:href="#input-internal"></use>
                         </svg> File within</a></li>
                             <li class="ui-object-sublist__item">
                                 <a href="#">
                                 <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                          <use xlink:href="#menu"></use>
+                          <use xlink:href="#input-pdf"></use>
                         </svg> File within a folder</a></li>
                             <li class="ui-object-sublist__item"><a href="#">
                                 <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                                  <use xlink:href="#menu"></use>
+                                  <use xlink:href="#input-excel"></use>
                                 </svg>  File name</a></li>
                                 <li class="ui-object-list__item  ui-object-list__item--folder"><a href="#">
-                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                                  <use xlink:href="#menu"></use>
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon icon--gray">
+                                  <use xlink:href="#field-types-folders"></use>
                                 </svg> Folder 3a<svg class="icon icon--absolute-v-middle ui-object-list__toggle">
                                   <use xlink:href="#chevron-right"></use>
                                 </svg></a>
@@ -137,32 +153,32 @@
                                 <li class="ui-object-sublist__item">
                                         <a href="#">
                                         <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                                  <use xlink:href="#menu"></use>
+                                  <use xlink:href="#input-excel"></use>
                                 </svg> File within</a></li>
                                     <li class="ui-object-sublist__item">
                                         <a href="#">
                                         <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                                  <use xlink:href="#menu"></use>
+                                  <use xlink:href="#input-pdf"></use>
                                 </svg> File within a folder</a></li>
                                     <li class="ui-object-sublist__item"><a href="#">
                                         <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                                          <use xlink:href="#menu"></use>
+                                          <use xlink:href="#input-swift"></use>
                                         </svg>  File name</a></li>
                                     <li class="ui-object-sublist__item"><a href="#">
                                         <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                                          <use xlink:href="#menu"></use>
+                                          <use xlink:href="#input-xml"></use>
                                         </svg> Filename</a></li> 
                                 </ul>
                             </li>
                             <li class="ui-object-sublist__item"><a href="#">
                                 <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                                  <use xlink:href="#menu"></use>
+                                  <use xlink:href="#input-excel"></use>
                                 </svg> Filename</a></li> 
                         </ul>
                     </li>
                     <li class="ui-object-list__item  ui-object-list__item--folder"><a href="#">
-                        <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                          <use xlink:href="#menu"></use>
+                        <svg class="icon icon--absolute-v-middle ui-object-list__icon icon--gray">
+                          <use xlink:href="#field-types-folders"></use>
                         </svg> Folder 4 <svg class="icon icon--absolute-v-middle ui-object-list__toggle">
                           <use xlink:href="#chevron-right"></use>
                         </svg></a>
@@ -170,18 +186,18 @@
                             <li class="ui-object-sublist__item">
                                 <a href="#">
                                 <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                          <use xlink:href="#menu"></use>
+                          <use xlink:href="#input-pdf"></use>
                         </svg> File</a></li>
                             <li class="ui-object-sublist__item">
                                 <a href="#">
                                 <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                          <use xlink:href="#menu"></use>
+                          <use xlink:href="#input-pdf"></use>
                         </svg> Filename</a></li>
                         </ul>
                     </li>
                     <li class="ui-object-list__item  ui-object-list__item--folder"><a href="#">
-                        <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                          <use xlink:href="#menu"></use>
+                        <svg class="icon icon--absolute-v-middle ui-object-list__icon icon--gray">
+                          <use xlink:href="#field-types-folders"></use>
                         </svg> Folder 5 <svg class="icon icon--absolute-v-middle ui-object-list__toggle">
                           <use xlink:href="#chevron-right"></use>
                         </svg></a>
@@ -189,18 +205,18 @@
                             <li class="ui-object-sublist__item">
                                 <a href="#">
                                 <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                          <use xlink:href="#menu"></use>
+                          <use xlink:href="#input-pdf"></use>
                         </svg> File</a></li>
                             <li class="ui-object-sublist__item">
                                 <a href="#">
                                 <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                          <use xlink:href="#menu"></use>
+                          <use xlink:href="#input-pdf"></use>
                         </svg> Filename</a></li>
                         </ul>
                     </li>
                     <li class="ui-object-list__item  ui-object-list__item--folder"><a href="#">
-                        <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                          <use xlink:href="#menu"></use>
+                        <svg class="icon icon--absolute-v-middle ui-object-list__icon icon--gray">
+                          <use xlink:href="#field-types-folders"></use>
                         </svg> Folder 6 <svg class="icon icon--absolute-v-middle ui-object-list__toggle">
                           <use xlink:href="#chevron-right"></use>
                         </svg></a>
@@ -208,12 +224,12 @@
                             <li class="ui-object-sublist__item">
                                 <a href="#">
                                 <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                          <use xlink:href="#menu"></use>
+                          <use xlink:href="#input-pdf"></use>
                         </svg> File</a></li>
                             <li class="ui-object-sublist__item">
                                 <a href="#">
                                 <svg class="icon icon--absolute-v-middle ui-object-list__icon">
-                          <use xlink:href="#menu"></use>
+                          <use xlink:href="#input-pdf"></use>
                         </svg> Filename</a></li>
                         </ul>
                     </li>
@@ -238,7 +254,7 @@
                    
                     <a href="#information" class="ui-header-bar__icons">
                         <svg class="icon icon--large icon-menu icon--white">
-                          <use xlink:href="#menu"></use>
+                          <use xlink:href="#dropdown"></use>
                         </svg>
                     </a>
                         

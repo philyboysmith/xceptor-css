@@ -1,11 +1,12 @@
 .o-body {
     float: left;
-    padding: $base-spacing-unit;
+    padding: $header-bar-height $base-spacing-unit $base-spacing-unit;
+
     width: 100%;
     overflow: hidden;
     border-left: 1px solid $color-gray-light;
 }
 
 .o-body--collapse {
-	padding: 0;
+	padding: $header-bar-height 0 0;
 }

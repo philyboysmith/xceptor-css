@@ -67,12 +67,18 @@
 
 //--- icons
 .ui-object-list__icon{
-	width: $list-item-icon-width;
+	width: $list-item-folder-icon-width;
+	height: $list-item-folder-icon-height;
+	margin-top: - $list-item-icon-height/2;
 	margin-left: - ($list-item-icon-width + $list-item-icon-to-text-space);
 }
 .ui-object-list__toggle{
 	right: $small-spacing-unit;
 	@include transition(all, 0.3s);	
+}
+.ui-object-sublist__item .ui-object-list__icon{
+	width: $list-item-icon-width;
+	height: $list-item-icon-width;
 }
 
 //--- item modifiers

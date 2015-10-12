@@ -1,15 +1,21 @@
 .o-header-bar {
     //height: 32px;
-    position: relative;
+    position: fixed;
     top: 0;
-    left: 0;
+    left: $navigation-width;
+    right: 0;
     width: 100%;
     min-width: 600px;
     z-index: 99999;
+    @extend .default-transition;
 }
 
 .o-header-bar__icons {
 	position: absolute;
 	top: 0;
 	right: 0;
+}
+.o-content--full-screen .o-header-bar{
+    left:0;
+
 }

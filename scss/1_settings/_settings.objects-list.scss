@@ -1,7 +1,9 @@
-$list-item-icon-width: $icon-base-width;
-$list-item-icon-height: $icon-base-height;
+$list-item-folder-icon-width: $icon-base-width--large;
+$list-item-folder-icon-height: $icon-base-height--large;
+$list-item-icon-width: 18px;
+$list-item-icon-height: 18px;
 $list-item-icon-to-text-space: $small-spacing-unit;
-$list-item-spacing: $small-spacing-unit $base-spacing-unit $small-spacing-unit $base-spacing-unit+$list-item-icon-width+$list-item-icon-to-text-space ;
+$list-item-spacing: $small-spacing-unit+3 $base-spacing-unit $small-spacing-unit+3 $base-spacing-unit+$list-item-icon-width+$list-item-icon-to-text-space ;
 //$list-item-spacing--folder: $small-spacing-unit $base-spacing-unit+ $small-spacing-unit$small-spacing-unit;
 
 $list-item-border-color: $color-gray-light;
@@ -13,3 +15,8 @@ $list-item-active-highlight-color: $color-teal;
 
 $sublist-item-background-color: $color-gray-lighter;
 $sublist-item-indent: ($base-spacing-unit + $small-spacing-unit) + ($small-spacing-unit + $list-item-icon-width + $list-item-icon-to-text-space);
+
+//ui navigation header
+$ui-navigation-header__nav-z-index: 200;
+$ui-navigation-header-bg: $color-brand-highlight;
+$ui-navigation-header-logo-width: $header-icon-wrapper-width + $tiny-spacing-unit*2;
