@@ -18,6 +18,34 @@
             $('#svg').append(ajax.responseText);  
         }
     </script>
+
+    <style type="text/css">
+        
+
+
+
+
+
+
+
+
+.nav-dropdown > span span[class^="icon-"],
+.nav-dropdown > span span[class*=" icon-"]{
+    padding: 0 30px 0 45px;
+}
+
+
+.cd-active.nav-dropdown ul li span {
+    -webkit-transition: all 0.2s linear 0s;
+    -moz-transition: all 0.2s linear 0s;
+    -ms-transition: all 0.2s linear 0s;
+    -o-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+}
+
+
+
+    </style>
 </head>
 <body>
     <div id="svg" class="hide"></div>
@@ -32,35 +60,52 @@
                 </i>
 
                 <nav class="ui-navigation-header__nav">
-                    <h1 class="ui-navigation-header__title">
-                    <span>Config <i class="ui-navigation-header__icons"><svg class="icon icon--large icon-menu icon--white ">
+                    <select id="primary-nav" name="primary-nav" class="nav-select">
+                        <option value="-1" selected>Top level menu</option>
+                        <option value="1" class="config">Configuration</option>
+                        <option value="2" class="operation">Operation</option>
+                        <option value="3" class="admin">Administration</option>
+                    </select>
+
+                    <!-- <h1 class="ui-navigation-header__title">
+                        <span>Configuration <svg class="icon icon--large icon--white ">
                           <use xlink:href="#dropdown1"></use>
-                        </svg></i></span>
-                    </h1>
-                <ul class="ui-navigation-header__nav-list">
+                        </svg></span>
+                        
+                        <i class="ui-navigation-header__icons"> <svg class="icon icon--large icon-menu icon--white ">
+                          <use xlink:href="#dropdown1"></use>
+                        </svg></i></h1> -->
+
+
+
+                <!-- <ul class="ui-navigation-header__nav-list">
                     <li data-value="1" class="ui-navigation-header__nav-list-item">
-                        <span class="icon-monkey">Operations</span></li>
+                        <span class="icon-monkey">Operations <svg class="icon icon--large icon--white ">
+                          <use xlink:href="#dropdown1"></use>
+                        </svg></span></li>
                     <li data-value="2" class="ui-navigation-header__nav-list-item">
-                        <span class="icon-bear">Adminisitration</span></li>
+                        <span class="icon-bear">Adminisitration <svg class="icon icon--large icon--white ">
+                          <use xlink:href="#dropdown1"></use>
+                        </svg></span></li>
                     <li data-value="3" class="ui-navigation-header__nav-list-item">
-                        <span class="icon-squirrel">Section 3</span></li>
-                </ul>
+                        <span class="icon-squirrel">Section 3 <svg class="icon icon--large icon--white ">
+                          <use xlink:href="#dropdown1"></use>
+                        </svg></span></li>
+                </ul> -->
                 </nav>
-                <!-- <h1 class="ui-navigation-header__title">Configure</h1>
-                <div class="ui-navigation-header__icons">
-                    <svg class="icon icon--large icon-menu icon--white">
-                      <use xlink:href="#chevron-down"></use>
-                    </svg>
-                    <!-- <svg class="icon icon-search">
-                      <use xlink:href="#search"></use>
-                    </svg> ->
-                </div> -->
+
             </header>
             <nav class="ui-navigation-filter">
-                <ul class="inline-list horizontal-list">
+                <select id="secondary-nav" name="secondary-nav" class="nav-select">
+                    <option value="1" class="items"selected>Items</option>
+                    <option value="2" class="objects">Objects</option>
+                    <option value="3" class="sub-item">Another sub-item</option>
+                    <option value="4" class="sub-item">Another sub-item</option>
+                </select>
+                <!-- <ul class="inline-list horizontal-list">
                     <li class="ui-navigation-filter__item"><a href="#">Items</a></li>
                     <li class="ui-navigation-filter__item"><a href="#">Objects</a></li>
-                </ul>
+                </ul> -->
             </nav>
             <div class="ui-object-list-wrapper">
                 <ul class="ui-object-list margin--bottom--small">
@@ -481,7 +526,6 @@
             </div>
         </div>
     </div> 
-
 
 <script src="js/mock-up-ui.js"></script>
 </body>

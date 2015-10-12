@@ -17,6 +17,6 @@ $sublist-item-background-color: $color-gray-lighter;
 $sublist-item-indent: ($base-spacing-unit + $small-spacing-unit) + ($small-spacing-unit + $list-item-icon-width + $list-item-icon-to-text-space);
 
 //ui navigation header
-$ui-navigation-header__nav-z-index: 200;
+$ui-navigation-header__nav-z-index: 500;
 $ui-navigation-header-bg: $color-brand-highlight;
 $ui-navigation-header-logo-width: $header-icon-wrapper-width + $tiny-spacing-unit*2;

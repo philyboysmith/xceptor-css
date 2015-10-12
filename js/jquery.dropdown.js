@@ -1,111 +1,3 @@
-/*global Modernizr:true */
-
-// Object Item menu panel
-$('#js-sidebar-trigger').click(function(){
-    $('.o-content').toggleClass('o-content--full-screen');
-    $(this).toggleClass('ui-header-bar__expander--closed');
-
-});
-
-// Folder toggle in Menu panel
-$('.ui-object-list__item--folder').on('click', function(e){
-    e.preventDefault();
-    var $folder = $(this);
-    $folder.children('.ui-object-sublist').slideToggle(300, function(){
-        $folder.toggleClass('ui-object-list__item--folder--open');
-    });
-    e.stopPropagation();
-});
-
-
-//hide all of the panel content areas
-//$('.ui-panel-content').css('display', 'none');
-// Panel's toggle
-$('.ui-panel-header').on('click', function(e){
-    e.preventDefault();
-    var $header = $(this);
-    $header.next('.ui-panel-content').slideToggle(300, function(){
-        $header.parent().toggleClass('ui-panel--open');
-    });
-    e.stopPropagation();
-});
-
-
-
-
-
-var mainNav = {
-	menuHeight:  "",
-	menuOpen: "false",
-	init: function () {
-		var _this = this;
-		_this.menuHeight =  _this.getMenuHeight();
-
-		// initia
-		$('.ui-navigation-header__nav-list').css('margin-top', - _this.menuHeight);
-
-		// bind the click to open/close the menu
-		$('.ui-navigation-header__title').on('click', function(e){
-			e.preventDefault();
-			
-			var $clickedNavTitle = $(this);
-
-		    $clickedNavTitle.parent('.ui-navigation-header__nav').toggleClass('ui-navigation-header__nav--open');
-		    if (_this.menuOpen === false) {
-		    	// open menu
-		    	_this.openMenu($clickedNavTitle );
-		    
-		    } else {
-		    	// close menu
-		    	_this.closeMenu($clickedNavTitle , _this.menuHeight);
-		    }
-		   
-
-		});
-
-		// bind a click to select a menu item
-		$('.ui-navigation-header__nav-list-item').on('click', function(e){
-			e.preventDefault();
-			
-			var $clickedItem = $(this).find('span');
-			var $currentItem = $('.ui-navigation-header__title').find('span');
-
-			//$('ui-navigation-header__nav-list li').append($currentItem);
-			$clickedItem.replaceWith( $currentItem );
-
-			// set the h1 to the selected item
-			$('.ui-navigation-header__title').html($clickedItem.find('span'));
-		    
-		   
-
-		});
-
-
-	},
-	getMenuHeight: function() {
-		return $('.ui-navigation-header__nav-list').height();
-	},
-	openMenu: function(navTitle) {
-		var _this = this;
-		navTitle.parent('.ui-navigation-header__nav').find('.ui-navigation-header__nav-list').css('margin-top', '0');
-		_this.menuOpen = true;
-	},
-	closeMenu: function(navTitle, menuHeight) {
-		var _this = this;
-		navTitle.parent('.ui-navigation-header__nav').find('.ui-navigation-header__nav-list').css('margin-top', - menuHeight);
-		_this.menuOpen = false;
-	},
-	selectItem: function(item) {
-		var _this = this;
-	}
-
-};
-
-//mainNav.init();
-
-
-
-
 /**
  * jquery.dropdown.js v1.0.0
  * http://www.codrops.com
@@ -131,7 +23,7 @@ var mainNav = {
 		easing : 'ease',
 		gutter : 0,
 		// initial stack effect
-		stack : false,
+		stack : true,
 		// delay between each option animation
 		delay : 0,
 		// random angle and positions for the options
@@ -141,7 +33,6 @@ var mainNav = {
 		rotated : false,
 		// effect to slide in the options. value is the margin to start with
 		slidingIn : false,
-		ddClass : 'nav-dropdown',
 		onOptionSelect : function(opt) { return false; }
 	};
 
@@ -154,23 +45,18 @@ var mainNav = {
 			this._layout();
 			this._initEvents();
 
-			console.log('_init: ' + this.options.ddClass);
-
-
 		},
 		_layout : function() {
-			console.log('_layout: ' + this.options.ddClass);
 
 			var self = this;
-			this.minZIndex = 400;
+			this.minZIndex = 1000;
 			var value = this._transformSelect();
 			this.opts = this.listopts.children( 'li' );
 			this.optsCount = this.opts.length;
 			this.size = { width : this.dd.width(), height : this.dd.height() };
-			var ddClass = 'nav-dropdown';
 			
 			var elName = this.$el.attr( 'name' ), elId = this.$el.attr( 'id' ),
-				inputName = elName !== undefined ? elName : elId !== undefined ? elId : this.options.ddClass + ( new Date() ).getTime();
+				inputName = elName !== undefined ? elName : elId !== undefined ? elId : 'cd-dropdown-' + ( new Date() ).getTime();
 
 			this.inputEl = $( '<input type="hidden" name="' + inputName + '" value="' + value + '"></input>' ).insertAfter( this.selectlabel );
 			
@@ -195,8 +81,8 @@ var mainNav = {
 				if( val !== -1 ) {
 					optshtml += 
 						classes !== undefined ? 
-							'<li class="nav-dropdown__list-item" data-value="' + val + '"><span class="' + classes + '">' + label + '</span></li>' :
-							'<li class="nav-dropdown__list-item" data-value="' + val + '"><span>' + label + '</span></li>';
+							'<li data-value="' + val + '"><span class="' + classes + '">' + label + '</span></li>' :
+							'<li data-value="' + val + '"><span>' + label + '</span></li>';
 				}
 
 				if( selected ) {
@@ -205,10 +91,10 @@ var mainNav = {
 				}
 
 			} );
-			var selectLabelIcon = '<i class="nav-dropdown__toggle"><svg class="icon icon--large icon--absolute-v-middle "><use xlink:href="#dropdown1"></use></svg></i>';
-			this.listopts = $( '<ul class="nav-dropdown__list" />' ).append( optshtml );
-			this.selectlabel = $( '<span class="nav-dropdown__title"> </span>' ).append( selectlabel );
-			this.dd = $( '<div class="' + this.options.ddClass + ' nav-dropdown"/>' ).append( this.selectlabel, selectLabelIcon, this.listopts ).insertAfter( this.$el );
+
+			this.listopts = $( '<ul/>' ).append( optshtml );
+			this.selectlabel = $( '<span/>' ).append( selectlabel );
+			this.dd = $( '<div class="cd-dropdown"/>' ).append( this.selectlabel, this.listopts ).insertAfter( this.$el );
 			this.$el.remove();
 
 			return value;
@@ -229,7 +115,6 @@ var mainNav = {
 						opacity : self.options.slidingIn ? 0 : 1,
 						transform : 'none'
 					} );
-					console.log('height: ' +self.size.height);
 				} );
 
 			if( !this.options.slidingIn ) {
@@ -268,7 +153,7 @@ var mainNav = {
 		},
 		open : function() {
 			var self = this;
-			this.dd.toggleClass( 'nav-dropdown--active' );
+			this.dd.toggleClass( 'cd-active' );
 			this.listopts.css( 'height', ( this.optsCount + 1 ) * ( this.size.height + this.options.gutter ) );
 			this.opts.each( function( i ) {
 
@@ -295,7 +180,7 @@ var mainNav = {
 		close : function() {
 
 			var self = this;
-			this.dd.toggleClass( 'nav-dropdown--active' );
+			this.dd.toggleClass( 'cd-active' );
 			if( this.options.delay && Modernizr.csstransitions ) {
 				this.opts.each( function( i ) {
 					$( this ).css( { 'transition-delay' : self.options.slidingIn ? ( ( self.optsCount - 1 - i ) * self.options.delay ) + 'ms' : ( i * self.options.delay ) + 'ms' } );
@@ -306,7 +191,7 @@ var mainNav = {
 
 		}
 
-	};
+	}
 
 	$.fn.dropdown = function( options ) {
 		var instance = $.data( this, 'dropdown' );
@@ -325,14 +210,3 @@ var mainNav = {
 	};
 
 } )( jQuery, window );
-
-
-
-//---- navigation header navigation dd
-$( '#primary-nav' ).dropdown( {
-	gutter : 2
-} );
-$( '#secondary-nav' ).dropdown( {
-	gutter : 2
-} );
-
