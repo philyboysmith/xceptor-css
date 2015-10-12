@@ -35,3 +35,12 @@
 	position: relative;
 	left: $small-spacing-unit;
 }
+
+.ui-breadcrumbs {
+	.ui-dropdown > .ui-dropdown__toggle:hover .ui-dropdown-list{
+		width: $breadcrumb-view-submenu-width;
+		left: 50%;
+		margin-left: - $breadcrumb-view-submenu-width/2 + $small-spacing-unit+$base-spacing-unit;
+		margin-top: $small-spacing-unit;
+	}
+}

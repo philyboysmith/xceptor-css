@@ -18,18 +18,25 @@ a.button { //, {
 		border-color: $button-border-color;
     	border-bottom-color:$button-border-color-shadow;
     	color: $button-text-color;
+    	&:visited{
+			color: $button-text-color;
+		}
 		// Hover
-		&:hover{
+		&:hover, &:focus, &:active{
 			background-color: $button-bg-hover;
 			color: $button-text-color;
 		}
+
 	}
 	.button--white{
 		background-color: $button-bg--white;
 		border-color: $button-border-color--white;
     	border-bottom-color:$button-border-color-shadow--white;
     	color: $button-text-color--white;
-		&:hover{
+    	&:visited{
+			color: $button-text-color--white;
+		}
+		&:hover, &:focus, &:active{
 			color: $button-text-color--white;
 			background-color: $button-bg-hover--white;
 			border-color: $button-border-color-hover--white;
@@ -41,13 +48,16 @@ a.button { //, {
 		color: $button-text-color--gray;
 		border-color: $button-border-color--gray;
 		border-bottom-color: $button-border-color-shadow--gray;
+		&:visited{
+			color: $button-text-color;
+		}
 		&:hover{
 			color: $button-text-color;
 			background-color: $button-bg-hover--gray;
 			border-color: $button-border-color-hover--gray;
 			border-bottom-color: $button-border-color-shadow-hover--gray;
-
 		}
+
 	}
 	.button--block{
 		display: block;

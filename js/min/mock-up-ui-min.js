@@ -31,6 +31,21 @@ $('.ui-panel-header').on('click', function(e){
 });
 
 
+// mock the edit button being clicked
+$('.edit').on('click', function(e){
+    e.preventDefault();
+
+    if ( $(this).hasClass('edit-mode') ) {
+    	$('.ui-form__item').find('input, textarea').attr( "readonly", "" );
+    }
+    else{
+    	$('.ui-form__item').find('input, textarea').removeAttr( "readonly" );
+    }
+
+    $(this).toggleClass('edit-mode')
+
+});
+
 
 
 
@@ -333,7 +348,8 @@ $( '#primary-nav' ).dropdown( {
 	gutter : 2
 } );
 $( '#secondary-nav' ).dropdown( {
-	gutter : 2
+	gutter : 2,
+	stacked: true
 } );
 
 

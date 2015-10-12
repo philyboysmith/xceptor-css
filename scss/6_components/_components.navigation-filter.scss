@@ -26,8 +26,25 @@
  * -------------------------------------------------------------
  */
 .ui-navigation-filter {
+	
 	.nav-dropdown__title {
+		border-bottom: 1px solid $ui-navigation-header-bg;
 		box-shadow: none;
+		&:hover{
+			color: $color-brand-highlight;
+		}
+
+	}
+
+	// Open styles
+	.nav-dropdown--active {
+		.nav-dropdown__title {
+			color: $color-gray;
+			border-bottom-color: transparent;
+		}
+		.nav-dropdown__list-item:last-child {
+			border-bottom: 1px solid $ui-navigation-header-bg;
+		} 
 	}
 
 }

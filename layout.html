@@ -61,8 +61,7 @@
 
                 <nav class="ui-navigation-header__nav">
                     <select id="primary-nav" name="primary-nav" class="nav-select">
-                        <option value="-1" selected>Top level menu</option>
-                        <option value="1" class="config">Configuration</option>
+                        <option value="1" class="config" selected>Configuration</option>
                         <option value="2" class="operation">Operation</option>
                         <option value="3" class="admin">Administration</option>
                     </select>
@@ -294,6 +293,19 @@
                         <li class="ui-breadcrumbs__item"><a href="#item1">Item 1</a></li>
                         <li class="ui-breadcrumbs__item"><a href="#item1">Item 2</a></li>
                         <li class="ui-breadcrumbs__item"><a href="#item1">Item 3</a></li>
+                        <li class="ui-breadcrumbs__item">
+                            <div class="ui-dropdown inline-block ui-dropdown--non-fancy">
+                            <button href="#viewdd" class="ui-dropdown__toggle">Views <i class="ui-dropdown__toggle__icon"><svg class="icon icon-dropdown">
+                                  <use xlink:href="#chevron-down" class="icon--white"></use>
+                                </svg>
+                            </i>
+                            <ul class="ui-dropdown-list">
+                                <li class="ui-dropdown-list__item"><a href="#">View 1</a></li>
+                                <li class="ui-dropdown-list__item"><a href="#">Another view</a></li>
+                                <li class="ui-dropdown-list__item"><a href="#">Another view</a></li>
+                            </ul>
+                            </button></div>
+                        </li>
                     </ol>
                     <div class="ui-header-bar__info">
                    
@@ -325,7 +337,7 @@
                     </div>
                     <div class="ui-item-header__links col--1-2">
                         <ul class="ui-button-list text-right">
-                            <li class="ui-button-list__item"><a href="#" class="button button--blue">    <svg class="icon icon--left-of-text icon-dropdown">
+                            <li class="ui-button-list__item"><a href="#" class="button button--blue edit">    <svg class="icon icon--left-of-text icon-dropdown">
                                   <use xlink:href="#dropdown" class="icon--white"></use>
                                 </svg>Edit</a></li>
                             <li class="ui-button-list__item"><a href="#" class="button button--white">    <svg class="icon icon--left-of-text icon-dropdown">
@@ -335,12 +347,12 @@
                                 <svg class="icon icon--left-of-text icon-dropdown">
                                   <use xlink:href="#dropdown" class="icon--white"></use>
                                 </svg>Review Changes</a></li>
-                            <li><div class="ui-dropdown inline--block">
+                            <li><div class="ui-dropdown ui-dropdown--align-right inline-block">
                             <button class="button button--white ui-dropdown__toggle">More <i class="ui-dropdown__toggle__icon">
                                 <svg class="icon icon-dropdown">
                                   <use xlink:href="#dropdown" class="icon--white"></use>
                                 </svg>
-                            </i></button>
+                            </i>
                             <ul class="ui-dropdown-list">
                                 <li class="ui-dropdown-list__header">
                                     <h3>Administrator</h3>
@@ -352,7 +364,8 @@
                                 <li class="ui-dropdown-list__item divider" role="separator"></li>
                                 <li class="ui-dropdown-list__item"><a href="#">Separated link</a></li>
                             </ul>
-                        </div></li>
+                            </button>
+                            </div></li>
                         </ul>
                         <div class="ui-item-header__status text--black">
                         <svg class="icon icon--left-of-text">
@@ -378,50 +391,50 @@
                                     <div class="multi-column--3">
                                         <div class="ui-form__item">
                                             <label for="id">ID:</label>
-                                            <input id="id" type="text" placeholder="this is a placeholder" value="679">
+                                            <input id="id" type="text" placeholder="this is a placeholder" value="679" readonly>
                                         </div>
                                         <div class="ui-form__item">
                                             <label for="name">Name:</label>
-                                            <input id="name" type="text" placeholder="this is a placeholder" value="Bank View London">
+                                            <input id="name" type="text" placeholder="this is a placeholder" value="Bank View London" readonly>
                                         </div>
                                         <div class="ui-form__item">
                                             <label for="displayName">Display name:</label>
-                                            <input id="displayName" type="text" placeholder="this is a placeholder" value="Bank View London">
+                                            <input id="displayName" type="text" placeholder="this is a placeholder" value="Bank View London" readonly>
                                         </div>
                                         <div class="ui-form__item">
                                             <label for="refName">Ref name:</label>
-                                            <input id="refName" type="text" placeholder="this is a placeholder" value="Exercise/Enrichment Exercise">
+                                            <input id="refName" type="text" placeholder="this is a placeholder" value="Exercise/Enrichment Exercise" readonly>
                                         </div>
                                         <div class="ui-form__item">
                                             <label for="preprocessor">Preprocessor:</label>
-                                            <input id="preprocessor" type="text" placeholder="this is a placeholder" value="No preprocessor selected">
+                                            <input id="preprocessor" type="text" placeholder="this is a placeholder" value="No preprocessor selected" readonly>
                                         </div>
                                         <div class="ui-form__item">
                                             <label for="state">State:</label>
-                                            <input id="state" type="text" placeholder="this is a placeholder" value="Approved">
+                                            <input id="state" type="text" placeholder="this is a placeholder" value="Approved" readonly>
                                         </div>
                                         <div class="ui-form__item">
                                             <label for="ownerGroup">Owner group:</label>
-                                            <input id="ownerGroup" type="text" placeholder="this is a placeholder" value="Exercise">
+                                            <input id="ownerGroup" type="text" placeholder="this is a placeholder" value="Exercise" readonly>
                                         </div>
                                         <div class="ui-form__item">
                                             <label for="created">Created:</label>
-                                            <input id="created" type="text" placeholder="this is a placeholder" value="29th Sep 2015, 10:09">
+                                            <input id="created" type="text" placeholder="this is a placeholder" value="29th Sep 2015, 10:09" readonly>
                                         </div>
                                         <div class="ui-form__item">
                                             <label for="updated">Last updated:</label>
-                                            <input id="updated" type="text" placeholder="this is a placeholder" value="29th Sep 2015, 09:40 (AutoTestClient)">
+                                            <input id="updated" type="text" placeholder="this is a placeholder" value="29th Sep 2015, 09:40 (AutoTestClient)" readonly>
                                         </div>
                                        
                                     </div>
                                     <div class="multi-column--2">
                                          <div class="ui-form__item">
                                             <label for="description">Description:</label>
-                                            <textarea id="description" placeholder="this is a placeholder" class="ui-item-summary__textarea-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</textarea>
+                                            <textarea id="description" placeholder="this is a placeholder" class="ui-item-summary__textarea-description" readonly>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</textarea>
                                         </div>
                                         <div class="ui-form__item">
                                             <label for="notes">Notes:</label>
-                                            <textarea id="notes" placeholder="Notes to go in here" class="ui-item-summary__textarea-notes"></textarea>
+                                            <textarea id="notes" placeholder="Notes to go in here" class="ui-item-summary__textarea-notes" readonly></textarea>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -431,7 +444,7 @@
                 </article>
                 <!-- END ui-item-summary -->
                 <article class="module">
-                <div class="ui-panel ui-panel--open">
+                <div class="ui-panel ui-panel--open ui-panel--no-border">
                     <div class="ui-panel-header">
                         <h1 class="ui-panel-header__title">
                             <a href="#">Data Capture <i class="ic ui-panel-header__icon"><svg class="icon icon--large">
@@ -443,10 +456,10 @@
                         <div class="ui-panel-navigation-wrapper">
                             <ul class="ui-panel-navigation">
                                 <li class="ui-panel-navigation__item  ui-panel-navigation__item--active"><a href="#">Item</a></li>
-                                <li class="ui-panel-navigation__item"><a href="#">Item</a></li>
-                                <li class="ui-panel-navigation__item"><a href="#">Item</a></li>
-                                <li class="ui-panel-navigation__item"><a href="#">Item</a></li>
-                                <li class="ui-panel-navigation__item"><a href="#">Item</a></li>
+                                <li class="ui-panel-navigation__item"><a href="#">Item 2</a></li>
+                                <li class="ui-panel-navigation__item"><a href="#">Item 3</a></li>
+                                <li class="ui-panel-navigation__item"><a href="#">Item 4</a></li>
+                                <li class="ui-panel-navigation__item"><a href="#">Item 5</a></li>
                             </ul>
                         </div>
                         <div class="ui-panel-body">
@@ -454,7 +467,7 @@
                                 <fieldset>
                                     <div class="ui-form__item">
                                         <label for="text">Text Input <abbr title="Required">*</abbr></label>
-                                        <input id="text" type="text">
+                                        <input id="text" type="text" readonly>
                                     </div>
                                     <div class="ui-form__item">
                                         <label for="text">Text Input</label>
@@ -464,11 +477,11 @@
                                 <fieldset>
                                     <legend>Dynamic Column Settings <a href="#" class="ui-form__legend-link">Here</a></legend>
                                     <div class="ui-form__item">
-                                        <input id="checkbox" class="checkbox" type="checkbox"> 
+                                        <input id="checkbox" class="checkbox" type="checkbox" readonly> 
                                         <label for="checkbox" class="check">Copy from cell above if blank</label>
                                     </div>
                                     <div class="ui-form__item">
-                                        <input id="merge" class="checkbox" type="checkbox"> 
+                                        <input id="merge" class="checkbox" type="checkbox" readonly> 
                                         <label for="merge" class="check">Merge with Cell below</label>
                                     </div>
                                     <div class="ui-form__item">
@@ -491,11 +504,11 @@
                                     </div>
                                     <div class="ui-form__item">
                                         <label for="text">If a column has already been selected</label>
-                                        <input id="text" type="text" placeholder="this is a placeholder" value="Find the next matching value">
+                                        <input id="text" type="text" placeholder="this is a placeholder" value="Find the next matching value" readonly>
                                     </div>
                                     <div class="ui-form__item">
                                         <label for="text">If not matching column can be found</label>
-                                        <input id="text" type="text" placeholder="this is a placeholder" value="Report an error">
+                                        <input id="text" type="text" placeholder="this is a placeholder" value="Report an error" readonly>
                                     </div>
                                 </fieldset>
 
@@ -504,15 +517,15 @@
                                     <div class="multi-column">
                                         <div class="ui-form__item">
                                             <label for="text">Apply action</label>
-                                            <input id="text" type="text" placeholder="this is a placeholder" value="When cell is empty">
+                                            <input id="text" type="text" placeholder="this is a placeholder" value="When cell is empty" readonly>
                                         </div>
                                         <div class="ui-form__item">
                                             <label for="text">Match value</label>
-                                            <input id="text" type="text" placeholder="this is a placeholder" value="ABC">
+                                            <input id="text" type="text" placeholder="this is a placeholder" value="ABC" readonly>
                                         </div>
                                         <div class="ui-form__item">
                                             <label for="text">Action to apply</label>
-                                            <input id="text" type="text" placeholder="this is a placeholder" value="Ignore the cell">
+                                            <input id="text" type="text" placeholder="this is a placeholder" value="Ignore the cell" readonly>
                                         </div>
                                     </div>
                                 </fieldset>
