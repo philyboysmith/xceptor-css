@@ -44,18 +44,7 @@
 	background-color: $base-background-color;
 	box-shadow: 0 2px 4px 0 $color-box-shadow;
 	@extend .clearfix;
-	&:before{
-		position: absolute;
-		height: 0;
-		width:0;
-		top: -6px;
-		left: 50%;
-
-		margin-left: -6px ;
-		border-style: solid;
-		border-width: 0 6px 7px 6px;
-		border-color: transparent transparent #ffffff transparent;	
-	}
+	
 }
 
 .ui-dropdown-list__header {
@@ -135,15 +124,13 @@
     @include transition(opacity);
     z-index: 200;
     margin-top: 14px;
-    //transition: opacity 0.7s ease;
-}
 
-//right aligned dd ul
-.ui-dropdown--align-right > .ui-dropdown__toggle:hover > .ui-dropdown-list{ /* Display the dropdown on hover */
-    right:0; /* Bring back on-screen when needed */
-    left: auto;
+    // align the sub menu to the right of the button edge
+    &.ui-dropdown-list--align-right {
+    	right:0; /* Bring back on-screen when needed */
+    	left: auto;
+    }
 }
-
 
 //--- style the icon on active hover -- NEED TO SORT THIS OUT WHEN WE GET ICONS
 .ui-dropdown__toggle:hover {
