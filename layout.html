@@ -426,11 +426,11 @@
                 <div class="ui-item-header grid grid--no-margin">
                     <div class="ui-item-header__details col--1-2">
                         <div class="grid">
-                        
-                            <svg class="icon ui-item-header__icon icon--white icon--left-of-text left">
-                              <use xlink:href="#menu"></use>
+                        <i class="ui-item-header__icon icon--left-of-text left">
+                            <svg class="icon icon--large icon--white icon--absolute-v-middle icon--absolute-h-middle ">
+                              <use xlink:href="#input-xml"></use>
                             </svg> 
-                        
+                        </i>
                         <h1 class="text--blue margin-bottom--tiny">Bank View London </h1>
                         <span class="gamma text--black ">Created June 9th 2015</span>
                         <div class="ui-item-header__desc clear-left margin-top--base">
@@ -661,15 +661,15 @@
                         <div class="ui-panel-body">
                             <form class="ui-form" action="">
                                  <fieldset>
-                                    <legend>Cell Value Dependent Actions</legend>
+                                    
                                     <div class="multi-column">
                                         <div class="ui-form__item">
-                                            <label for="text">Apply action</label>
-                                            <input id="text" type="text" placeholder="this is a placeholder" value="When cell is empty" readonly>
+                                            <label for="enrichmentName">Name:</label>
+                                            <input id="enrichmentName" type="text" placeholder="this is a placeholder" value="Name of enrichment" readonly>
                                         </div>
                                         <div class="ui-form__item">
-                                            <label for="text">Match value</label>
-                                            <input id="text" type="text" placeholder="this is a placeholder" value="ABC" readonly>
+                                            <label for="enrichmentDesc">Decription:</label>
+                                            <input id="enrichmentDesc" type="text" placeholder="this is a placeholder" value="ABC" readonly>
                                         </div>
                                         <div class="ui-form__item">
                                             <label for="text">Action to apply</label>

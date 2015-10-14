@@ -13,6 +13,9 @@
 	width: $icon-base-width--x-large;
 	height: $icon-base-height--x-large;
 	background-color: $color-green;
+	border-radius: $icon-base-width--x-large;
+	position: relative;
+
 }
 
 .ui-item-header__status {
