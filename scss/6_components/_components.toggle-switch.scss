@@ -1,0 +1,64 @@
+$toggle-switch-width: 40px;
+$toggle-switch-height: $toggle-switch-width/2;
+$toggle-switch-padding: 4px;
+$toggle-switch-bg: $color-ui;//#dddddd;
+$toggle-switch__button-bg: #fff;
+$toggle-switch__button-width: $toggle-switch-height;
+$toggle-switch--enabled-bg: #8ce196;
+$toggle-switch--disabled-bg: $color-gray-lighter;//#f1f1f1;
+
+
+.ui-toggle-switch{
+  input[type="checkbox"].cmn-toggle-round + label {
+    //padding: $toggle-switch-padding;
+    width: $toggle-switch-width;
+    height: $toggle-switch-height;
+    background-color: $toggle-switch-bg;
+    border-radius: $toggle-switch-height;
+    border: none;
+    padding:0;
+
+  }
+  input.cmn-toggle-round + label:before,
+  input.cmn-toggle-round + label:after {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  input.cmn-toggle-round + label:before {
+    right: 1px;
+    background-color: $toggle-switch--disabled-bg;
+    border-radius: $toggle-switch-height;
+    transition: background 0.4s;
+    border: none; 
+  }
+  input.cmn-toggle-round + label:after {
+    width: $toggle-switch__button-width;//58px;
+    background-color: $toggle-switch__button-bg;
+    border-radius: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    transition: margin 0.4s;
+    opacity: 1;
+    transform: none;
+  }
+  input.cmn-toggle-round:checked + label:before {
+    background-color: $toggle-switch--enabled-bg;
+  }
+  input.cmn-toggle-round:checked + label:after {
+    margin-left: $toggle-switch-height;
+  }
+
+}
+.ui-toggle-switch__input{
+  
+}
+.ui-toggle-switch__label
+{
+  
+}

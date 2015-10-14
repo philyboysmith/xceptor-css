@@ -662,7 +662,7 @@
                             <form class="ui-form" action="">
                                  <fieldset>
                                     
-                                    <div class="multi-column">
+                                    <div class="multi-column--3">
                                         <div class="ui-form__item">
                                             <label for="enrichmentName">Name:</label>
                                             <input id="enrichmentName" type="text" placeholder="this is a placeholder" value="Name of enrichment" readonly>
@@ -672,13 +672,17 @@
                                             <input id="enrichmentDesc" type="text" placeholder="this is a placeholder" value="ABC" readonly>
                                         </div>
                                         <div class="ui-form__item">
-                                            <label for="text">Action to apply</label>
-                                            <input id="text" type="text" placeholder="this is a placeholder" value="Ignore the cell" readonly>
+                                            <label for="text">Status</label>
+                                            <div class="ui-toggle-switch">
+                                              <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round ui-toggle-switch__input" type="checkbox" checked>
+                                              <label for="cmn-toggle-1" class="ui-toggle-switch__label"></label>
+                                            </div>
                                         </div>
                                     </div>
                                 </fieldset>
 
                                 <fieldset>
+                                <legend>Enrichment type <a href="#" class="ui-form__legend-link">Change type</a></legend>
                                     <div class="ui-form__item">
                                         <label for="text">Text Input <abbr title="Required">*</abbr></label>
                                         <input id="text" type="text" readonly>
