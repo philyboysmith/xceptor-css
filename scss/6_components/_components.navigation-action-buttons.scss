@@ -147,6 +147,9 @@ $panel-shadow-color: darken($color-brand, 2);
 	background-color: rgba(255,255,255,0.05);
 	border-radius: $base-radius;
 	@include rem(font-size, 11px);
+	&:visited{
+		color: $color-text-overlay;	
+	}
 	&:hover{
 		background-color: rgba(255,255,255,0.2);
 	}
