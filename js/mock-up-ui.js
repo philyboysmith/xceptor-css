@@ -1,122 +1,76 @@
 /*global Modernizr:true */
 
-// Object Item menu panel
-$('#js-sidebar-trigger').click(function(){
-    $('.o-content').toggleClass('o-content--full-screen');
-    $(this).toggleClass('ui-header-bar__expander--closed');
-
-});
-
-// Folder toggle in Menu panel
-$('.ui-object-list__item--folder').on('click', function(e){
-    e.preventDefault();
-    var $folder = $(this);
-    $folder.children('.ui-object-sublist').slideToggle(300, function(){
-        $folder.toggleClass('ui-object-list__item--folder--open');
-    });
-    e.stopPropagation();
-});
-
-
-//hide all of the panel content areas
-//$('.ui-panel-content').css('display', 'none');
-// Panel's toggle
-$('.ui-panel-header').on('click', function(e){
-    e.preventDefault();
-    var $header = $(this);
-    $header.next('.ui-panel-content').slideToggle(300, function(){
-        $header.parent().toggleClass('ui-panel--open');
-    });
-    e.stopPropagation();
-});
-
-
-// mock the edit button being clicked
-$('.edit').on('click', function(e){
-    e.preventDefault();
-
-    if ( $(this).hasClass('edit-mode') ) {
-    	$('.ui-form__item').find('input, textarea').attr( "readonly", "" );
-    }
-    else{
-    	$('.ui-form__item').find('input, textarea').removeAttr( "readonly" );
-    }
-
-    $(this).toggleClass('edit-mode')
-
-});
 
 
 
+// var mainNav = {
+// 	menuHeight:  "",
+// 	menuOpen: "false",
+// 	init: function () {
+// 		var _this = this;
+// 		_this.menuHeight =  _this.getMenuHeight();
 
-var mainNav = {
-	menuHeight:  "",
-	menuOpen: "false",
-	init: function () {
-		var _this = this;
-		_this.menuHeight =  _this.getMenuHeight();
+// 		// initia
+// 		$('.ui-navigation-header__nav-list').css('margin-top', - _this.menuHeight);
 
-		// initia
-		$('.ui-navigation-header__nav-list').css('margin-top', - _this.menuHeight);
-
-		// bind the click to open/close the menu
-		$('.ui-navigation-header__title').on('click', function(e){
-			e.preventDefault();
+// 		// bind the click to open/close the menu
+// 		$('.ui-navigation-header__title').on('click', function(e){
+// 			e.preventDefault();
 			
-			var $clickedNavTitle = $(this);
+// 			var $clickedNavTitle = $(this);
 
-		    $clickedNavTitle.parent('.ui-navigation-header__nav').toggleClass('ui-navigation-header__nav--open');
-		    if (_this.menuOpen === false) {
-		    	// open menu
-		    	_this.openMenu($clickedNavTitle );
+// 		    $clickedNavTitle.parent('.ui-navigation-header__nav').toggleClass('ui-navigation-header__nav--open');
+// 		    if (_this.menuOpen === false) {
+// 		    	// open menu
+// 		    	_this.openMenu($clickedNavTitle );
 		    
-		    } else {
-		    	// close menu
-		    	_this.closeMenu($clickedNavTitle , _this.menuHeight);
-		    }
+// 		    } else {
+// 		    	// close menu
+// 		    	_this.closeMenu($clickedNavTitle , _this.menuHeight);
+// 		    }
 		   
 
-		});
+// 		});
 
-		// bind a click to select a menu item
-		$('.ui-navigation-header__nav-list-item').on('click', function(e){
-			e.preventDefault();
+// 		// bind a click to select a menu item
+// 		$('.ui-navigation-header__nav-list-item').on('click', function(e){
+// 			e.preventDefault();
 			
-			var $clickedItem = $(this).find('span');
-			var $currentItem = $('.ui-navigation-header__title').find('span');
+// 			var $clickedItem = $(this).find('span');
+// 			var $currentItem = $('.ui-navigation-header__title').find('span');
 
-			//$('ui-navigation-header__nav-list li').append($currentItem);
-			$clickedItem.replaceWith( $currentItem );
+// 			//$('ui-navigation-header__nav-list li').append($currentItem);
+// 			$clickedItem.replaceWith( $currentItem );
 
-			// set the h1 to the selected item
-			$('.ui-navigation-header__title').html($clickedItem.find('span'));
+// 			// set the h1 to the selected item
+// 			$('.ui-navigation-header__title').html($clickedItem.find('span'));
 		    
 		   
 
-		});
+// 		});
 
 
-	},
-	getMenuHeight: function() {
-		return $('.ui-navigation-header__nav-list').height();
-	},
-	openMenu: function(navTitle) {
-		var _this = this;
-		navTitle.parent('.ui-navigation-header__nav').find('.ui-navigation-header__nav-list').css('margin-top', '0');
-		_this.menuOpen = true;
-	},
-	closeMenu: function(navTitle, menuHeight) {
-		var _this = this;
-		navTitle.parent('.ui-navigation-header__nav').find('.ui-navigation-header__nav-list').css('margin-top', - menuHeight);
-		_this.menuOpen = false;
-	},
-	selectItem: function(item) {
-		var _this = this;
-	}
+// 	},
+// 	getMenuHeight: function() {
+// 		return $('.ui-navigation-header__nav-list').height();
+// 	},
+// 	openMenu: function(navTitle) {
+// 		var _this = this;
+// 		navTitle.parent('.ui-navigation-header__nav').find('.ui-navigation-header__nav-list').css('margin-top', '0');
+// 		_this.menuOpen = true;
+// 	},
+// 	closeMenu: function(navTitle, menuHeight) {
+// 		var _this = this;
+// 		navTitle.parent('.ui-navigation-header__nav').find('.ui-navigation-header__nav-list').css('margin-top', - menuHeight);
+// 		_this.menuOpen = false;
+// 	},
+// 	selectItem: function(item) {
+// 		var _this = this;
+// 	}
 
-};
+// };
 
-//mainNav.init();
+// //mainNav.init();
 
 
 
@@ -169,12 +123,10 @@ var mainNav = {
 			this._layout();
 			this._initEvents();
 
-			console.log('_init: ' + this.options.ddClass);
 
 
 		},
 		_layout : function() {
-			console.log('_layout: ' + this.options.ddClass);
 
 			var self = this;
 			this.minZIndex = 400;
@@ -182,7 +134,6 @@ var mainNav = {
 			this.opts = this.listopts.children( 'li' );
 			this.optsCount = this.opts.length;
 			this.size = { width : this.dd.width(), height : this.dd.height() };
-			var ddClass = 'nav-dropdown';
 			
 			var elName = this.$el.attr( 'name' ), elId = this.$el.attr( 'id' ),
 				inputName = elName !== undefined ? elName : elId !== undefined ? elId : this.options.ddClass + ( new Date() ).getTime();
@@ -343,12 +294,153 @@ var mainNav = {
 
 
 
-//---- navigation header navigation dd
-$( '#primary-nav' ).dropdown( {
-	gutter : 2
-} );
-$( '#secondary-nav' ).dropdown( {
-	gutter : 2,
-	stacked: true
-} );
+
+
+
+
+
+
+// new configure item action panel
+
+var configActions = {
+	panelSettings: {
+		panelClass: '.ui-nav-action__panel',
+		panelOpen: false,
+		buttonActiveClass: 'button--active'
+	},
+
+	_init: function() {
+		this._initEvents();
+	},
+	_initEvents: function(){
+		var self = this;
+		//click the action buttons
+		$('.ui-nav-action').on('click', '.ui-nav-action__button', function(e){
+			e.preventDefault();
+			//var $actionContentPanel = $(panelClass);
+		    
+		    if ( $(this).hasClass(self.panelSettings.buttonActiveClass) ) {
+				console.log('true - Active button clicked - panel is open');
+				self._hidePanel($(this));
+		    }
+		    else{
+		    	// check if the panel is open or not
+				if (self.panelSettings.panelOpen === false) {
+					console.log('false - panel is closed');
+					self._showPanel($(this));
+					
+				}
+				else {
+					console.log('true - panel is open');
+					self._hidePanel($(this));
+					self._showPanel($(this));
+				}
+		    }
+			
+
+			
+		});
+	},
+	_hidePanel: function() {
+		$(this.panelSettings.panelClass).css('max-height', 0);
+		$('.ui-nav-action__button').removeClass('button--active');
+		this.panelSettings.panelOpen = false;	
+	},
+	_displayCorrectSubPanel: function(buttonName){
+		console.log('button name: ' + buttonName);
+		$(this.panelSettings.panelClass).find('.action-panel').removeClass('show-content');
+		$(this.panelSettings.panelClass).find('#'+ buttonName).addClass('show-content');
+	},
+	_getPanelHeight: function(){
+		var h = $(this.panelSettings.panelClass).find('.inner').outerHeight();
+		return h;
+	},
+	_showPanel: function(buttonClicked){
+		var self = this;
+		
+		var buttonName = buttonClicked.attr('data-button-name');
+
+		this._displayCorrectSubPanel(buttonName);
+		// get the panel height for css animation
+		var panelHeight = self._getPanelHeight();
+		// plus the action button height
+		var actionButtonHeight = $('.ui-nav-action').height();
+		// animate the panel
+		$(this.panelSettings.panelClass).css('max-height', panelHeight + actionButtonHeight);
+
+		// set active classes
+		buttonClicked.addClass('button--active');
+		this.panelSettings.panelOpen = true;
+
+
+	}
+
+};
+
+
+$(function() {
+
+
+
+	// Object Item menu panel
+	$('#js-sidebar-trigger').click(function(){
+	    $('.o-content').toggleClass('o-content--full-screen');
+	    $(this).toggleClass('ui-header-bar__expander--closed');
+
+	});
+
+	// Folder toggle in Menu panel
+	$('.ui-object-list__item--folder').on('click', function(e){
+	    e.preventDefault();
+	    var $folder = $(this);
+	    $folder.children('.ui-object-sublist').slideToggle(300, function(){
+	        $folder.toggleClass('ui-object-list__item--folder--open');
+	    });
+	    e.stopPropagation();
+	});
+
+
+	//hide all of the panel content areas
+	//$('.ui-panel-content').css('display', 'none');
+	// Panel's toggle
+	$('.ui-panel-header').on('click', function(e){
+	    e.preventDefault();
+	    var $header = $(this);
+	    $header.next('.ui-panel-content').slideToggle(300, function(){
+	        $header.parent().toggleClass('ui-panel--open');
+	    });
+	    e.stopPropagation();
+	});
+
+
+	// mock the edit button being clicked
+	$('.edit').on('click', function(e){
+	    e.preventDefault();
+
+	    if ( $(this).hasClass('edit-mode') ) {
+	    	$('.ui-form__item').find('input, textarea').attr( "readonly", "" );
+	    }
+	    else{
+	    	$('.ui-form__item').find('input, textarea').removeAttr( "readonly" );
+	    }
+
+	    $(this).toggleClass('edit-mode')
+
+	});
+
+	configActions._init();
+
+
+	//---- navigation header navigation dd
+	$( '#primary-nav' ).dropdown( {
+		gutter : 2
+	} );
+	$( '#secondary-nav' ).dropdown( {
+		gutter : 2
+	} );
+
+});
+
+// mock the edit button being clicked
+
 

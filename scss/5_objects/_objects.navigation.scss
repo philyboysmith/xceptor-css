@@ -4,10 +4,11 @@
     bottom: 0;
     //z-index: $z-navigation;
     width: $navigation-width;
-    	@media screen and (max-width: $tablet-and-lower) {
-    		width: $navigation-width--tablet
-    	}
+    	// @media screen and (max-width: $tablet-and-lower) {
+    	// 	width: $navigation-width--tablet
+    	// }
     
     //@extend %box-shadow--right;
     @include transition;
+
 }

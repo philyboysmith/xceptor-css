@@ -30,8 +30,19 @@
 }
 
 .ui-header-bar__info{
-	float: right;
+	position: absolute;
+	right: 0;
+	@extend .ui-navigation-header__icons;
+	button{
+		position: absolute;
+		padding: 0;
+	}
+	.ui-dropdown__toggle__icon{
+		border: none;
+	}
 }
+
+
 
 // .ui-header-bar__username{
 // 	color: $color-text-overlay;

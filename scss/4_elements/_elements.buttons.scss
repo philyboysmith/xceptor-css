@@ -1,6 +1,11 @@
-// input[type="button"], 
-// input[type="submit"], 
-// button,
+input[type="button"], 
+input[type="submit"], 
+button {
+	border: none;
+	background: transparent;
+}
+
+// --- Styled as the cta buttons
 .button,
 a.button { //, {
 	@include button-base;
@@ -8,6 +13,10 @@ a.button { //, {
 	// Hover
 	&:hover{
 		cursor: pointer;
+	}
+	> .icon{
+		position: relative;
+		left:- $tiny-spacing-unit;
 	}
 }
 
@@ -27,6 +36,10 @@ a.button { //, {
 			color: $button-text-color;
 		}
 
+		.icon{
+			fill: $button-text-color;
+		}
+
 	}
 	.button--white{
 		background-color: $button-bg--white;
@@ -40,6 +53,10 @@ a.button { //, {
 			color: $button-text-color--white;
 			background-color: $button-bg-hover--white;
 			border-color: $button-border-color-hover--white;
+		}
+
+		.icon{
+			fill: $button-text-color--white;
 		}
 
 	}
@@ -56,6 +73,9 @@ a.button { //, {
 			background-color: $button-bg-hover--gray;
 			border-color: $button-border-color-hover--gray;
 			border-bottom-color: $button-border-color-shadow-hover--gray;
+		}
+		.icon{
+			fill:$button-text-color;
 		}
 
 	}

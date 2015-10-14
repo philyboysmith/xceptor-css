@@ -4,6 +4,8 @@
 	width: $navigation-width - 1px;
 	top: $header-filter-height;
 	bottom:0;
+
+	padding-bottom: $action-buttons-panel-height + $small-spacing-unit; // needed to allow space for the action buttons
 }
 
 .ui-object-list,

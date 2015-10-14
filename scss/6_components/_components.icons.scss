@@ -8,12 +8,12 @@
   display: inline-block;
   width: $icon-base-width;
   height: $icon-base-height;
-  speak: none; // screen readers
-  vertical-align: text-top;
+  speak: none; // for screen readers
+  vertical-align: middle;//text-top;
   line-height: 1;
 
-  //placeholdering style -- PLEASE REMOVE
-  background-color: pink;
+  // //placeholdering style -- PLEASE REMOVE
+  // background-color: pink;
 }
 
 //--- modifiers
@@ -42,7 +42,6 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  
 }
 
 %absolute-positioning--vertical-middle{
@@ -50,6 +49,12 @@
   display: block;
   top: 50%;
   margin-top: - $icon-base-height/2;
+}
+%absolute-positioning--horz-middle{
+  position: absolute;
+  display: block;
+  left: 50%;
+  margin-left: - $icon-base-height/2;
 }
 
 .#{$icon-prefix}--absolute-full-height {
@@ -61,6 +66,13 @@
 
   &.#{$icon-prefix}--large {
     margin-top: - $icon-base-height--large/2;
+  }
+}
+.#{$icon-prefix}--absolute-h-middle {
+  @extend %absolute-positioning--horz-middle;
+
+  &.#{$icon-prefix}--large {
+    margin-left: - $icon-base-height--large/2;
   }
 }
 
@@ -90,7 +102,9 @@
 .icon--gray-lighter{
   fill: $color-gray-lighter;
 }
-
+.icon--green{
+  fill: $color-green;
+}
 
 
 
