@@ -18,7 +18,7 @@
 	a{	
 		@extend .gamma;
 		color: $panel-header-color;
-		padding: $small-spacing-unit * 1.5;
+		padding: $panel-header-padding;
 		display: block;
 		border-bottom: 1px solid $color-ui;
 		border-left: 4px solid transparent;

@@ -12,8 +12,7 @@
     text-align: center;
     @include rem(line-height, $button-line-height);
     font-weight: $bold-font-weight;
-    @include rem(border-width, $button-border-width);
-    @include rem(border-bottom-width, $button-border-bottom-width);
+    border-width: $button-border-width;
     border-style: $button-border-style;
     // transitions
     @extend .default-transition;

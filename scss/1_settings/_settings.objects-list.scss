@@ -1,12 +1,12 @@
-$list-item-folder-icon-width: $icon-base-width--large;
-$list-item-folder-icon-height: $icon-base-height--large;
+$list-item-folder-icon-width: $icon-base-width;
+$list-item-folder-icon-height: $icon-base-height;
 $list-item-icon-width: 18px;
 $list-item-icon-height: 18px;
 $list-item-icon-to-text-space: $small-spacing-unit;
-$list-item-spacing: $small-spacing-unit+3 $base-spacing-unit $small-spacing-unit+3 $base-spacing-unit+$list-item-icon-width+$list-item-icon-to-text-space ;
+$list-item-spacing: $small-spacing-unit $base-spacing-unit $small-spacing-unit $base-spacing-unit+$list-item-icon-width+$list-item-icon-to-text-space ;
 //$list-item-spacing--folder: $small-spacing-unit $base-spacing-unit+ $small-spacing-unit$small-spacing-unit;
 
-$list-item-border-color: $color-gray-light;
+$list-item-border-color: lighten($color-gray-light,5);
 $list-item-text-color: $color-heading-text;
 
 $list-item-active-highlight-l-border: 3px;

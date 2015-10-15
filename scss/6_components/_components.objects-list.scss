@@ -16,7 +16,7 @@
 %ui-object-list__item{
 	padding: $list-item-spacing;
 	display: block;
-	border-bottom: 1px solid $list-item-border-color;
+	
 	border-left: $list-item-active-highlight-l-border solid transparent;
 
 }
@@ -45,12 +45,17 @@
 	@extend %ui-object-list__item;
 	background-color: $color-gray-lighter;
 	padding-left: $sublist-item-indent;
+	&:hover{
+		background-color: darken($sublist-item-background-color, 7);
+	}
 }
 
 
 .ui-object-list__item--folder{
+	border-bottom: 1px solid $list-item-border-color;
 	a{
 		padding-right: $base-spacing-unit + $small-spacing-unit;
+
 	}
 	
 	//hide the sublist
@@ -61,6 +66,7 @@
 	// nested folder style
 	.ui-object-list__item--folder{
 		background-color: darken($sublist-item-background-color, 5);
+		
 	}
 }
 
@@ -71,7 +77,7 @@
 .ui-object-list__icon{
 	width: $list-item-folder-icon-width;
 	height: $list-item-folder-icon-height;
-	margin-top: - $list-item-icon-height/2;
+	//margin-top: - $list-item-icon-height/2;
 	margin-left: - ($list-item-icon-width + $list-item-icon-to-text-space);
 }
 .ui-object-list__toggle{

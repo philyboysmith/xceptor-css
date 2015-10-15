@@ -25,7 +25,7 @@ a.button { //, {
 	.button--blue{
 		background-color: $button-bg;
 		border-color: $button-border-color;
-    	border-bottom-color:$button-border-color-shadow;
+    	
     	color: $button-text-color;
     	&:visited{
 			color: $button-text-color;
@@ -44,7 +44,7 @@ a.button { //, {
 	.button--white{
 		background-color: $button-bg--white;
 		border-color: $button-border-color--white;
-    	border-bottom-color:$button-border-color-shadow--white;
+    	
     	color: $button-text-color--white;
     	&:visited{
 			color: $button-text-color--white;
@@ -64,7 +64,7 @@ a.button { //, {
 		background-color: $button-bg--gray;
 		color: $button-text-color--gray;
 		border-color: $button-border-color--gray;
-		border-bottom-color: $button-border-color-shadow--gray;
+		
 		&:visited{
 			color: $button-text-color;
 		}
@@ -81,4 +81,18 @@ a.button { //, {
 	}
 	.button--block{
 		display: block;
+	}
+
+	.button--shadow, a.button--shadow  {
+		border-bottom-width: $button-border-bottom-width;
+
+		&.button--blue{
+			border-bottom-color:$button-border-color-shadow;
+		}
+		&.button--white{
+			border-bottom-color:$button-border-color-shadow--white;
+		}
+		&.button--gray{
+			border-bottom-color: $button-border-color-shadow--gray;
+		}
 	}

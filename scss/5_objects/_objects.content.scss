@@ -6,7 +6,7 @@
     z-index: $z-content;
     background: white;
     position: relative;
-    float: left;
+    overflow: hidden;
     box-shadow: -3px 0 4px 0 rgba(0, 0, 0, 0.15);
 }
 
