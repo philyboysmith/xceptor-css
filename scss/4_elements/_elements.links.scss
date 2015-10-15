@@ -2,7 +2,7 @@ a {
     text-decoration: none;
     color: $color-link;
     @extend .default-transition;
-    @include rem(border-bottom, 1px solid transparent);
+    border-bottom: 1px solid transparent;
   
     &:visited{
     	color: $color-link;
@@ -11,7 +11,7 @@ a {
     &:focus {
         color: darken($color-link-hover, 5);
        // text-decoration: underline;
-        border-color: $color-link-hover;
+        border-bottom-color: $color-link-hover ;
     }
     &:active{}
 

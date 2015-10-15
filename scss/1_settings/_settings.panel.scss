@@ -1,4 +1,4 @@
-$panel-navigation-item-spacing: $small-spacing-unit $base-spacing-unit;
+$panel-navigation-item-spacing: $tiny-spacing-unit $base-spacing-unit;
 $panel-navigation-item-border-color: $color-gray-light;
 $panel-navigation-background-color: $color-gray-lighter;
 
@@ -6,5 +6,6 @@ $panel-body-background-color: #FFFFFF;
 $panel-body-padding: $base-spacing-unit $base-spacing-unit*2;
 
 $panel-header-color: $color-brand-shadow;
+$panel-header-color--hover: $color-brand-highlight;
 $panel-header-padding: $small-spacing-unit $small-spacing-unit * 1.5;
 $panel-navigation-width: 200px;

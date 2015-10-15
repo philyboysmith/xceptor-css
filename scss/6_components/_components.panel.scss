@@ -1,18 +1,20 @@
 .ui-panel {
-	border-top: 1px solid $color-gray-light;
 	@include clearfix();
 	background: white;
 	//@include rem(margin-bottom, 1px);
 }
-.ui-panel + .ui-panel, .ui-panel--no-border {
+.ui-panel:not(.ui-panel--open) + .ui-panel > .ui-panel-header {
 	border-top: none;
 }
 
 .ui-panel-header {
+	border-top: 1px solid $color-ui;
+	border-bottom: 1px solid $color-ui;
 
 }
 %ui-panel-header__title--hover{
 	border-left: 4px solid $color-brand;
+
 }
 .ui-panel-header__title {	
 	a{	
@@ -20,7 +22,7 @@
 		color: $panel-header-color;
 		padding: $panel-header-padding;
 		display: block;
-		border-bottom: 1px solid $color-ui;
+		border-bottom: none;
 		border-left: 4px solid transparent;
 		position: relative;
 		&:visited{
@@ -28,6 +30,7 @@
 		}
 		&:hover{
 			@extend %ui-panel-header__title--hover;
+			color: $panel-header-color--hover;
 		}
 	}
 	
