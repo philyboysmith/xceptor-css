@@ -1,3 +1,26 @@
+/*
+ * -------------------------------------------------------------
+ * Breakpoint mixin.
+ * -------------------------------------------------------------
+ * 
+ * Usage example
+ * .nav {
+ *  padding: $base-spacing;
+ *    @include breakpoint($width-md) {
+ *      padding: $base-double-spacing;
+ *    }
+ *  }
+ */
+@mixin breakpoint($width, $type: min-width) {
+  @if (str-index($type, max-)) { 
+    $width: $width - 1;
+  }
+  @media screen and ($type: $width) { 
+    @content;
+  }
+}
+
+
 
 /*
  * -------------------------------------------------------------
