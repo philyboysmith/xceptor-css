@@ -385,7 +385,8 @@ $(function() {
 	// Object Item menu panel
 	$('#js-sidebar-trigger').click(function(){
 	    $('.o-content').toggleClass('o-content--full-screen');
-	    $(this).toggleClass('ui-header-bar__expander--closed');
+	    $('.o-side-panel').toggleClass('o-side-panel--closed');
+	    $(this).toggleClass('ui-side-panel__expander--closed');
 
 	});
 	// Toggle the navigation

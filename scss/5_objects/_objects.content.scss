@@ -1,14 +1,14 @@
 .o-content {
 	height: 100%;
 	//width:100%;
-    left: $side-panel-width;
+    padding-left: $side-panel-width;
     right: 0;
     top: $header-bar-height;
-    bottom: 0;
-    overflow-y: auto;
+   // bottom: 0;
+
     z-index: $z-content;
-    background: white;
-    position: absolute;//relative;
+    background: $base-background-color;
+    position: relative;
     //overflow: hidden;
     box-shadow: -3px 0 4px 0 rgba(0, 0, 0, 0.15);
 
@@ -16,5 +16,11 @@
 }
 
 .o-content--full-screen {
-	left: 0;
+	padding-left: 0;
+
+}
+.o-content--full-screen~.o-side-panel{
+    padding-left: 0;
+    background-color: green !important;
+    
 }
