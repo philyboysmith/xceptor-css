@@ -1,0 +1,809 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Xceptor Style Guide</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    
+    <script>
+        var ajax = new XMLHttpRequest();
+        ajax.open("GET", "img/svg-defs.svg", true);
+        ajax.send();
+        ajax.onload = function(e) {
+            $('#svg').append(ajax.responseText);  
+        }
+    </script>
+    <script src="js/mock-up-ui.js"></script>
+</head>
+<body>
+    <div id="svg" class="hide"></div>
+
+        <div class="o-wrapper">
+        
+         <div class="o-header-bar">
+                <div class="ui-header-bar">
+
+                    <ol class="ui-breadcrumbs">
+                        <li class="ui-breadcrumbs__item"><a href="#item1">Item 1</a></li>
+                        <li class="ui-breadcrumbs__item"><a href="#item1">Item 2</a></li>
+                        <li class="ui-breadcrumbs__item"><a href="#item1">Item 3</a></li>
+                        <li class="ui-breadcrumbs__item">
+                            <div class="ui-dropdown inline-block ui-dropdown--non-fancy">
+                            <button class="ui-dropdown__toggle">Views <i class="ui-dropdown__toggle__icon"><svg class="icon icon-dropdown">
+                                  <use xlink:href="#chevron-down" class="icon--white"></use>
+                                </svg>
+                            </i>
+                            <ul class="ui-dropdown-list">
+                                <li class="ui-dropdown-list__item"><a href="#">View 1</a></li>
+                                <li class="ui-dropdown-list__item"><a href="#">Another view</a></li>
+                                <li class="ui-dropdown-list__item"><a href="#">Another view</a></li>
+                            </ul>
+                            </button></div>
+                        </li>
+                    </ol>
+                    <!-- <div class="ui-header-bar__info"> -->
+                   <button class="ui-header-bar__expander icon--absolute-full-height" id="js-sidebar-trigger" title="Collapse / Expand Menu">
+                        <svg class="icon icon--large icon--white icon--absolute-v-middle icon--absolute-h-middle">
+                          <use xlink:href="#chevron-left"></use>
+                        </svg> 
+                    </button>
+           
+                        <div class="ui-header-bar__info icon--absolute-full-height">
+                            <button class="icon--absolute-v-middle icon--absolute-h-middle icon--large"><i class="ui-dropdown__toggle__icon">
+                                <svg class="icon icon--large icon--white">
+                                  <use xlink:href="#dropdown1"></use>
+                                </svg>
+                            </i>
+                            <!-- <ul class="ui-dropdown-list ui-dropdown-list--align-right">
+                                <li class="ui-dropdown-list__header">
+                                    <h3>Administrator</h3>
+                                    <h4><a href="#">Edit profile</a></h4>
+                                </li>
+                                <li class="ui-dropdown-list__item"><a href="#">Action</a></li>
+                                <li class="ui-dropdown-list__item"><a href="#">Another action</a></li>
+                                <li class="ui-dropdown-list__item"><a href="#">Something else here</a></li>
+                                <li class="ui-dropdown-list__item divider" role="separator"></li>
+                                <li class="ui-dropdown-list__item"><a href="#">Separated link</a></li>
+                            </ul> -->
+                            </button>
+                        </div>
+
+                   <!--      
+                    </div> -->
+                </div>
+            </div>
+            <div class="o-side-panel">
+            <!--  Object list -->
+                <div class="ui-object-list-wrapper">
+                <ul class="ui-object-list margin--bottom--small">
+                    
+                    <li class="ui-object-list__item  ui-object-list__item--folder"><a href="#">
+                        <svg class="icon icon--absolute-v-middle ui-object-list__icon icon--gray">
+                          <use xlink:href="#field-types-folders"></use>
+                        </svg> Folder 1<svg class="icon icon--absolute-v-middle ui-object-list__toggle">
+                          <use xlink:href="#chevron-right"></use>
+                        </svg></a>
+                        <ul class="ui-object-sublist">
+                        <li class="ui-object-sublist__item">
+                                <a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                          <use xlink:href="#input-excel"></use>
+                        </svg> File within</a></li>
+                            <li class="ui-object-sublist__item ui-object-sublist__item--active">
+                                <a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                          <use xlink:href="#input-document"></use>
+                        </svg> File within a folder</a></li>
+                            <li class="ui-object-sublist__item"><a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                                  <use xlink:href="#input-excel"></use>
+                                </svg>  File name that is really really looooooongggg</a></li>
+                            <li class="ui-object-sublist__item"><a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                                  <use xlink:href="#input-excel"></use>
+                                </svg> File</a></li> 
+                        </ul>
+                    </li>
+                    <li class="ui-object-list__item  ui-object-list__item--folder ui-object-list__item--folder--open"><a href="#">
+                        <svg class="icon icon--absolute-v-middle ui-object-list__icon icon--gray">
+                          <use xlink:href="#field-types-folders"></use>
+                        </svg> Folder 2<svg class="icon icon--absolute-v-middle ui-object-list__toggle">
+                          <use xlink:href="#chevron-right"></use>
+                        </svg></a>
+                        <ul class="ui-object-sublist">
+                            <li class="ui-object-sublist__item">
+                                <a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                                  <use xlink:href="#input-pdf"></use>
+                                </svg> File within</a></li>
+                            <li class="ui-object-sublist__item ui-object-sublist__item--active">
+                                <a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                                  <use xlink:href="#input-xml"></use>
+                                </svg> File within a folder</a>
+                            </li>
+                            <li class="ui-object-sublist__item">
+                                <a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                                  <use xlink:href="#input-delimited"></use>
+                                </svg>  File name that is really really looooooongggg</a></li>
+                            <li class="ui-object-sublist__item">
+                                <a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                                  <use xlink:href="#input-pdf"></use>
+                                </svg> File</a></li>
+                        </ul>
+                    </li>
+                    <li class="ui-object-list__item  ui-object-list__item--folder"><a href="#">
+                        <svg class="icon icon--absolute-v-middle ui-object-list__icon icon--gray">
+                          <use xlink:href="#field-types-folders"></use>
+                        </svg> Folder 3<svg class="icon icon--absolute-v-middle ui-object-list__toggle">
+                          <use xlink:href="#chevron-right"></use>
+                        </svg></a>
+                        <ul class="ui-object-sublist">
+                        <li class="ui-object-sublist__item">
+                                <a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                          <use xlink:href="#input-internal"></use>
+                        </svg> File within</a></li>
+                            <li class="ui-object-sublist__item">
+                                <a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                          <use xlink:href="#input-pdf"></use>
+                        </svg> File within a folder</a></li>
+                            <li class="ui-object-sublist__item"><a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                                  <use xlink:href="#input-excel"></use>
+                                </svg>  File name</a></li>
+                                <li class="ui-object-list__item  ui-object-list__item--folder"><a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon icon--gray">
+                                  <use xlink:href="#field-types-folders"></use>
+                                </svg> Folder 3a<svg class="icon icon--absolute-v-middle ui-object-list__toggle">
+                                  <use xlink:href="#chevron-right"></use>
+                                </svg></a>
+                                <ul class="ui-object-sublist">
+                                <li class="ui-object-sublist__item">
+                                        <a href="#">
+                                        <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                                  <use xlink:href="#input-excel"></use>
+                                </svg> File within</a></li>
+                                    <li class="ui-object-sublist__item">
+                                        <a href="#">
+                                        <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                                  <use xlink:href="#input-pdf"></use>
+                                </svg> File within a folder</a></li>
+                                    <li class="ui-object-sublist__item"><a href="#">
+                                        <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                                          <use xlink:href="#input-swift"></use>
+                                        </svg>  File name</a></li>
+                                    <li class="ui-object-sublist__item"><a href="#">
+                                        <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                                          <use xlink:href="#input-xml"></use>
+                                        </svg> Filename</a></li> 
+                                </ul>
+                            </li>
+                            <li class="ui-object-sublist__item"><a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                                  <use xlink:href="#input-excel"></use>
+                                </svg> Filename</a></li> 
+                        </ul>
+                    </li>
+                    <li class="ui-object-list__item  ui-object-list__item--folder"><a href="#">
+                        <svg class="icon icon--absolute-v-middle ui-object-list__icon icon--gray">
+                          <use xlink:href="#field-types-folders"></use>
+                        </svg> Folder 4 <svg class="icon icon--absolute-v-middle ui-object-list__toggle">
+                          <use xlink:href="#chevron-right"></use>
+                        </svg></a>
+                        <ul class="ui-object-sublist">
+                            <li class="ui-object-sublist__item">
+                                <a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                          <use xlink:href="#input-pdf"></use>
+                        </svg> File</a></li>
+                            <li class="ui-object-sublist__item">
+                                <a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                          <use xlink:href="#input-pdf"></use>
+                        </svg> Filename</a></li>
+                        </ul>
+                    </li>
+                    <li class="ui-object-list__item  ui-object-list__item--folder"><a href="#">
+                        <svg class="icon icon--absolute-v-middle ui-object-list__icon icon--gray">
+                          <use xlink:href="#field-types-folders"></use>
+                        </svg> Folder 5 <svg class="icon icon--absolute-v-middle ui-object-list__toggle">
+                          <use xlink:href="#chevron-right"></use>
+                        </svg></a>
+                        <ul class="ui-object-sublist">
+                            <li class="ui-object-sublist__item">
+                                <a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                          <use xlink:href="#input-pdf"></use>
+                        </svg> File</a></li>
+                            <li class="ui-object-sublist__item">
+                                <a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                          <use xlink:href="#input-pdf"></use>
+                        </svg> Filename</a></li>
+                        </ul>
+                    </li>
+                    <li class="ui-object-list__item  ui-object-list__item--folder"><a href="#">
+                        <svg class="icon icon--absolute-v-middle ui-object-list__icon icon--gray">
+                          <use xlink:href="#field-types-folders"></use>
+                        </svg> Folder 6 <svg class="icon icon--absolute-v-middle ui-object-list__toggle">
+                          <use xlink:href="#chevron-right"></use>
+                        </svg></a>
+                        <ul class="ui-object-sublist">
+                            <li class="ui-object-sublist__item">
+                                <a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                          <use xlink:href="#input-pdf"></use>
+                        </svg> File</a></li>
+                            <li class="ui-object-sublist__item">
+                                <a href="#">
+                                <svg class="icon icon--absolute-v-middle ui-object-list__icon">
+                          <use xlink:href="#input-pdf"></use>
+                        </svg> Filename</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>                
+            </div>
+            <!-- END of object list -->
+                <!-- Actions buttons -->
+            <div class="ui-nav-action__panel">
+            <div class="inner">
+                <section id="add-item" class="action-panel">
+                <h2 class="action-panel__heading">Add New Item</h2>
+                
+                    <div class="ui-tabs">
+                        <div class="ui-tabs__tab-item">
+                           <input type="radio" id="tab-1" name="tab-group-1" checked>
+                           <label for="tab-1">Choose format</label>
+                           
+                           <div class="ui-tabs__tab-content">
+                                <div class="action-panel__sub-panel">
+                                    
+                                    <ul class="big-icon-list">
+                                        <li  class="big-icon-list__item">
+                                           <a href="#" class="big-icon-list__link">
+                                           <i class=""><svg class="icon big-icon-list__icon">
+                                          <use xlink:href="#input-pdf"></use>
+                                        </svg></i>PDF</a> 
+                                           
+                                        </li>
+                                        <li  class="big-icon-list__item">
+                                           <a href="#" class="big-icon-list__link">
+                                           <i class=""><svg class="icon big-icon-list__icon">
+                                          <use xlink:href="#input-xml"></use>
+                                        </svg></i>XML</a> 
+                                        </li>
+                                        <li  class="big-icon-list__item">
+                                           <a href="#" class="big-icon-list__link">
+                                           <i class=""><svg class="icon big-icon-list__icon">
+                                          <use xlink:href="#input-internal"></use>
+                                        </svg></i>Internal Format</a> 
+                                        </li>
+                                        <li  class="big-icon-list__item">
+                                           <a href="#" class="big-icon-list__link">
+                                           <i class=""><svg class="icon big-icon-list__icon">
+                                          <use xlink:href="#input-document"></use>
+                                        </svg></i>Document</a> 
+                                        </li>
+                                        <!-- <li  class="big-icon-list__item">
+                                           <a href="#" class="big-icon-list__link">
+                                           <i class=""><svg class="icon big-icon-list__icon">
+                                          <use xlink:href="#input-delimited"></use>
+                                        </svg></i>Delimited</a> 
+                                        </li>
+                                        <li class="big-icon-list__item">
+                                           <a href="#" class="big-icon-list__link">
+                                           <i class=""><svg class="icon big-icon-list__icon">
+                                          <use xlink:href="#input-excel"></use>
+                                        </svg></i>Excel</a> 
+                                        </li>
+                                         -->
+                                    </ul>
+                                </div>
+                           </div> 
+                       </div>
+                       <div class="ui-tabs__tab-item">
+                           <input type="radio" id="tab-2" name="tab-group-1" >
+                           <label for="tab-2">Upload</label>
+                           
+                           <div class="ui-tabs__tab-content ui-tabs__tab-content--padding">
+                               <div class="action-panel__sub-panel">
+                                    <p>Optionally you can upload a document and let Xceptor determine the format.</p>
+                                    <form action="">
+                                    <label>Choose a file from your computer</label>
+                                      <input type="file" name="upload" accept="image/*">
+                                      
+                                    </form>
+
+                                </div>
+                           </div> 
+                       </div>
+                        
+         
+
+                    </div>
+
+
+                </section>
+
+                <section id="search-items" class="action-panel action-panel__search-items">
+                   <!--  <h1 class="action-panel__heading">Search Items</h1> -->
+                    <div class="ui-form__item">
+
+                        <input id="filter" type="search" placeholder="Filter items" value="" >
+                        <button  data-button-name="search-items" class="icon--large icon--absolute-full-height"><svg class="icon icon--large icon--white icon--absolute-v-height" title="Import">
+                            <use xlink:href="#search"></use>
+                </svg></button>
+                    </div>
+                    
+                </section>
+
+                <section id="import-items" class="action-panel">
+                    <h1 class="action-panel__heading">Import Items</h1>
+                    <p>Import html content in here</p>
+                    
+                </section>
+                </div>
+            </div>
+            <div class="ui-nav-action text-center">
+                    
+                <button data-button-name="import-items" class="ui-nav-action__button"><svg class="icon icon--larg icon--white" title="Import">
+                  <use xlink:href="#import"></use>
+                </svg></button>
+                <button data-button-name="add-item" class="ui-nav-action__button ui-nav-action__button--large margin-left--tiny margin-right--tiny"><svg class="icon icon--large icon--white" title="Add new item">
+                  <use xlink:href="#add"></use>
+                </svg></button>
+                <button  data-button-name="search-items" class="ui-nav-action__button"><svg class="icon icon--larg icon--white" title="Import">
+                  <use xlink:href="#search"></use>
+                </svg></button>
+            </div>
+            
+            <!-- END Actions buttons -->
+            </div>
+
+            <div class="o-content">
+           
+                <div class="o-body o-body--collapse">
+                <!-- ui-item-header -->
+                    <div class="ui-item-header grid grid--no-margin">
+                        <div class="ui-item-header__details col--1-2">
+                            <div class="grid">
+                            <i class="ui-item-header__icon icon--left-of-text left">
+                                <svg class="icon icon--large icon--white icon--absolute-v-middle icon--absolute-h-middle ">
+                                  <use xlink:href="#input-xml"></use>
+                                </svg> 
+                            </i>
+                            <h1 class="text--blue margin-bottom--tiny">Bank View London </h1>
+                            <span class="gamma text--black ">Created June 9th 2015</span>
+                            <div class="ui-item-header__desc clear-left margin-top--base">
+                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. </p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="ui-item-header__links col--1-2">
+                            <ul class="ui-button-list text-right">
+                                <li class="ui-button-list__item"><a href="#" class="button button--blue edit">    <svg class="icon icon-dropdown">
+                                      <use xlink:href="#dropdown1"></use>
+                                    </svg>Edit</a></li>
+                                <li class="ui-button-list__item"><a href="#" class="button button--white">    <svg class="icon icon-dropdown">
+                                      <use xlink:href="#dropdown1"></use>
+                                    </svg>Test</a></li>
+                                <li class="ui-button-list__item"><a href="#" class="button button--white">
+                                    <svg class="icon icon-dropdown">
+                                      <use xlink:href="#dropdown1"></use>
+                                    </svg>Review Changes</a></li>
+                                <li><div class="ui-dropdown inline-block">
+                                <button class="button button--white ui-dropdown__toggle">More <i class="ui-dropdown__toggle__icon">
+                                    <svg class="icon icon-dropdown">
+                                      <use xlink:href="#dropdown1"></use>
+                                    </svg>
+                                </i>
+                                <ul class="ui-dropdown-list ui-dropdown-list--align-right">
+                                   
+                                    <li class="ui-dropdown-list__item"><a href="#">Action</a></li>
+                                    <li class="ui-dropdown-list__item"><a href="#">Another action</a></li>
+                                    <li class="ui-dropdown-list__item"><a href="#">Something else here</a></li>
+                                    <li class="ui-dropdown-list__item divider" role="separator"></li>
+                                    <li class="ui-dropdown-list__item"><a href="#">Separated link</a></li>
+                                </ul>
+                                </button>
+                                </div></li>
+                            </ul>
+                            <div class="ui-item-header__status text--black">
+                            <svg class="icon icon--left-of-text icon--green">
+                                <use xlink:href="#dropdown1" ></use>
+                                </svg>Approved</div>
+                        </div>
+                    </div>
+                    <!-- END ui-item-header -->
+                    <!-- END ui-item-summary -->
+                    <article class="ui-item-summary ui-panel module">
+                        <div class="ui-panel-header">
+                            <h1 class="ui-panel-header__title">
+                                <a href="#">Summary <i class="ic ui-panel-header__icon"><svg class="icon icon--large">
+                                      <use xlink:href="#chevron-right"></use>
+                                    </svg></i></a>
+                            </h1>
+                        </div>
+                        <div class="ui-panel-content">
+                            <div class="ui-panel-body">
+                                <form>
+                                    <fieldset>
+                                        
+                                        <div class="multi-column--3">
+                                            <div class="ui-form__item">
+                                                <label for="id">ID:</label>
+                                                <input id="id" type="text" placeholder="this is a placeholder" value="679" readonly>
+                                            </div>
+                                            <div class="ui-form__item">
+                                                <label for="name">Name:</label>
+                                                <input id="name" type="text" placeholder="this is a placeholder" value="Bank View London" readonly>
+                                            </div>
+                                            <div class="ui-form__item">
+                                                <label for="displayName">Display name:</label>
+                                                <input id="displayName" type="text" placeholder="this is a placeholder" value="Bank View London" readonly>
+                                            </div>
+                                            <div class="ui-form__item">
+                                                <label for="refName">Ref name:</label>
+                                                <input id="refName" type="text" placeholder="this is a placeholder" value="Exercise/Enrichment Exercise" readonly>
+                                            </div>
+                                            <div class="ui-form__item">
+                                                <label for="preprocessor">Preprocessor:</label>
+                                                <input id="preprocessor" type="text" placeholder="this is a placeholder" value="No preprocessor selected" readonly>
+                                            </div>
+                                            <div class="ui-form__item">
+                                                <label for="state">State:</label>
+                                                <input id="state" type="text" placeholder="this is a placeholder" value="Approved" readonly>
+                                            </div>
+                                            <div class="ui-form__item">
+                                                <label for="ownerGroup">Owner group:</label>
+                                                <input id="ownerGroup" type="text" placeholder="this is a placeholder" value="Exercise" readonly>
+                                            </div>
+                                            <div class="ui-form__item">
+                                                <label for="created">Created:</label>
+                                                <input id="created" type="text" placeholder="this is a placeholder" value="29th Sep 2015, 10:09" readonly>
+                                            </div>
+                                            <div class="ui-form__item">
+                                                <label for="updated">Last updated:</label>
+                                                <input id="updated" type="text" placeholder="this is a placeholder" value="29th Sep 2015, 09:40 (AutoTestClient)" readonly>
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="multi-column--2">
+                                             <div class="ui-form__item">
+                                                <label for="description">Description:</label>
+                                                <textarea id="description" placeholder="this is a placeholder" class="ui-item-summary__textarea-description" readonly>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</textarea>
+                                            </div>
+                                            <div class="ui-form__item">
+                                                <label for="notes">Notes:</label>
+                                                <textarea id="notes" placeholder="Notes to go in here" class="ui-item-summary__textarea-notes" readonly></textarea>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- END ui-item-summary -->
+
+                    <!-- ui-item-data-capture -->
+                    <article class="ui-panel ui-panel--open module">
+
+                        <div class="ui-panel-header">
+                            <h1 class="ui-panel-header__title">
+                                <a href="#">Data Capture <i class="ic ui-panel-header__icon"><svg class="icon icon--large">
+                                      <use xlink:href="#chevron-right"></use>
+                                    </svg></i></a>
+                            </h1>
+                        </div>
+                        <div class="ui-panel-content">
+                            <div class="ui-panel-navigation-wrapper">
+                                <ul class="ui-panel-navigation">
+                                    <li class="ui-panel-navigation__item  ui-panel-navigation__item--active"><a href="#">Item</a></li>
+                                    <li class="ui-panel-navigation__item"><a href="#">Item 2</a></li>
+                                    <li class="ui-panel-navigation__item"><a href="#">Item 3</a></li>
+                                    <li class="ui-panel-navigation__item"><a href="#">Item 4</a></li>
+                                    <li class="ui-panel-navigation__item"><a href="#">Item 5</a></li>
+                                </ul>
+                            </div>
+                            <div class="ui-panel-body">
+                                <form class="ui-form" action="">
+                                    <fieldset>
+                                        <div class="ui-form__item">
+                                            <label for="text">Text Input <abbr title="Required">*</abbr></label>
+                                            <input id="text" type="text" value="This is a required field" readonly>
+                                        </div>
+                                        <div class="ui-form__item">
+                                            <label for="text">Text Input</label>
+                                            <input id="text" type="text" placeholder="this is a placeholder" readonly="readonly">
+                                        </div>
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend>Dynamic Column Settings <a href="#" class="ui-form__legend-link">Here</a></legend>
+                                        <div class="ui-form__item">
+                                            <input id="checkbox" class="checkbox" type="checkbox" readonly> 
+                                            <label for="checkbox" class="check">Copy from cell above if blank</label>
+                                        </div>
+                                        <div class="ui-form__item">
+                                            <input id="merge" class="checkbox" type="checkbox" readonly> 
+                                            <label for="merge" class="check">Merge with Cell below</label>
+                                        </div>
+                                        <div class="ui-form__item">
+                                            <table>
+                                                <tr>
+                                                    <td>OR</td>
+                                                    <td>row</td>
+                                                    <td>1</td>
+                                                    <td>matches value</td>
+                                                    <td>A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>AND</td>
+                                                    <td>row</td>
+                                                    <td>2</td>
+                                                    <td>matches value</td>
+                                                    <td>B</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="ui-form__item">
+                                            <label for="text">If a column has already been selected</label>
+                                            <input id="text" type="text" placeholder="this is a placeholder" value="Find the next matching value" readonly>
+                                        </div>
+                                        <div class="ui-form__item">
+                                            <label for="text">If not matching column can be found</label>
+                                            <input id="text" type="text" placeholder="this is a placeholder" value="Report an error" readonly>
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <legend>Cell Value Dependent Actions</legend>
+                                        <div class="multi-column">
+                                            <div class="ui-form__item">
+                                                <label for="text">Apply action</label>
+                                                <input id="text" type="text" placeholder="this is a placeholder" value="When cell is empty" readonly>
+                                            </div>
+                                            <div class="ui-form__item">
+                                                <label for="text">Match value</label>
+                                                <input id="text" type="text" placeholder="this is a placeholder" value="ABC" readonly>
+                                            </div>
+                                            <div class="ui-form__item">
+                                                <label for="text">Action to apply</label>
+                                                <input id="text" type="text" placeholder="this is a placeholder" value="Ignore the cell" readonly>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+
+
+                        </div>
+                    </article>
+                    <!-- END ui-item-data-capture -->
+                    <!-- ui-item-enrichment -->
+                    <article class="ui-panel module">
+       
+                        <div class="ui-panel-header">
+                            <h1 class="ui-panel-header__title">
+                                <a href="#">Enrichments <i class="ui-panel-header__icon"><svg class="icon icon--large">
+                                      <use xlink:href="#chevron-right"></use>
+                                    </svg></i></a>
+                            </h1>
+                        </div>
+                        <div class="ui-panel-content">
+                            <div class="ui-panel-navigation-wrapper">
+                                <ul class="ui-panel-navigation">
+                                    <li class="ui-panel-navigation__item  ui-panel-navigation__item--active"><a href="#">Item</a></li>
+                                    <li class="ui-panel-navigation__item"><a href="#">Item 2</a></li>
+                                    <li class="ui-panel-navigation__item"><a href="#">Item 3</a></li>
+                                    <li class="ui-panel-navigation__item"><a href="#">Item 4</a></li>
+                                    <li class="ui-panel-navigation__item"><a href="#">Item 5</a></li>
+                                </ul>
+                            </div>
+                            <div class="ui-panel-body">
+                                <form class="ui-form" action="">
+                                     <fieldset>
+                                        
+                                        <div class="multi-column--3">
+                                            <div class="ui-form__item">
+                                                <label for="enrichmentName">Name:</label>
+                                                <input id="enrichmentName" type="text" placeholder="this is a placeholder" value="Name of enrichment" readonly>
+                                            </div>
+                                            <div class="ui-form__item">
+                                                <label for="enrichmentDesc">Decription:</label>
+                                                <input id="enrichmentDesc" type="text" placeholder="this is a placeholder" value="ABC" readonly>
+                                            </div>
+                                            <div class="ui-form__item">
+                                                <label for="text">Status</label>
+                                                <div class="ui-toggle-switch">
+                                                  <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round ui-toggle-switch__input" type="checkbox" checked>
+                                                  <label for="cmn-toggle-1" class="ui-toggle-switch__label"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset>
+                                    <legend>Enrichment type <a href="#" class="ui-form__legend-link">Change type</a></legend>
+                                        <div class="ui-form__item">
+                                            <label for="text">Text Input <abbr title="Required">*</abbr></label>
+                                            <input id="text" type="text" readonly>
+                                        </div>
+                                        <div class="ui-form__item">
+                                            <label for="text">Text Input</label>
+                                            <input id="text" type="text" placeholder="this is a placeholder" readonly="readonly">
+                                        </div>
+                                    </fieldset>
+                                
+                                   
+                                </form>
+                            </div>
+
+
+                        </div>
+                    </article>
+                    <!-- ui-item-enrichment -->
+
+
+
+                    </div>
+            </div>
+        </div>
+ 
+        <button class="ui-navigation__toggle" id="js-navigation-trigger" title="Collapse / Expand Menu">
+            <svg class="icon icon--large icon--white icon--absolute-v-middle icon--absolute-h-middle">
+              <use xlink:href="#menu"></use>
+            </svg> 
+        </button>
+        <button class="ui-navigation-secondary__toggle" id="js-navigation-trigger" title="Collapse / Expand Menu">
+            <svg class="icon icon--large icon--white icon--absolute-v-middle icon--absolute-h-middle">
+              <use xlink:href="#dropdown1"></use>
+            </svg> 
+        </button>
+        
+    <div class="o-navigation ui-navigation__overlay" role="navigation" aria-label="Main navigation">
+        <div class="ui-navigation__title">Navigation</div>
+        <nav class="ui-navigation__lists">
+            <ul class="ui-navigation__list col--1-5">
+                <li >
+                    <h3 class="ui-navigation_list-heading">Configuration</h3></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Input Formats</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+            </ul>
+            <ul class="ui-navigation__list col--1-5">
+                <li >
+                    <h3 class="ui-navigation_list-heading">Data Hub</h3></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Data Sets</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+                
+            </ul>
+            <ul class="ui-navigation__list col--1-5">
+                <li >
+                    <h3 class="ui-navigation_list-heading">Operations</h3></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Data Sets</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+            </ul>
+            <ul class="ui-navigation__list col--1-5">
+                <li >
+                    <h3 class="ui-navigation_list-heading">Admisitration</h3></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Users</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">User Groups</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">User Permisions</a></li>
+            </ul>
+            <ul class="ui-navigation__list col--1-5">
+                <li >
+                    <h3 class="ui-navigation_list-heading">Admisitration 1</h3></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Users</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">User Groups</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">User Permisions</a></li>
+            </ul>
+        </nav>
+             
+    </div>
+    <div class="o-navigation ui-navigation__overlay ui-navigation-secondary" role="navigation" aria-label="Secondary navigation">
+        <div class="ui-navigation__title">Navigation</div>
+        <nav class="ui-navigation__lists">
+            <ul class="ui-navigation__list col--1-5">
+                <li >
+                    <h3 class="ui-navigation_list-heading">Configuration</h3></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Input Formats</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+            </ul>
+            <ul class="ui-navigation__list col--1-5">
+                <li >
+                    <h3 class="ui-navigation_list-heading">Data Hub</h3></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Data Sets</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+                
+            </ul>
+            <ul class="ui-navigation__list col--1-5">
+                <li >
+                    <h3 class="ui-navigation_list-heading">Operations</h3></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Data Sets</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Output Formats</a></li>
+            </ul>
+            <ul class="ui-navigation__list col--1-5">
+                <li >
+                    <h3 class="ui-navigation_list-heading">Admisitration</h3></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Users</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">User Groups</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">User Permisions</a></li>
+            </ul>
+            <ul class="ui-navigation__list col--1-5">
+                <li >
+                    <h3 class="ui-navigation_list-heading">Admisitration 1</h3></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">Users</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">User Groups</a></li>
+                <li class="ui-navigation_list-item">
+                    <a href="#">User Permisions</a></li>
+            </ul>
+        </nav>
+             
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+.ui-navigation__toggle {
+	left: 0;
+	top: 0;
+	position: absolute;
+	width: $navigation-toggle-width;
+	height: $navigation-toggle-height;
+	border-right: 2px solid darken($navigation-toggle-bg, 10);
+	background-color: $navigation-toggle-bg;
+	z-index: $z-header-bar + 1;
+	outline: none;
+	@extend .default-transition;
+	&:hover{
+		background-color: $navigation-toggle-bg--hover;
+	}
+
+
+}
+.ui-navigation__toggle__icon{
+	@extend .default-transition;
+}
+.ui-navigation__toggle--open{
+	z-index: $navigation-overlay-z-index + 1;
+	border-bottom: 2px solid darken($navigation-toggle-bg, 10);
+	transition: none;
+}
+
+.ui-navigation__overlay {
+	background-color: $navigation-overlay-bg;
+	background-color: rgba($navigation-overlay-bg, $navigation-overlay-bg-opacity);
+
+	color: $color-text-overlay;
+}
+
+
+.ui-navigation__title{
+	max-width: $navigation-content-max-width;
+	margin: 20px auto;
+	@extend .alpha;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.ui-navigation__lists{
+	max-width: $navigation-content-max-width;
+	margin: 20px auto;
+}
+.ui-navigation__list {
+	@extend .unstyled-list;
+}
+
+.ui-navigation_list-heading {
+	margin-bottom: $base-spacing-unit;
+	@extend .beta;
+	color: $color-text-overlay;
+}
+.ui-navigation_list-item {
+	margin-bottom: $small-spacing-unit;
+
+	a{
+		color: $color-text-overlay;
+
+		&:hover{
+			border-bottom-color: inherit;
+		}
+	}
+}

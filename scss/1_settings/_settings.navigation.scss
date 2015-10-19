@@ -1,10 +1,22 @@
 $header-icon-wrapper-width: $icon-base-width--large+$tiny-spacing-unit;
 $header-filter-spacing: $tiny-spacing-unit;
 $header-filter-height: 90px;
-$navigation-width: 280px;
-$navigation-width--tablet: 160px;
+
+
+$navigation-content-max-width: 800px;
+$navigation-toggle-width: 40px;
+$navigation-toggle-height: $header-bar-height;
+$navigation-toggle-bg: $color-brand;
+$navigation-toggle-bg--hover:  $color-brand-highlight;
+
+$navigation-overlay-bg: $color-brand;
+$navigation-overlay-bg-opacity: 0.88;
+$navigation-overlay-z-index: $z-navigation;
 
 //breadcrumb settings
 $breadcrumb-view-submenu-width: 180px;
 
-$action-buttons-panel-height: 65px;
+
+
+
+

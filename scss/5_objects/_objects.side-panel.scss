@@ -1,0 +1,15 @@
+.o-side-panel {
+	position: absolute;
+    top: $header-bar-height;
+    bottom: 0;
+    //z-index: $z-navigation;
+    width: $side-panel-width;
+    	// @media screen and (max-width: $tablet-and-lower) {
+    	// 	width: $navigation-width--tablet
+    	// }
+    
+    //@extend %box-shadow--right;
+    background-color: pink;
+    @extend .default-transition;
+
+}

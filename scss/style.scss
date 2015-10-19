@@ -64,9 +64,10 @@
 @import '1_settings/_settings.global';
 @import '1_settings/_settings.icons';
 @import '1_settings/_settings.typography';
+@import '1_settings/_settings.z-index';
+@import '1_settings/_settings.side-panel';
 @import '1_settings/_settings.navigation';
 @import '1_settings/_settings.objects-list';
-@import '1_settings/_settings.z-index';
 @import '1_settings/_settings.panel';
 @import '1_settings/_settings.tables';
 @import '1_settings/_settings.buttons';
@@ -98,15 +99,17 @@
 @import '5_objects/objects.content';
 @import '5_objects/objects.body';
 @import '5_objects/objects.header-bar';
+@import '5_objects/objects.side-panel';
 @import '5_objects/objects.navigation';
 @import '5_objects/objects.wrappers';
 
 @import '6_components/components.icons';
-@import '6_components/components.navigation-header';
+//@import '6_components/components.navigation-header';
 @import '6_components/components.objects-list';
 @import '6_components/components.tabs';
-@import '6_components/components.navigation-filter';
-@import '6_components/components.navigation-action-buttons';
+@import '6_components/components.navigation';
+@import '6_components/components.navigation-secondary';
+@import '6_components/components.side-panel-action-buttons';
 @import '6_components/components.breadcrumbs';
 @import '6_components/components.panel';
 @import '6_components/components.form';

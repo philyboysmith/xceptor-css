@@ -2,11 +2,12 @@
     //height: 32px;
     position: fixed;
     top: 0;
-    left: $navigation-width;
+    left: 0;//$navigation-width;
     right: 0;
+    height: $header-bar-height;
     //width: 100%;
-    min-width: 600px;
-    z-index: 99999;
+    //min-width: 600px;
+    z-index: $z-header-bar;
     @extend .default-transition;
 }
 

@@ -1,7 +1,6 @@
 .ui-panel {
 	@include clearfix();
 	background: white;
-	//@include rem(margin-bottom, 1px);
 }
 .ui-panel:not(.ui-panel--open) + .ui-panel > .ui-panel-header {
 	border-top: none;
@@ -14,8 +13,8 @@
 }
 %ui-panel-header__title--hover{
 	border-left: 4px solid $color-brand;
-
 }
+
 .ui-panel-header__title {	
 	a{	
 		@extend .gamma;

@@ -1,15 +1,20 @@
 .o-content {
 	height: 100%;
 	//width:100%;
-    margin-left: $navigation-width;
-    @extend .default-transition;
+    left: $side-panel-width;
+    right: 0;
+    top: $header-bar-height;
+    bottom: 0;
+    overflow-y: auto;
     z-index: $z-content;
     background: white;
-    position: relative;
-    overflow: hidden;
+    position: absolute;//relative;
+    //overflow: hidden;
     box-shadow: -3px 0 4px 0 rgba(0, 0, 0, 0.15);
+
+    @extend .default-transition;
 }
 
 .o-content--full-screen {
-	margin-left: 0;
+	left: 0;
 }

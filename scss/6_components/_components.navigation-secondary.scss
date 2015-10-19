@@ -1,0 +1,36 @@
+.ui-navigation-secondary__toggle {
+	right: 0;
+	top: 0;
+	position: absolute;
+	width: $navigation-toggle-width;
+	height: $navigation-toggle-height;
+	border-left: 2px solid darken($navigation-toggle-bg, 10);
+	//background-color: $navigation-toggle-bg;
+	z-index: $z-header-bar + 1;
+	outline: none;
+	@extend .default-transition;
+	&:hover{
+		background-color: $navigation-toggle-bg--hover;
+	}
+
+
+}
+
+.ui-navigation-secondary--open{
+	z-index: $navigation-overlay-z-index + 1;
+	border-bottom: 2px solid darken($navigation-toggle-bg, 10);
+	transition: none;
+}
+
+
+.ui-navigation_list-item {
+	margin-bottom: $small-spacing-unit;
+
+	a{
+		color: $color-text-overlay;
+
+		&:hover{
+			border-bottom-color: inherit;
+		}
+	}
+}

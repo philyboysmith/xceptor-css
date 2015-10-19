@@ -1,7 +1,7 @@
 .ui-object-list-wrapper{
 	overflow-y: auto;
 	position: fixed;
-	width: $navigation-width - 1px;
+	width: $side-panel-width - 1px;
 	top: $header-filter-height;
 	bottom:0;
 

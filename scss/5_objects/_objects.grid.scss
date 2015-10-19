@@ -1,7 +1,6 @@
 
 
 .grid {
-  background: white;
   margin: 0 0 $grid-padding 0;
   
   &:after {
@@ -31,9 +30,15 @@
 .col--1-4 {
   width: 25%;
 }
+.col--1-5 {
+  width: 20%;
+}
 .col--1-8 {
   width: 12.5%;
 }
+
+
+
 
 /* Opt-in outside padding */
 .grid--padding {

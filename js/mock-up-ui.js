@@ -388,6 +388,13 @@ $(function() {
 	    $(this).toggleClass('ui-header-bar__expander--closed');
 
 	});
+	// Toggle the navigation
+	$('#js-navigation-trigger').click(function(){
+	    $('.o-navigation').toggleClass('o-navigation--open');
+	    $(this).toggleClass('ui-navigation__toggle--open');
+
+	});
+	
 
 	// Folder toggle in Menu panel
 	$('.ui-object-list__item--folder').on('click', function(e){
