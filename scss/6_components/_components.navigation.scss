@@ -1,20 +1,24 @@
-.ui-navigation__toggle {
-	left: 0;
+%nav-toggle-styles {
 	top: 0;
-	position: absolute;
+	position: fixed;
 	width: $navigation-toggle-width;
 	height: $navigation-toggle-height;
-	border-right: 2px solid darken($navigation-toggle-bg, 10);
-	background-color: $navigation-toggle-bg;
 	z-index: $z-header-bar + 1;
 	outline: none;
 	@extend .default-transition;
+
 	&:hover{
 		background-color: $navigation-toggle-bg--hover;
 	}
-
-
 }
+
+.ui-navigation__toggle {
+	@extend %nav-toggle-styles;
+	left: 0;
+	border-right: 2px solid darken($navigation-toggle-bg, 10);
+	background-color: $navigation-toggle-bg;
+}
+
 .ui-navigation__toggle__icon{
 	@extend .default-transition;
 }

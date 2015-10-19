@@ -1,17 +1,10 @@
 .ui-navigation-secondary__toggle {
+	@extend %nav-toggle-styles;
 	right: 0;
-	top: 0;
-	position: absolute;
-	width: $navigation-toggle-width;
-	height: $navigation-toggle-height;
 	border-left: 2px solid darken($navigation-toggle-bg, 10);
-	//background-color: $navigation-toggle-bg;
-	z-index: $z-header-bar + 1;
-	outline: none;
+
 	@extend .default-transition;
-	&:hover{
-		background-color: $navigation-toggle-bg--hover;
-	}
+	
 
 
 }
@@ -22,7 +15,9 @@
 	transition: none;
 }
 
-
+.ui-navigation-secondary__overlay{
+	//background-color: pink;
+}
 .ui-navigation_list-item {
 	margin-bottom: $small-spacing-unit;
 

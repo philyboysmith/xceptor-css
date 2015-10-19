@@ -394,6 +394,13 @@ $(function() {
 	    $(this).toggleClass('ui-navigation__toggle--open');
 
 	});
+	// Toggle the secondary navigation
+	$('#js-secondary-navigation-trigger').click(function(){
+	    $('.ui-navigation-secondary__overlay').toggleClass('o-navigation--open');
+	    $(this).toggleClass('ui-navigation__toggle--open');
+
+	});
+
 	
 
 	// Folder toggle in Menu panel

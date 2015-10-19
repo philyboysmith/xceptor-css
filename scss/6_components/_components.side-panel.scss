@@ -1,0 +1,25 @@
+
+
+.ui-side-panel{
+	background-color: pink;
+}
+
+.ui-side-panel__expander {
+	//@extend .ui-navigation-header__icons;
+	right: $navigation-toggle-width + $small-spacing-unit;
+	border: none;
+	background-color: transparent;
+	@extend .default-transition;
+	transition-delay: 0.5s;
+	padding: 0 $small-spacing-unit;
+	width:$icon-base-width--large;
+	outline: none;
+	.icon{
+		left: 50%;
+		margin-left: - $icon-base-width--large/2;
+	}
+}
+
+.ui-side-panel__expander--closed {
+	@extend .rotate-180;
+}
