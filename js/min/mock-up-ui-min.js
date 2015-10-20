@@ -391,14 +391,14 @@ $(function() {
 	});
 	// Toggle the navigation
 	$('#js-navigation-trigger').click(function(){
-	    $('.o-navigation').toggleClass('o-navigation--open');
+	    $('.ui-navigation__overlay').toggleClass('o-navigation--open');
 	    $(this).toggleClass('ui-navigation__toggle--open');
 
 	});
 	// Toggle the secondary navigation
 	$('#js-secondary-navigation-trigger').click(function(){
 	    $('.ui-navigation-secondary__overlay').toggleClass('o-navigation--open');
-	    $(this).toggleClass('ui-navigation__toggle--open');
+	    $(this).toggleClass('ui-navigation-secondary__toggle--open');
 
 	});
 
@@ -414,9 +414,19 @@ $(function() {
 	    e.stopPropagation();
 	});
 
+	//Tabs js
+	$('.ui-tabs__list-item').on('click', function(){
+        var _self = $(this);
+        var tab_id = _self.attr('data-tab');
+        console.log('tab ID: ' + tab_id);
+        $('.ui-tabs__list-item').removeClass('ui-tabs__list-item--active');
+        $('.ui-tabs__tab-content').removeClass('ui-tabs__tab-content--active');
 
-	//hide all of the panel content areas
-	//$('.ui-panel-content').css('display', 'none');
+        _self.addClass('ui-tabs__list-item--active');
+        $("#" + tab_id).addClass('ui-tabs__tab-content--active');
+    });
+
+
 	// Panel's toggle
 	$('.ui-panel-header').on('click', function(e){
 	    e.preventDefault();
@@ -446,13 +456,13 @@ $(function() {
 	configActions._init();
 
 
-	//---- navigation header navigation dd
-	$( '#primary-nav' ).dropdown( {
-		gutter : 2
-	} );
-	$( '#secondary-nav' ).dropdown( {
-		gutter : 2
-	} );
+	// //---- navigation header navigation dd
+	// $( '#primary-nav' ).dropdown( {
+	// 	gutter : 2
+	// } );
+	// $( '#secondary-nav' ).dropdown( {
+	// 	gutter : 2
+	// } );
 
 });
 

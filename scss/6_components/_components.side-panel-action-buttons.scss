@@ -167,6 +167,7 @@ $panel-shadow-color: darken($color-brand, 2);
 
 
 //--- tabs in action panel
+.ui-nav-action__panel{
 .ui-tabs {
 
 	[type=radio]:checked ~ label {
@@ -186,7 +187,8 @@ $panel-shadow-color: darken($color-brand, 2);
 	}
 }
 .ui-tabs__tab-content {
-	top: $tab-label-height + 2;
+	//top: $tab-label-height + 2;
 
 	background: $panel-shadow-color;
+}
 }

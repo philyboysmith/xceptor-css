@@ -110,7 +110,16 @@
 	@include transform-rotate(90deg);
 }
 .rotate-90--counter{
-	@include transform-rotate(90deg);
+	@include transform-rotate(-90deg);
+}
+.rotate-45{
+	@include transform-rotate(45deg);
+}
+.rotate-45--counter{
+	@include transform-rotate(-45deg);
+}
+.rotate-135{
+	@include transform-rotate(135deg);
 }
 
 // ----- Spacing helper styles
