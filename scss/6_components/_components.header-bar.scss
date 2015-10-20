@@ -2,30 +2,7 @@
 	background-color: $color-brand-shadow;
 	@include rem(padding, $top-bar-vertical-spacing $navigation-toggle-width $top-bar-vertical-spacing $navigation-toggle-width+$base-spacing-unit);
 	position: relative;
-}
-
-.ui-header-bar__expander {
-	//@extend .ui-navigation-header__icons;
-	right: 30px;
-	border: none;
-	background-color: transparent;
-	@extend .default-transition;
-	transition-delay: 0.5s;
-	padding: 0 $small-spacing-unit;
-	width:$icon-base-width--large;
-	outline: none;
-	.icon{
-		left: 50%;
-		margin-left: - $icon-base-width--large/2;
-	}
-}
-
-.ui-header-bar__expander--closed {
-	@extend .rotate-180;
-}
-
-.ui-header-bar__icons{
-	//@extend .ui-navigation-header__icons;
+	height: $header-bar-height;
 }
 
 .ui-header-bar__info{
@@ -41,9 +18,3 @@
 	}
 }
 
-
-
-// .ui-header-bar__username{
-// 	color: $color-text-overlay;
-// 	line-height: 1;
-// }

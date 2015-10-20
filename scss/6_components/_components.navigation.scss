@@ -1,40 +1,51 @@
-.ui-navigation__toggle {
-	left: 0;
+%nav-toggle-styles {
 	top: 0;
-	position: absolute;
+	position: fixed;
 	width: $navigation-toggle-width;
 	height: $navigation-toggle-height;
-	border-right: 2px solid darken($navigation-toggle-bg, 10);
-	background-color: $navigation-toggle-bg;
 	z-index: $z-header-bar + 1;
 	outline: none;
+	border-bottom: 2px solid transparent;
 	@extend .default-transition;
+
 	&:hover{
 		background-color: $navigation-toggle-bg--hover;
 	}
-
-
 }
-.ui-navigation__toggle__icon{
-	@extend .default-transition;
+%ui-navigation__overlay-styles {
+	background-color: $navigation-overlay-bg;
+	background-color: rgba($navigation-overlay-bg, $navigation-overlay-bg-opacity);
+	color: $color-text-overlay;
+	h2, h3, h4 {
+		color: $color-text-overlay;
+	}
+}
+.ui-navigation__toggle {
+	@extend %nav-toggle-styles;
+	left: 0;
+	border-right: $navigation-toggle-border;
+	background-color: $navigation-toggle-bg;
+}
+
+
+%ui-navigation__toggle--open-styles {
+	z-index: $navigation-overlay-z-index + 1;
+	border-bottom: $navigation-toggle-border;
+	transition: background;
+	background-color: $navigation-toggle-bg--hover;
 }
 .ui-navigation__toggle--open{
-	z-index: $navigation-overlay-z-index + 1;
-	border-bottom: 2px solid darken($navigation-toggle-bg, 10);
-	transition: none;
+	@extend %ui-navigation__toggle--open-styles;
 }
 
 .ui-navigation__overlay {
-	background-color: $navigation-overlay-bg;
-	background-color: rgba($navigation-overlay-bg, $navigation-overlay-bg-opacity);
-
-	color: $color-text-overlay;
+	@extend %ui-navigation__overlay-styles;
 }
 
 
 .ui-navigation__title{
 	max-width: $navigation-content-max-width;
-	margin: 20px auto;
+	margin: 14px auto;
 	@extend .alpha;
 	text-align: center;
 	text-transform: uppercase;
@@ -42,7 +53,7 @@
 
 .ui-navigation__lists{
 	max-width: $navigation-content-max-width;
-	margin: 20px auto;
+	margin: 50px auto 20px;
 }
 .ui-navigation__list {
 	@extend .unstyled-list;
@@ -63,4 +74,80 @@
 			border-bottom-color: inherit;
 		}
 	}
+}
+
+
+
+/*
+ * -------------------------------------------------------------
+ * Menu toggle button animation.
+ * -------------------------------------------------------------
+ */
+ $hamburger-line-height:  2px;
+ $hamburger-line-spacing: 6px;
+.icon-hamburger{
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    height:  $hamburger-line-height;
+    background: #fff;
+    border-radius: 1px;
+    transition: background 0s .3s;
+}
+
+.icon-hamburger:after, .icon-hamburger:before {
+    position: absolute;
+    border-radius: 1px;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: $hamburger-line-height;
+    background-color: #fff;
+    content: "";
+}
+
+.icon-hamburger:before {
+    top: -  $hamburger-line-spacing;
+}
+.icon-hamburger:after {
+    bottom: -  $hamburger-line-spacing;
+}
+
+
+.icon-hamburger:before {
+    transition-property: top,transform;
+}
+.icon-hamburger:after {
+    transition-property: bottom,transform;
+}
+
+// delay and duration on closing menu
+.icon-hamburger:after, 
+.icon-hamburger:before {
+    transition-duration: .3s,.3s;
+    transition-delay: .6s,.3s;
+}
+
+//-- open toggle animation
+.ui-navigation__toggle--open{
+	//hides the middle burger line
+	.icon-hamburger {
+	    background: 0 0;
+	}
+
+	// delay and duration on opening menu
+	.icon-hamburger:after, 
+	.icon-hamburger:before {
+	    transition-delay: .3s,.6s;
+	}
+	.icon-hamburger:before {
+	    top: 0;
+	    transform: rotate(45deg);
+	}
+	.icon-hamburger:after {
+	    bottom: 0;
+	    transform: rotate(-45deg);
+	}
+
 }

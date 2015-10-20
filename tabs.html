@@ -1,0 +1,167 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Xceptor Style Guide</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    
+    <script>
+        var ajax = new XMLHttpRequest();
+        ajax.open("GET", "img/svg-defs.svg", true);
+        ajax.send();
+        ajax.onload = function(e) {
+            $('#svg').append(ajax.responseText);  
+        }
+
+
+    </script>
+    <script src="js/mock-up-ui.js"></script>
+
+    <style>
+        .c-hamburger {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 96px;
+    height: 96px;
+    font-size: 0;
+    text-indent: -9999px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: background .3s;
+    transition: background .3s;
+}
+
+.c-hamburger--htx {
+    background-color: #ff3264;
+}
+
+.c-hamburger--htx span {
+    -webkit-transition: background 0s .3s;
+    transition: background 0s .3s;
+}
+.c-hamburger span {
+    display: block;
+    position: absolute;
+    top: 44px;
+    left: 18px;
+    right: 18px;
+    height: 8px;
+    background: #fff;
+}
+
+.c-hamburger span::after, .c-hamburger span::before {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #fff;
+    content: "";
+}
+.c-hamburger--htx span::before {
+    -webkit-transition-property: top,-webkit-transform;
+    transition-property: top,transform;
+}
+.c-hamburger--htx span::after, .c-hamburger--htx span::before {
+    -webkit-transition-duration: .3s,.3s;
+    transition-duration: .3s,.3s;
+    -webkit-transition-delay: .3s,0s;
+    transition-delay: .3s,0s;
+}
+.c-hamburger span::before {
+    top: -20px;
+}
+
+.c-hamburger--htx span::after {
+    -webkit-transition-property: bottom,-webkit-transform;
+    transition-property: bottom,transform;
+}
+.c-hamburger span::after {
+    bottom: -20px;
+}
+
+/*active */
+.c-hamburger--htx.is-active span::after, .c-hamburger--htx.is-active span::before {
+    -webkit-transition-delay: 0s,.3s;
+    transition-delay: 0s,.3s;
+}
+.c-hamburger--htx.is-active span {
+    background: 0 0;
+}
+.c-hamburger--htx.is-active span::before {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.c-hamburger--htx span::before {
+    -webkit-transition-property: top,-webkit-transform;
+    transition-property: top,transform;
+}
+
+.c-hamburger--htx.is-active span::after {
+    bottom: 0;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.c-hamburger--htx span::after {
+    -webkit-transition-property: bottom,-webkit-transform;
+    transition-property: bottom,transform;
+}
+
+
+        </style>
+</head>
+<body>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat magna in enim ultrices, et luctus risus tincidunt. Mauris malesuada porta diam, et bibendum nunc feugiat at. Quisque at nunc vestibulum, congue magna non, mollis arcu. In ac lorem fermentum, rhoncus velit at, elementum tellus. Etiam et dui leo. Mauris cursus ultrices convallis. Integer rutrum luctus hendrerit. Donec lacinia sagittis lectus at laoreet.</p>
+
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat magna in enim ultrices, et luctus risus tincidunt. Mauris malesuada porta diam, et bibendum nunc feugiat at. Quisque at nunc vestibulum, congue magna non, mollis arcu. In ac lorem fermentum, rhoncus velit at, elementum tellus. Etiam et dui leo. Mauris cursus ultrices convallis. Integer rutrum luctus hendrerit. Donec lacinia sagittis lectus at laoreet.</p>
+ <button class="ui-navigation__toggle c-hamburger" id="js-navigation-trigger" title="Collapse / Expand Menu">
+    <span class="">Navigation</span>
+</button>
+
+<button class="c-hamburger c-hamburger--htx">
+          <span>toggle menu</span>
+        </button>
+
+
+
+<div class="ui-tabs">
+
+    <ul class="ui-tabs__list">
+        <li class="ui-tabs__list-item ui-tabs__list-item--active" data-tab="tab-1">Profile</li>
+        <li class="ui-tabs__list-item " data-tab="tab-2">Tab Two</li>
+        <li class="ui-tabs__list-item " data-tab="tab-3">Tab Three</li>
+        <li class="ui-tabs__list-item " data-tab="tab-4">Tab Four</li>
+    </ul>
+
+    <div id="tab-1" class="ui-tabs__tab-content ui-tabs__tab-content--active">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+    <div id="tab-2" class="ui-tabs__tab-content">
+         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div id="tab-3" class="ui-tabs__tab-content">
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </div>
+    <div id="tab-4" class="ui-tabs__tab-content">
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+
+</div><!-- container -->
+</body>

@@ -4,13 +4,14 @@ $header-filter-height: 90px;
 
 
 $navigation-content-max-width: 800px;
-$navigation-toggle-width: 40px;
+$navigation-toggle-width: $header-bar-height;
 $navigation-toggle-height: $header-bar-height;
 $navigation-toggle-bg: $color-brand;
 $navigation-toggle-bg--hover:  $color-brand-highlight;
+$navigation-toggle-border: 2px solid darken($navigation-toggle-bg, 10);
 
 $navigation-overlay-bg: $color-brand;
-$navigation-overlay-bg-opacity: 0.88;
+$navigation-overlay-bg-opacity: 0.92;
 $navigation-overlay-z-index: $z-navigation;
 
 //breadcrumb settings

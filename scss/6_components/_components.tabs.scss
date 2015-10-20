@@ -1,59 +1,30 @@
-$tab-label-height: 38px;
 
-.ui-tabs {
-	position: relative;   
-	min-height: 200px; /* This part sucks */
-	clear: both;
-
-	[type=radio]:checked ~ label {
-	  background: white;
-	  border-bottom: 2px solid $color-brand-highlight;
-	  z-index: 2;
-	}
-	[type=radio]:checked ~ label ~ .ui-tabs__tab-content {
-	  z-index: 1;
-	}
-
+.ui-tabs__list{
+	@extend .unstyled-list;
 }
 
-.ui-tabs__tab-item {
-	float: left;
-
-	label, label:not(:checked){
-		background: $color-gray-lighter; 
-		padding: 0 $small-spacing-unit; 
-		line-height: $tab-label-height;
-		height: $tab-label-height;
-		border-bottom: 2px solid $color-ui; 
-		margin-left: 2px; 
-		position: relative;
-		left: 1px; 
-		&:before, &:after{
-			display: none;
-		}
-	}
-	&:first-child label{
-		margin-left: 0;
-	}
-	[type=radio] {
-		display: none;   
-	}
-
+.ui-tabs__list-item {
+	background: $tab-item-bg;
+	color: $tab-item-color;
+	display: inline-block;
+	padding: $tab-item-padding;
+	cursor: pointer;
+	border-bottom: $tab-item-border;
+	margin-right: $tab-item-spacing;
 }
-.ui-tabs__tab-content {
-	position: absolute;
-	top: $tab-label-height + 2;
-	left: 0;
-	background: white;
-	right: 0;
-	bottom: 0;
-	padding-top: $small-spacing-unit;
+.ui-tabs__list-item--active {
+	border-bottom-color: $tab-item-color--active;
+	color: $tab-item-color--active;
+	background: $tab-item-bg--active; 
+}
+.ui-tabs__tab-content{
+	display: none;
+	padding: $tab-content-padding;
+}
+.ui-tabs__tab-content--active{
+	display: inherit;
 }
 .ui-tabs__tab-content--padding{
-	padding:$small-spacing-unit $base-spacing-unit;;
+	padding: $small-spacing-unit;
 }
-
-
-
-
 

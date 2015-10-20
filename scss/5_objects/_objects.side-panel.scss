@@ -1,15 +1,15 @@
 .o-side-panel {
-	position: absolute;
+	position: fixed;
+    left: 0;
     top: $header-bar-height;
     bottom: 0;
-    //z-index: $z-navigation;
+    z-index: $z-side-panel;
     width: $side-panel-width;
-    	// @media screen and (max-width: $tablet-and-lower) {
-    	// 	width: $navigation-width--tablet
-    	// }
     
     //@extend %box-shadow--right;
-    background-color: pink;
     @extend .default-transition;
 
+}
+.o-side-panel--closed {
+    left: - $side-panel-width;
 }

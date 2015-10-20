@@ -28,7 +28,8 @@
 
 .#{$icon-prefix}--no-text{
 	overflow: hidden;
-	text-indent: -9999px;
+  font-size: 0;
+  text-indent: -9999px;
 }
 .#{$icon-prefix}--left-of-text {
 	margin-right: $icon-spacing-from-text;
@@ -36,6 +37,12 @@
 .#{$icon-prefix}--right-of-text {
 	margin-left: $icon-spacing-from-text;
 }
+
+//used for hiding the close icon in intial state. Use the active class you apply to the icon and change its opacity
+.#{$icon-prefix}--close {
+  opacity: 0
+}
+
 
 // set of styles to prevent the repeating of css value on common icon pos
 %absolute-positioning--full-height{
@@ -75,6 +82,7 @@
     margin-left: - $icon-base-height--large/2;
   }
 }
+
 
 /*
  * -------------------------------------------------------------
@@ -118,3 +126,7 @@
   stroke: inherit;
   /* any other styles, such as stroke-width, that you want to override */
 }
+
+  
+
+

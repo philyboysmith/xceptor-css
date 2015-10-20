@@ -46,22 +46,21 @@
                             </button></div>
                         </li>
                     </ol>
-                    <!-- <div class="ui-header-bar__info"> -->
-                   <button class="ui-header-bar__expander icon--absolute-full-height" id="js-sidebar-trigger" title="Collapse / Expand Menu">
+
+                   <button class="ui-side-panel__expander icon--absolute-full-height" id="js-sidebar-trigger" title="Collapse / Expand Menu">
                         <svg class="icon icon--large icon--white icon--absolute-v-middle icon--absolute-h-middle">
                           <use xlink:href="#chevron-left"></use>
                         </svg> 
                     </button>
-           
-                       
+
                 </div>
             </div>
-            <div class="o-side-panel">
+            <div class="o-side-panel ui-side-panel">
             <!--  Object list -->
                 <div class="ui-object-list-wrapper">
                 <ul class="ui-object-list margin--bottom--small">
                     
-                    <li class="ui-object-list__item  ui-object-list__item--folder"><a href="#">
+                    <li class="ui-object-list__item ui-object-list__item--folder"><a href="#">
                         <svg class="icon icon--absolute-v-middle ui-object-list__icon icon--gray">
                           <use xlink:href="#field-types-folders"></use>
                         </svg> Folder 1<svg class="icon icon--absolute-v-middle ui-object-list__toggle">
@@ -568,6 +567,7 @@
                         </div>
                     </article>
                     <!-- END ui-item-data-capture -->
+
                     <!-- ui-item-enrichment -->
                     <article class="ui-panel module">
        
@@ -633,19 +633,19 @@
                     <!-- ui-item-enrichment -->
 
 
-
                     </div>
             </div>
         </div>
  
-        <button class="ui-navigation__toggle" id="js-navigation-trigger" title="Collapse / Expand Menu">
-            <svg class="icon icon--large icon--white icon--absolute-v-middle icon--absolute-h-middle">
-              <use xlink:href="#menu"></use>
-            </svg> 
+        <button class="ui-navigation__toggle icon--no-text" id="js-navigation-trigger" title="Collapse / Expand Menu">
+            <span class="icon-hamburger icon--large icon--absolute-h-middle">Navigation</span>
         </button>
-        <button class="ui-navigation-secondary__toggle" id="js-navigation-trigger" title="Collapse / Expand Menu">
-            <svg class="icon icon--large icon--white icon--absolute-v-middle icon--absolute-h-middle">
-              <use xlink:href="#dropdown1"></use>
+        <button class="ui-navigation-secondary__toggle" id="js-secondary-navigation-trigger" title="Collapse / Expand Menu">
+            <svg class="icon--open icon icon--large icon--white icon--absolute-v-middle icon--absolute-h-middle">
+              <use xlink:href="#xceptor"></use>
+            </svg>
+            <svg class="icon--close icon icon--large icon--white icon--absolute-v-middle icon--absolute-h-middle">
+              <use xlink:href="#add"></use>
             </svg> 
         </button>
         
@@ -716,71 +716,44 @@
         </nav>
              
     </div>
-    <div class="o-navigation ui-navigation__overlay ui-navigation-secondary" role="navigation" aria-label="Secondary navigation">
-        <div class="ui-navigation__title">Navigation</div>
-        <nav class="ui-navigation__lists">
-            <ul class="ui-navigation__list col--1-5">
-                <li >
-                    <h3 class="ui-navigation_list-heading">Configuration</h3></li>
-                <li class="ui-navigation_list-item">
-                    <a href="#">Input Formats</a></li>
-                <li class="ui-navigation_list-item">
-                    <a href="#">Output Formats</a></li>
-                <li class="ui-navigation_list-item">
-                    <a href="#">Output Formats</a></li>
-                <li class="ui-navigation_list-item">
-                    <a href="#">Output Formats</a></li>
-                <li class="ui-navigation_list-item">
-                    <a href="#">Output Formats</a></li>
-                <li class="ui-navigation_list-item">
-                    <a href="#">Output Formats</a></li>
-            </ul>
-            <ul class="ui-navigation__list col--1-5">
-                <li >
-                    <h3 class="ui-navigation_list-heading">Data Hub</h3></li>
-                <li class="ui-navigation_list-item">
-                    <a href="#">Data Sets</a></li>
-                <li class="ui-navigation_list-item">
-                    <a href="#">Output Formats</a></li>
-                <li class="ui-navigation_list-item">
-                    <a href="#">Output Formats</a></li>
-                <li class="ui-navigation_list-item">
-                    <a href="#">Output Formats</a></li>
-                <li class="ui-navigation_list-item">
-                    <a href="#">Output Formats</a></li>
-                <li class="ui-navigation_list-item">
-                    <a href="#">Output Formats</a></li>
-                
-            </ul>
-            <ul class="ui-navigation__list col--1-5">
-                <li >
-                    <h3 class="ui-navigation_list-heading">Operations</h3></li>
-                <li class="ui-navigation_list-item">
-                    <a href="#">Data Sets</a></li>
-                <li class="ui-navigation_list-item">
-                    <a href="#">Output Formats</a></li>
-            </ul>
-            <ul class="ui-navigation__list col--1-5">
-                <li >
-                    <h3 class="ui-navigation_list-heading">Admisitration</h3></li>
-                <li class="ui-navigation_list-item">
-                    <a href="#">Users</a></li>
-                <li class="ui-navigation_list-item">
-                    <a href="#">User Groups</a></li>
-                <li class="ui-navigation_list-item">
-                    <a href="#">User Permisions</a></li>
-            </ul>
-            <ul class="ui-navigation__list col--1-5">
-                <li >
-                    <h3 class="ui-navigation_list-heading">Admisitration 1</h3></li>
-                <li class="ui-navigation_list-item">
-                    <a href="#">Users</a></li>
-                <li class="ui-navigation_list-item">
-                    <a href="#">User Groups</a></li>
-                <li class="ui-navigation_list-item">
-                    <a href="#">User Permisions</a></li>
-            </ul>
-        </nav>
+    <div class="o-navigation ui-navigation__overla ui-navigation-secondary__overlay" role="navigation" aria-label="Secondary navigation">
+        <div class="ui-navigation__title">Xceptor Information</div>
+        
+    <div class="ui-tabs ui-navigation__lists">
+        <nav>
+        <ul class="ui-tabs__list text-center ">
+            <li class="ui-tabs__list-item ui-tabs__list-item--active" data-tab="info-profile">Profile</li>
+            <li class="ui-tabs__list-item" data-tab="info-about">About Xceptor</li>
+            <li class="ui-tabs__list-item" data-tab="info-help">Help</li>
+            <li class="ui-tabs__list-item" data-tab="info-logout">Log Out</li>
+        </ul></nav>
+
+    <div id="info-profile" class="ui-tabs__tab-content ui-tabs__tab-content--active ui-tabs__tab-content--padding">
+        
+        <div class="grid grid--no-margin">
+            <div class="col--1-2 ">
+               <h3>Reset Password</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+               <button class="button">Change Password</button>
+            </div>
+            <div class="col--1-2">
+              <h3>Preferences</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+               <button class="button">Reset Preferences</button>
+            </div>
+        </div>
+    </div>
+    <div id="info-about" class="ui-tabs__tab-content ui-tabs__tab-content--padding">
+         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div id="info-help" class="ui-tabs__tab-content ui-tabs__tab-content--padding">
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </div>
+    <div id="info-logout" class="ui-tabs__tab-content ui-tabs__tab-content--padding">
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+
+</div>
              
     </div>
 

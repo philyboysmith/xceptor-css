@@ -74,6 +74,7 @@
 @import '1_settings/_settings.forms';
 @import '1_settings/_settings.breakpoints';
 @import '1_settings/_settings.grid';
+@import '1_settings/_settings.tabs';
 
 
 @import '2_tools/tools.mixins';
@@ -109,6 +110,7 @@
 @import '6_components/components.tabs';
 @import '6_components/components.navigation';
 @import '6_components/components.navigation-secondary';
+@import '6_components/components.side-panel';
 @import '6_components/components.side-panel-action-buttons';
 @import '6_components/components.breadcrumbs';
 @import '6_components/components.panel';
