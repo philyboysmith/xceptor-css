@@ -96,3 +96,38 @@ a.button { //, {
 			border-bottom-color: $button-border-color-shadow--gray;
 		}
 	}
+
+
+/**
+ * 
+ * Circle buttons 
+ *
+ */
+.circle-button {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: $circle-button-width;
+    height: $circle-button-height;
+    line-height: $circle-button-height;
+    padding: 0;
+    background-color: $color-brand;
+    border-radius: 50%;
+    transition: .3s;
+    cursor: pointer;
+    vertical-align: middle;
+    .icon{
+  		@extend .#{$icon-prefix}--absolute-v-middle;
+  		@extend .#{$icon-prefix}--absolute-h-middle;
+    }
+}
+.circle-button--large{
+	width: $circle-button-width--large;
+    height: $circle-button-height--large;
+    line-height: $circle-button-height--large;
+}
+
+
+
+

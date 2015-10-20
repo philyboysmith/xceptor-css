@@ -1,5 +1,50 @@
 $panel-shadow-color: darken($color-brand, 2);
 
+/*
+ * -------------------------------------------------------------
+ * Action buttons.
+ * -------------------------------------------------------------
+ */
+.fixed-action-btn {
+	position: fixed;
+	z-index: 300;
+	bottom: $small-spacing-unit;
+	left: $small-spacing-unit;
+}
+
+.expandable-actions{
+	@extend .fixed-action-btn;
+}
+
+
+// default alignment of ex[andable buttons is  bottom to top
+.expandable-actions__list{
+	@extend .unstyled-list;
+	left:0;
+    right: 0;
+    text-align: center;
+    position: absolute;
+    bottom: $circle-button-width--large + $tiny-spacing-unit;
+    margin: 0;
+    li{
+    	margin-bottom: $tiny-spacing-unit;
+    }
+}
+
+//modifier to make the buttons allign from left to right
+.expandable-actions__list--left-to-right{
+	left: $circle-button-width--large + $tiny-spacing-unit;
+	bottom: 0;
+	li{
+    	margin-left: $tiny-spacing-unit;
+    }
+}
+
+
+
+
+
+
 .ui-nav-action {
 	position: absolute;
 	z-index: 200;
@@ -13,42 +58,48 @@ $panel-shadow-color: darken($color-brand, 2);
 	max-height: $action-buttons-panel-height;
 }
 
-.ui-nav-action__button {
-	overflow: hidden;
-	padding: $small-spacing-unit;
-	border-radius: 4rem;
-	background-color: $color-brand;
-	background: rgba($color-brand, 0.9);
-	line-height: 1;
-	border: 2px solid $color-brand-shadow;
-	margin-top: - $base-spacing-unit;
-	@extend .default-transition;
+// .ui-nav-action__button {
+// 	overflow: hidden;
+// 	padding: $small-spacing-unit;
+// 	border-radius: 4rem;
+// 	background-color: $color-brand;
+// 	background: rgba($color-brand, 0.9);
+// 	line-height: 1;
+// 	border: 2px solid $color-brand-shadow;
+// 	margin-top: - $base-spacing-unit;
+// 	@extend .default-transition;
 
-	outline: none;
-	&:hover{
-		background-color: $color-brand-highlight;
-		background: rgba($color-brand-highlight, 0.9);
-	}
+// 	outline: none;
+// 	&:hover{
+// 		background-color: $color-brand-highlight;
+// 		background: rgba($color-brand-highlight, 0.9);
+// 	}
 
-	.icon { 
-		background-color: transparent;
-		@extend .default-transition;
-	}
-}
-.ui-nav-action__button--large {
-	padding: $small-spacing-unit+3;
-	border-radius: 10rem;
+// 	.icon { 
+// 		background-color: transparent;
+// 		@extend .default-transition;
+// 	}
+// }
+
+// .ui-nav-action__button--large {
+// 	padding: $small-spacing-unit+3;
+// 	border-radius: 10rem;
 	
-	top: -5px;
-	position: relative;
-}
-.button--active{
-	background-color: $color-brand-highlight;
-	background: rgba($color-brand-highlight, 0.9);
-	.icon{
-		transform: rotate(135deg);
-	}
-}
+// 	top: -5px;
+// 	position: relative;
+// }
+// .button--active{
+// 	background-color: $color-brand-highlight;
+// 	background: rgba($color-brand-highlight, 0.9);
+// 	.icon{
+// 		transform: rotate(135deg);
+// 	}
+// }
+
+
+
+
+
 
 
 .ui-nav-action__panel{
@@ -168,27 +219,26 @@ $panel-shadow-color: darken($color-brand, 2);
 
 //--- tabs in action panel
 .ui-nav-action__panel{
-.ui-tabs {
-
-	[type=radio]:checked ~ label {
-	  background: transparent;
-	  border-bottom: 2px solid white;
-	}
-
-}
-.ui-tabs__tab-item {
-	width: 49%;
-	label, label:not(:checked){
-		background: transparent; 
-		border-bottom: 2px solid transparent;
-		color: $color-text-overlay;
-		text-align: center;
+	.ui-tabs {
+		margin-top: $small-spacing-unit;
+		.ui-tabs__list-item {
+			color: $color-text-overlay;
+		  background: transparent;
+		  border-bottom-color: transparent;
+		}
+		.ui-tabs__list-item--active{
+			background-color: $panel-shadow-color;
+			border-bottom-color: $color-text-overlay;
+		}
 
 	}
-}
-.ui-tabs__tab-content {
-	//top: $tab-label-height + 2;
+	.ui-tabs__tab-item {
+		width: 49%;
 
-	background: $panel-shadow-color;
-}
+	}
+	.ui-tabs__tab-content {
+		//top: $tab-label-height + 2;
+
+		background: $panel-shadow-color;
+	}
 }

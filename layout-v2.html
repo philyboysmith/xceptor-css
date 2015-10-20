@@ -56,6 +56,12 @@
                 </div>
             </div>
             <div class="o-side-panel ui-side-panel">
+
+            <!-- Panel filter section -->
+            <div class="ui-side-panel-filter">
+              
+            </div>
+            <!-- END Panel filter section -->
             <!--  Object list -->
                 <div class="ui-object-list-wrapper">
                 <ul class="ui-object-list margin--bottom--small">
@@ -239,11 +245,12 @@
                 <h2 class="action-panel__heading">Add New Item</h2>
                 
                     <div class="ui-tabs">
-                        <div class="ui-tabs__tab-item">
-                           <input type="radio" id="tab-1" name="tab-group-1" checked>
-                           <label for="tab-1">Choose format</label>
+                    <ul class="ui-tabs__list">
+                      <li class="ui-tabs__list-item ui-tabs__list-item--active" data-tab="tab-1">Choose format</li>
+                      <li class="ui-tabs__list-item " data-tab="tab-2">Upload</li>
+                    </ul>
+                        <div id="tab-1" class="ui-tabs__tab-content ui-tabs__tab-content--active">
                            
-                           <div class="ui-tabs__tab-content">
                                 <div class="action-panel__sub-panel">
                                     
                                     <ul class="big-icon-list">
@@ -272,7 +279,7 @@
                                           <use xlink:href="#input-document"></use>
                                         </svg></i>Document</a> 
                                         </li>
-                                        <!-- <li  class="big-icon-list__item">
+                                       <li  class="big-icon-list__item">
                                            <a href="#" class="big-icon-list__link">
                                            <i class=""><svg class="icon big-icon-list__icon">
                                           <use xlink:href="#input-delimited"></use>
@@ -284,16 +291,14 @@
                                           <use xlink:href="#input-excel"></use>
                                         </svg></i>Excel</a> 
                                         </li>
-                                         -->
+                                         
                                     </ul>
                                 </div>
-                           </div> 
+                         
                        </div>
-                       <div class="ui-tabs__tab-item">
-                           <input type="radio" id="tab-2" name="tab-group-1" >
-                           <label for="tab-2">Upload</label>
+                      
                            
-                           <div class="ui-tabs__tab-content ui-tabs__tab-content--padding">
+                        <div id="tab-2" class="ui-tabs__tab-content ui-tabs__tab-content--padding">
                                <div class="action-panel__sub-panel">
                                     <p>Optionally you can upload a document and let Xceptor determine the format.</p>
                                     <form action="">
@@ -303,7 +308,6 @@
                                     </form>
 
                                 </div>
-                           </div> 
                        </div>
                         
          
@@ -332,9 +336,9 @@
                 </section>
                 </div>
             </div>
-            <div class="ui-nav-action text-center">
+            <div class="ui-nav-action">
                     
-                <button data-button-name="import-items" class="ui-nav-action__button"><svg class="icon icon--larg icon--white" title="Import">
+               <!--  <button data-button-name="import-items" class="ui-nav-action__button"><svg class="icon icon--larg icon--white" title="Import">
                   <use xlink:href="#import"></use>
                 </svg></button>
                 <button data-button-name="add-item" class="ui-nav-action__button ui-nav-action__button--large margin-left--tiny margin-right--tiny"><svg class="icon icon--large icon--white" title="Add new item">
@@ -342,7 +346,25 @@
                 </svg></button>
                 <button  data-button-name="search-items" class="ui-nav-action__button"><svg class="icon icon--larg icon--white" title="Import">
                   <use xlink:href="#search"></use>
-                </svg></button>
+                </svg></button> -->
+                <div class="expandable-actions">
+
+                  <button data-button-name="add-item" class="circle-button circle-button--large"><svg class="icon icon--large icon--white" title="Add new item">
+                    <use xlink:href="#add"></use>
+                  </svg></button>
+                
+                  <ul class="expandable-actions__list">
+                    <li><a class="circle-button"><svg class="icon icon--white" title="Import">
+                  <use xlink:href="#import"></use>
+                </svg></a></li>
+                    <li><a class="circle-button"><svg class="icon icon--white" title="Search">
+                  <use xlink:href="#search"></use>
+                </svg></a></li>
+                    <li><a class="circle-button"><svg class="icon icon--white" title="Import">
+                  <use xlink:href="#menu"></use>
+                </svg></a></li>
+                  </ul>
+                </div>
             </div>
             
             <!-- END Actions buttons -->

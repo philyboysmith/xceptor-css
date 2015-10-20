@@ -38,3 +38,10 @@ $button-border-color--gray:				$color-gray-light;
 $button-border-color-shadow--gray:		#979797;//$color-gray;
 $button-border-color-hover--gray:			darken($color-gray-light, 10);
 $button-border-color-shadow-hover--gray:	darken($color-gray, 10);
+
+
+// circle button settings
+$circle-button-width: 37px;
+$circle-button-height: $circle-button-width;
+$circle-button-width--large: 55px;
+$circle-button-height--large: $circle-button-width--large;
