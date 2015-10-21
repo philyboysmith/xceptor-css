@@ -1,54 +1,60 @@
 $panel-shadow-color: darken($color-brand, 2);
 
+
 .ui-nav-action {
 	position: absolute;
 	z-index: 200;
 	bottom: 0;
 	left:0;
 	right:0;
-	//background-color: $color-gray-lighter;
 	background-color: rgba(white, 0.2);
 	padding: 0 $base-spacing-unit $small-spacing-unit;
 	//border-top: $color-gray-light 1px solid;
 	max-height: $action-buttons-panel-height;
 }
 
-.ui-nav-action__button {
-	overflow: hidden;
-	padding: $small-spacing-unit;
-	border-radius: 4rem;
-	background-color: $color-brand;
-	background: rgba($color-brand, 0.9);
-	line-height: 1;
-	border: 2px solid $color-brand-shadow;
-	margin-top: - $base-spacing-unit;
-	@extend .default-transition;
+// .ui-nav-action__button {
+// 	overflow: hidden;
+// 	padding: $small-spacing-unit;
+// 	border-radius: 4rem;
+// 	background-color: $color-brand;
+// 	background: rgba($color-brand, 0.9);
+// 	line-height: 1;
+// 	border: 2px solid $color-brand-shadow;
+// 	margin-top: - $base-spacing-unit;
+// 	@extend .default-transition;
 
-	outline: none;
-	&:hover{
-		background-color: $color-brand-highlight;
-		background: rgba($color-brand-highlight, 0.9);
-	}
+// 	outline: none;
+// 	&:hover{
+// 		background-color: $color-brand-highlight;
+// 		background: rgba($color-brand-highlight, 0.9);
+// 	}
 
-	.icon { 
-		background-color: transparent;
-		@extend .default-transition;
-	}
-}
-.ui-nav-action__button--large {
-	padding: $small-spacing-unit+3;
-	border-radius: 10rem;
+// 	.icon { 
+// 		background-color: transparent;
+// 		@extend .default-transition;
+// 	}
+// }
+
+// .ui-nav-action__button--large {
+// 	padding: $small-spacing-unit+3;
+// 	border-radius: 10rem;
 	
-	top: -5px;
-	position: relative;
-}
-.button--active{
-	background-color: $color-brand-highlight;
-	background: rgba($color-brand-highlight, 0.9);
-	.icon{
-		transform: rotate(135deg);
-	}
-}
+// 	top: -5px;
+// 	position: relative;
+// }
+// .button--active{
+// 	background-color: $color-brand-highlight;
+// 	background: rgba($color-brand-highlight, 0.9);
+// 	.icon{
+// 		transform: rotate(135deg);
+// 	}
+// }
+
+
+
+
+
 
 
 .ui-nav-action__panel{
@@ -168,27 +174,26 @@ $panel-shadow-color: darken($color-brand, 2);
 
 //--- tabs in action panel
 .ui-nav-action__panel{
-.ui-tabs {
-
-	[type=radio]:checked ~ label {
-	  background: transparent;
-	  border-bottom: 2px solid white;
-	}
-
-}
-.ui-tabs__tab-item {
-	width: 49%;
-	label, label:not(:checked){
-		background: transparent; 
-		border-bottom: 2px solid transparent;
-		color: $color-text-overlay;
-		text-align: center;
+	.ui-tabs {
+		margin-top: $small-spacing-unit;
+		.ui-tabs__list-item {
+			color: $color-text-overlay;
+		  background: transparent;
+		  border-bottom-color: transparent;
+		}
+		.ui-tabs__list-item--active{
+			background-color: $panel-shadow-color;
+			border-bottom-color: $color-text-overlay;
+		}
 
 	}
-}
-.ui-tabs__tab-content {
-	//top: $tab-label-height + 2;
+	.ui-tabs__tab-item {
+		width: 49%;
 
-	background: $panel-shadow-color;
-}
+	}
+	.ui-tabs__tab-content {
+		//top: $tab-label-height + 2;
+
+		background: $panel-shadow-color;
+	}
 }

@@ -1,3 +1,11 @@
+
+// Form
+$form-border-color:           $color-ui; 
+$form-border-color-hover: darken($form-border-color, 18);
+$form-input-text-color: $color-text-dark; 
+
+
+
 //Fieldset and legend settings
 $legend-font-size:            $h3-font-size;
 $legend-font-color:           $color-heading-text;
@@ -7,7 +15,7 @@ $legend-margin:               0 0 $small-spacing-unit;
 $fieldset-background:         transparent;
 $fieldset-border:             none;
 $fieldset-margin:             0 0 $small-spacing-unit;
-$fieldset-padding:            0;//$base-spacing-unit;
+$fieldset-padding:            0;
 
 
 $text-inputs-list: 'input[type="color"]',
@@ -37,6 +45,7 @@ $form-input-border-base:      1px solid transparent;
 $form-input-border:           1px solid $form-border-color;
 $form-input-padding:          $tiny-spacing-unit+2 $tiny-spacing-unit $tiny-spacing-unit+2 0;
 
+
 $label-spacing: 0;
 
 
@@ -49,7 +58,7 @@ $radio-check-input-size:      19px;
 $check-radio-spacing:         25px;
 $check-radio-padding:         0 0 3px 25px;
 $check-radio-border:          2px solid $form-border-color;
-$check-radio-bg:              #fff;
+$check-radio-bg:              $base-background-color;
 $checkbox-radius:             5px;
 $checkbox-input-icon:         "\2713";
 $radio-input-icon:            "\25CF";

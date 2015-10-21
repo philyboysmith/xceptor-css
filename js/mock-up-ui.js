@@ -464,6 +464,30 @@ $(function() {
 	// 	gutter : 2
 	// } );
 
+
+	// Extra form items reveal
+	$(document).on('click', '.input-group__has-button', function(e) {
+      var _self = $(this);
+      openOtherOptionsPanel(_self);
+      console.log('openOtherOptionsPanel clicked')
+
+    });
+	var openOtherOptionsPanel = function (btn) {
+    $this = btn;
+    if ($this.hasClass('active') === false) {
+      $this.addClass('active');
+      
+	$this.closest('.ui-form__item').find('.input-group__extra-options').velocity("slideDown", function() {
+	  /* Then fade in its children over a duration of 1000ms. */
+	  $children.velocity("fadeIn", 1000);
+	});
+      
+    }
+    else {
+    	$this.closest('.ui-form__item').find('.input-group__extra-options').velocity('reverse');
+    }
+  };
+
 });
 
 // mock the edit button being clicked

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+    
     
     <script>
         var ajax = new XMLHttpRequest();
@@ -19,6 +21,7 @@
         }
     </script>
     <script src="js/mock-up-ui.js"></script>
+    <script src="js/ui-buttons.js"></script>
 </head>
 <body>
     <div id="svg" class="hide"></div>
@@ -56,6 +59,33 @@
                 </div>
             </div>
             <div class="o-side-panel ui-side-panel">
+
+            <!-- Panel filter section -->
+            <div class="ui-sidepanel-filter">
+              
+               <div class="input-group">
+                <input type="search" placeholder="Search/filter list" class="input-group__input" />
+                  <span class="input-group__addon input-group__has-button"><button>
+                    <svg class="icon">
+                      <use xlink:href="#dropdown1"></use>
+                    </svg> 
+                  </button></span>
+                  <div class="input-group__extra-options">
+                    
+                    <p>jsjsjsjsjsjjsjjss</p>
+                    <div class="ui-form__item">
+                        <label for="text">If a column has already been selected</label>
+                        <input id="text" type="text" placeholder="this is a placeholder" value="Find the next matching value" readonly>
+                    </div>
+                    <div class="ui-form__item">
+                        <label for="text">If not matching column can be found</label>
+                        <input id="text" type="text" placeholder="this is a placeholder" value="Report an error" readonly>
+                    </div>
+                  </div>
+                  
+              </div>
+            </div>
+            <!-- END Panel filter section -->
             <!--  Object list -->
                 <div class="ui-object-list-wrapper">
                 <ul class="ui-object-list margin--bottom--small">
@@ -239,11 +269,12 @@
                 <h2 class="action-panel__heading">Add New Item</h2>
                 
                     <div class="ui-tabs">
-                        <div class="ui-tabs__tab-item">
-                           <input type="radio" id="tab-1" name="tab-group-1" checked>
-                           <label for="tab-1">Choose format</label>
+                    <ul class="ui-tabs__list">
+                      <li class="ui-tabs__list-item ui-tabs__list-item--active" data-tab="tab-1">Choose format</li>
+                      <li class="ui-tabs__list-item " data-tab="tab-2">Upload</li>
+                    </ul>
+                        <div id="tab-1" class="ui-tabs__tab-content ui-tabs__tab-content--active">
                            
-                           <div class="ui-tabs__tab-content">
                                 <div class="action-panel__sub-panel">
                                     
                                     <ul class="big-icon-list">
@@ -272,7 +303,7 @@
                                           <use xlink:href="#input-document"></use>
                                         </svg></i>Document</a> 
                                         </li>
-                                        <!-- <li  class="big-icon-list__item">
+                                       <li  class="big-icon-list__item">
                                            <a href="#" class="big-icon-list__link">
                                            <i class=""><svg class="icon big-icon-list__icon">
                                           <use xlink:href="#input-delimited"></use>
@@ -284,16 +315,14 @@
                                           <use xlink:href="#input-excel"></use>
                                         </svg></i>Excel</a> 
                                         </li>
-                                         -->
+                                         
                                     </ul>
                                 </div>
-                           </div> 
+                         
                        </div>
-                       <div class="ui-tabs__tab-item">
-                           <input type="radio" id="tab-2" name="tab-group-1" >
-                           <label for="tab-2">Upload</label>
+                      
                            
-                           <div class="ui-tabs__tab-content ui-tabs__tab-content--padding">
+                        <div id="tab-2" class="ui-tabs__tab-content ui-tabs__tab-content--padding">
                                <div class="action-panel__sub-panel">
                                     <p>Optionally you can upload a document and let Xceptor determine the format.</p>
                                     <form action="">
@@ -303,7 +332,6 @@
                                     </form>
 
                                 </div>
-                           </div> 
                        </div>
                         
          
@@ -332,9 +360,9 @@
                 </section>
                 </div>
             </div>
-            <div class="ui-nav-action text-center">
+            <div class="ui-nav-action">
                     
-                <button data-button-name="import-items" class="ui-nav-action__button"><svg class="icon icon--larg icon--white" title="Import">
+               <!--  <button data-button-name="import-items" class="ui-nav-action__button"><svg class="icon icon--larg icon--white" title="Import">
                   <use xlink:href="#import"></use>
                 </svg></button>
                 <button data-button-name="add-item" class="ui-nav-action__button ui-nav-action__button--large margin-left--tiny margin-right--tiny"><svg class="icon icon--large icon--white" title="Add new item">
@@ -342,7 +370,21 @@
                 </svg></button>
                 <button  data-button-name="search-items" class="ui-nav-action__button"><svg class="icon icon--larg icon--white" title="Import">
                   <use xlink:href="#search"></use>
-                </svg></button>
+                </svg></button> -->
+                <div class="expandable-action-buttons">
+
+                  <button data-button-name="add-item" class="button button--blue button--floating button--floating--large button--drop-shadow"><svg class="icon icon--large icon--white" title="Add new item">
+                    <use xlink:href="#add"></use>
+                  </svg></button>
+                
+                  <ul class="expandable-action-buttons__list">
+                    <li><a class="button button--blue button--floating"><svg class="icon icon--whit" title="Import"><use xlink:href="#import"></use></svg></a>
+                    </li>
+                    <li><a class="button button--blue button--floating"><svg class="icon icon--white" title="Search"><use xlink:href="#search"></use>
+                </svg></a></li>
+                    
+                  </ul>
+                </div>
             </div>
             
             <!-- END Actions buttons -->
@@ -369,7 +411,7 @@
                         </div>
                         <div class="ui-item-header__links col--1-2">
                             <ul class="ui-button-list text-right">
-                                <li class="ui-button-list__item"><a href="#" class="button button--blue edit">    <svg class="icon icon-dropdown">
+                                <li class="ui-button-list__item"><a href="#" class="button button--blue edit"><svg class="icon icon-dropdown">
                                       <use xlink:href="#dropdown1"></use>
                                     </svg>Edit</a></li>
                                 <li class="ui-button-list__item"><a href="#" class="button button--white">    <svg class="icon icon-dropdown">
@@ -532,6 +574,23 @@
                                                     <td>B</td>
                                                 </tr>
                                             </table>
+                                        </div>
+                                        <div class="ui-form__item">
+                                          <div class="input-group">
+                                            <input type="search" placeholder="Search/filter list" class="input-group__input" />
+                                            <span class="input-group__addon input-group__has-button">£</span>
+                                          </div>
+                                          <div class="input-group__extra-options">
+                                              <p>jsjsjsjsjsjjsjjss</p>
+                                              <div class="ui-form__item">
+                                                  <label for="text">If a column has already been selected</label>
+                                                  <input id="text" type="text" placeholder="this is a placeholder" value="Find the next matching value" readonly>
+                                              </div>
+                                              <div class="ui-form__item">
+                                                  <label for="text">If not matching column can be found</label>
+                                                  <input id="text" type="text" placeholder="this is a placeholder" value="Report an error" readonly>
+                                              </div>
+                                          </div>
                                         </div>
                                         <div class="ui-form__item">
                                             <label for="text">If a column has already been selected</label>
