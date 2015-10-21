@@ -18,7 +18,7 @@ $color-box-shadow:      rgba(0, 0, 0, 0.15);
 
 
 
-
+//---- Global colours
 
 //Page
 $base-background-color: #FFFFFF;
@@ -32,11 +32,6 @@ $color-heading-text:	#000; //$color-gray-dark;
 
 // UI
 $color-ui:          	$color-gray-light;
-
-// Form
-$form-border-color:		$color-ui; 
-$form-border-color-hover: darken($form-border-color, 18);
-$form-input-text-color:	$color-text-dark; //?? this is picked from Sketch mock-up but should it match up with one of the grey sass vars?
 
 
 // Links

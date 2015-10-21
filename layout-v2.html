@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+    
     
     <script>
         var ajax = new XMLHttpRequest();
@@ -19,6 +21,7 @@
         }
     </script>
     <script src="js/mock-up-ui.js"></script>
+    <script src="js/ui-buttons.js"></script>
 </head>
 <body>
     <div id="svg" class="hide"></div>
@@ -58,8 +61,29 @@
             <div class="o-side-panel ui-side-panel">
 
             <!-- Panel filter section -->
-            <div class="ui-side-panel-filter">
+            <div class="ui-sidepanel-filter">
               
+               <div class="input-group">
+                <input type="search" placeholder="Search/filter list" class="input-group__input" />
+                  <span class="input-group__addon input-group__has-button"><button>
+                    <svg class="icon">
+                      <use xlink:href="#dropdown1"></use>
+                    </svg> 
+                  </button></span>
+                  <div class="input-group__extra-options">
+                    
+                    <p>jsjsjsjsjsjjsjjss</p>
+                    <div class="ui-form__item">
+                        <label for="text">If a column has already been selected</label>
+                        <input id="text" type="text" placeholder="this is a placeholder" value="Find the next matching value" readonly>
+                    </div>
+                    <div class="ui-form__item">
+                        <label for="text">If not matching column can be found</label>
+                        <input id="text" type="text" placeholder="this is a placeholder" value="Report an error" readonly>
+                    </div>
+                  </div>
+                  
+              </div>
             </div>
             <!-- END Panel filter section -->
             <!--  Object list -->
@@ -347,22 +371,18 @@
                 <button  data-button-name="search-items" class="ui-nav-action__button"><svg class="icon icon--larg icon--white" title="Import">
                   <use xlink:href="#search"></use>
                 </svg></button> -->
-                <div class="expandable-actions">
+                <div class="expandable-action-buttons">
 
-                  <button data-button-name="add-item" class="circle-button circle-button--large"><svg class="icon icon--large icon--white" title="Add new item">
+                  <button data-button-name="add-item" class="button button--blue button--floating button--floating--large button--drop-shadow"><svg class="icon icon--large icon--white" title="Add new item">
                     <use xlink:href="#add"></use>
                   </svg></button>
                 
-                  <ul class="expandable-actions__list">
-                    <li><a class="circle-button"><svg class="icon icon--white" title="Import">
-                  <use xlink:href="#import"></use>
+                  <ul class="expandable-action-buttons__list">
+                    <li><a class="button button--blue button--floating"><svg class="icon icon--whit" title="Import"><use xlink:href="#import"></use></svg></a>
+                    </li>
+                    <li><a class="button button--blue button--floating"><svg class="icon icon--white" title="Search"><use xlink:href="#search"></use>
                 </svg></a></li>
-                    <li><a class="circle-button"><svg class="icon icon--white" title="Search">
-                  <use xlink:href="#search"></use>
-                </svg></a></li>
-                    <li><a class="circle-button"><svg class="icon icon--white" title="Import">
-                  <use xlink:href="#menu"></use>
-                </svg></a></li>
+                    
                   </ul>
                 </div>
             </div>
@@ -391,7 +411,7 @@
                         </div>
                         <div class="ui-item-header__links col--1-2">
                             <ul class="ui-button-list text-right">
-                                <li class="ui-button-list__item"><a href="#" class="button button--blue edit">    <svg class="icon icon-dropdown">
+                                <li class="ui-button-list__item"><a href="#" class="button button--blue edit"><svg class="icon icon-dropdown">
                                       <use xlink:href="#dropdown1"></use>
                                     </svg>Edit</a></li>
                                 <li class="ui-button-list__item"><a href="#" class="button button--white">    <svg class="icon icon-dropdown">
@@ -554,6 +574,23 @@
                                                     <td>B</td>
                                                 </tr>
                                             </table>
+                                        </div>
+                                        <div class="ui-form__item">
+                                          <div class="input-group">
+                                            <input type="search" placeholder="Search/filter list" class="input-group__input" />
+                                            <span class="input-group__addon input-group__has-button">£</span>
+                                          </div>
+                                          <div class="input-group__extra-options">
+                                              <p>jsjsjsjsjsjjsjjss</p>
+                                              <div class="ui-form__item">
+                                                  <label for="text">If a column has already been selected</label>
+                                                  <input id="text" type="text" placeholder="this is a placeholder" value="Find the next matching value" readonly>
+                                              </div>
+                                              <div class="ui-form__item">
+                                                  <label for="text">If not matching column can be found</label>
+                                                  <input id="text" type="text" placeholder="this is a placeholder" value="Report an error" readonly>
+                                              </div>
+                                          </div>
                                         </div>
                                         <div class="ui-form__item">
                                             <label for="text">If a column has already been selected</label>

@@ -39,7 +39,7 @@ select[multiple=multiple],
 textarea {
   width: 100%;
   background-color: $base-background-color;
-  @include rem(border, $form-input-border-base);
+  border: $form-input-border-base;
   border-bottom: $form-input-border;
   font-family: $base-font-family;
   @include rem(font-size, $form-text-size);
@@ -249,6 +249,56 @@ input:-moz-placeholder {@include placeholder-styles; }
  */
 abbr[title="Required"], abbr[title="required"]{
   @include required-asterix;
+}
+
+/*
+ * -------------------------------------------------------------
+ * inline button before or after input element
+ * -------------------------------------------------------------
+ */
+
+.input-group, .input-group__input, .input-group__addon, .input-group__has-button { 
+  display: table-cell;
+}
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+.input-group__input {
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 100%;
+  border-right: $form-input-border;
+}
+.input-group__addon, .input-group__has-button {
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  color: $form-input-text-color;
+  padding: $tiny-spacing-unit $small-spacing-unit;
+  background-color: $secondary-background-color;
+  border: $form-input-border;
+  
+}
+.input-group__has-button{
+  padding: 0;
+  cursor: pointer;
+  .icon{
+    fill: $form-input-text-color;
+  }
+}
+// this is used to hide extra form options
+.input-group__extra-options{
+  display: none;
+  //height: 0;
+  overflow: hidden;
+  opacity: 0;
+  background-color: $secondary-background-color;
+  padding: $small-spacing-unit;
+  border: $color-ui solid 1px;
 }
 
 
