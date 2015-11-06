@@ -2,8 +2,8 @@
 <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="input-internal" fill="#000000">
-            <path d="M1,19 L21,19 L21,15 L1,15 L1,19 L1,19 Z M3,16 L5,16 L5,18 L3,18 L3,16 L3,16 Z M1,3 L1,7 L21,7 L21,3 L1,3 L1,3 Z M5,6 L3,6 L3,4 L5,4 L5,6 L5,6 Z M1,13 L21,13 L21,9 L1,9 L1,13 L1,13 Z M3,10 L5,10 L5,12 L3,12 L3,10 L3,10 Z" id="Shape"></path>
+        <g id="input" stroke="#000000">
+            <path d="M9.45660172,0 L17.0074602,0 C18.6601943,0 20,1.34308127 20,3.00138694 L20,18.9986131 C20,20.6562333 18.6470745,22 17.0074602,22 L4.99253976,22 C3.33980569,22 2,20.6569187 2,18.9986131 L2,7.45660172 L9.45660172,0 Z" id="Rectangle-9"></path>
         </g>
     </g>
 </svg>
