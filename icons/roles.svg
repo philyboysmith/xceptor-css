@@ -2,8 +2,6 @@
 <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="delete" fill="#000000">
-            <path d="M7.33333333,20 L14.6666667,20 C15.95,20 17,19 17,17.7777778 L17,6 L5,6 L5,17.7777778 C5,19 6.05,20 7.33333333,20 Z M15,2 L14,1 L8,1 L7,2 L4,2 L4,4 L18,4 L18,2 L15,2 Z" id="Shape"></path>
-        </g>
+        <g id="roles"></g>
     </g>
 </svg>
