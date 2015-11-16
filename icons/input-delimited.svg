@@ -2,8 +2,8 @@
 <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="input-delimited" fill="#454545">
-            <g id="Imported-EPS" transform="translate(6.000000, 6.000000)">
+        <g id="input-delimited" fill="#000000">
+            <g id="Imported-EPS" transform="translate(7.000000, 4.000000)">
                 <path d="M6.386,11.253 C4.836,12.989 3.286,14.167 1.736,14.942 L1.147,13.764 C3.069,12.803 4.433,11.625 5.022,10.292 C5.797,9.114 6.2,7.967 6.2,7.192 C6.2,7.006 6.2,6.82 6.014,6.603 C5.828,6.603 5.642,6.417 5.425,6.417 L3.503,6.603 C2.728,6.603 1.953,6.417 1.178,5.828 C0.403,5.239 0,4.65 0,3.503 C0,2.728 0.186,1.953 0.775,1.178 C1.364,0.403 2.325,0 3.689,0 C4.867,0 6.014,0.589 6.975,1.55 C7.936,2.511 8.525,3.875 8.525,5.611 C8.525,7.564 7.75,9.517 6.386,11.253" id="Page-1"></path>
             </g>
         </g>

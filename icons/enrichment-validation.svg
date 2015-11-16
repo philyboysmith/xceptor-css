@@ -2,7 +2,7 @@
 <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="enrichment-validation" fill="#454545">
+        <g id="enrichment-validation" fill="#000000">
             <path d="M16.694,4 L8.541,12.184 L4.728,8.371 L2,11.099 L8.541,17.64 L19.453,6.728 L16.694,4" id="Imported-Layers"></path>
         </g>
     </g>
