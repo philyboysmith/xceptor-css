@@ -2,9 +2,8 @@
 <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="field-types-boolean">
-            <path d="M5.16853095,8.8896346 L2.05891126,5.78001491 L1,6.83146905 L5.16853095,11 L14.1170768,2.05145414 L13.0656227,1 L5.16853095,8.8896346 Z" id="Shape" fill="#B8E986"></path>
-            <path d="M20,11.0071429 L18.9928571,10 L15,13.9928571 L11.0071429,10 L10,11.0071429 L13.9928571,15 L10,18.9928571 L11.0071429,20 L15,16.0071429 L18.9928571,20 L20,18.9928571 L16.0071429,15 L20,11.0071429 Z" id="Shape" fill="#E84A5D"></path>
+        <g id="field-types-boolean" fill="#000000">
+            <path d="M8.16853095,13.8896346 L5.05891126,10.7800149 L4,11.8314691 L8.16853095,16 L17.1170768,7.05145414 L16.0656227,6 L8.16853095,13.8896346 Z" id="Shape"></path>
         </g>
     </g>
 </svg>

@@ -2,9 +2,11 @@
 <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.9">
-        <g id="field-types-date-time" fill="#1CACC1">
-            <path d="M10.99,1 C5.47,1 1,5.48 1,11 C1,16.52 5.47,21 10.99,21 C16.52,21 21,16.52 21,11 C21,5.48 16.52,1 10.99,1 L10.99,1 Z M11,19 C6.58,19 3,15.42 3,11 C3,6.58 6.58,3 11,3 C15.42,3 19,6.58 19,11 C19,15.42 15.42,19 11,19 L11,19 Z" id="Shape"></path>
-            <path d="M11.5,6 L10,6 L10,12 L15.25,15.15 L16,13.92 L11.5,11.25 L11.5,6 Z" id="Shape"></path>
+        <g id="field-types-date-time" fill="#000000">
+            <g id="Shape-+-Shape" transform="translate(2.000000, 2.000000)">
+                <path d="M8.991,0 C4.023,0 0,4.032 0,9 C0,13.968 4.023,18 8.991,18 C13.968,18 18,13.968 18,9 C18,4.032 13.968,0 8.991,0 L8.991,0 Z M9,16.2 C5.022,16.2 1.8,12.978 1.8,9 C1.8,5.022 5.022,1.8 9,1.8 C12.978,1.8 16.2,5.022 16.2,9 C16.2,12.978 12.978,16.2 9,16.2 L9,16.2 Z" id="Shape"></path>
+                <path d="M9.45,4.5 L8.1,4.5 L8.1,9.9 L12.825,12.735 L13.5,11.628 L9.45,9.225 L9.45,4.5 Z" id="Shape"></path>
+            </g>
         </g>
     </g>
 </svg>
