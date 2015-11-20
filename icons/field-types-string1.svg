@@ -2,8 +2,8 @@
 <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="enrichment-split-repeating-groups" fill="#000000">
-            <path d="M13,3 L15.29,5.29 L12.41,8.17 L13.83,9.59 L16.71,6.71 L19,9 L19,3 L13,3 Z M9,3 L3,3 L3,9 L5.29,6.71 L10,11.41 L10,19 L12,19 L12,10.59 L6.71,5.29 L9,3 Z" id="Shape"></path>
+        <g id="field-types-string1" fill="#000000">
+            <path d="M5,16 L8,16 L10,12 L10,6 L4,6 L4,12 L7,12 L5,16 Z M13,16 L16,16 L18,12 L18,6 L12,6 L12,12 L15,12 L13,16 Z" id="Shape"></path>
         </g>
     </g>
 </svg>
