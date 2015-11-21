@@ -2,8 +2,8 @@
 <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="folders" fill="#000000">
-            <path d="M10,4 L4,4 C2.9,4 2.01,4.9 2.01,6 L2,18 C2,19.1 2.9,20 4,20 L20,20 C21.1,20 22,19.1 22,18 L22,8 C22,6.9 21.1,6 20,6 L12,6 L10,4 L10,4 Z" id="Shape"></path>
+        <g id="folders-open" fill="#000000">
+            <path d="M20,6 L12,6 L10,4 L4,4 C2.9,4 2.01,4.9 2.01,6 L2,18 C2,19.1 2.9,20 4,20 L20,20 C21.1,20 22,19.1 22,18 L22,8 C22,6.9 21.1,6 20,6 L20,6 Z M20,18 L4,18 L4,8 L20,8 L20,18 L20,18 Z" id="Shape"></path>
         </g>
     </g>
 </svg>
