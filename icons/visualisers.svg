@@ -3,7 +3,15 @@
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="visualisers" fill="#000000">
-            <path d="M3,7 L7,7 L7,3 L3,3 L3,7 L3,7 Z M9,19 L13,19 L13,15 L9,15 L9,19 L9,19 Z M3,19 L7,19 L7,15 L3,15 L3,19 L3,19 Z M3,13 L7,13 L7,9 L3,9 L3,13 L3,13 Z M9,13 L13,13 L13,9 L9,9 L9,13 L9,13 Z M15,3 L15,7 L19,7 L19,3 L15,3 L15,3 Z M9,7 L13,7 L13,3 L9,3 L9,7 L9,7 Z M15,13 L19,13 L19,9 L15,9 L15,13 L15,13 Z M15,19 L19,19 L19,15 L15,15 L15,19 L15,19 Z" id="Shape"></path>
+            <rect id="bottom-right" x="15" y="15" width="4" height="4"></rect>
+            <rect id="bottom-mid" x="9" y="15" width="4" height="4"></rect>
+            <rect id="bottom-left" x="3" y="15" width="4" height="4"></rect>
+            <rect id="mid-right" x="15" y="9" width="4" height="4"></rect>
+            <rect id="mid-mid" x="9" y="9" width="4" height="4"></rect>
+            <rect id="mid-left" x="3" y="9" width="4" height="4"></rect>
+            <rect id="top-right" x="15" y="3" width="4" height="4"></rect>
+            <rect id="top-mid" x="9" y="3" width="4" height="4"></rect>
+            <rect id="top-left" x="3" y="3" width="4" height="4"></rect>
         </g>
     </g>
 </svg>

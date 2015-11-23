@@ -3,7 +3,8 @@
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="add" fill="#000000">
-            <path d="M12,12 L12,20 L10,20 L10,12 L2,12 L2,10 L10,10 L10,2 L12,2 L12,10 L20,10 L20,12 L12,12 Z" id="Shape"></path>
+            <rect id="vertical" x="10" y="2" width="2" height="18"></rect>
+            <rect id="horizontal" x="2" y="10" width="18" height="2"></rect>
         </g>
     </g>
 </svg>
