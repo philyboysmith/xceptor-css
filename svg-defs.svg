@@ -464,23 +464,27 @@
     <title>input-excel</title>
     <g id="input-excel-Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
       <g id="input-excel-input-excel" fill="#000000">
-        <path d="M18,19.6666667 L14.6666667,19.6666667 L11,13.3333333 L7.33333333,19.6666667 L4,19.6666667 L9.33333333,11.3333333 L4,3 L7.33333333,3 L11,9.33333333 L14.6666667,3 L18,3 L12.6666667,11.3333333 L18,19.6666667 L18,19.6666667 Z" id="input-excel-Path"
-        /> </g>
+        <path d="M3,2 L5.99196494,2 L19,20 L16.0080351,20 L3,2 Z" id="input-excel-right" />
+        <path d="M3,2 L5.99196494,2 L19,20 L16.0080351,20 L3,2 Z" id="input-excel-left" transform="translate(11.000000, 11.000000) scale(-1, 1) translate(-11.000000, -11.000000) " /> </g>
     </g>
   </symbol>
   <symbol viewBox="0 0 22 22" id="input-fixed-width">
     <title>input-fixed-width</title>
     <g id="input-fixed-width-Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
       <g id="input-fixed-width-input-fixed-width" fill="#000000">
-        <path d="M11,10 L17.01,10 L17.01,7 L21,11 L17.01,15 L17.01,12 L11,12 L4.99,12 L4.99,15 L1,11 L4.99,7 L4.99,10 L11,10 Z" id="input-fixed-width-Shape" /> </g>
+        <path d="M6,10 L16,10 L16,6 L21,11 L16,16 L16,12 L6,12 L6,16 L1,11 L6,6 L6,10 Z" id="input-fixed-width-Shape" /> </g>
     </g>
   </symbol>
   <symbol viewBox="0 0 22 22" id="input-internal">
     <title>input-internal</title>
     <g id="input-internal-Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
       <g id="input-internal-input-internal" fill="#000000">
-        <path d="M1,19 L21,19 L21,15 L1,15 L1,19 L1,19 Z M3,16 L5,16 L5,18 L3,18 L3,16 L3,16 Z M1,3 L1,7 L21,7 L21,3 L1,3 L1,3 Z M5,6 L3,6 L3,4 L5,4 L5,6 L5,6 Z M1,13 L21,13 L21,9 L1,9 L1,13 L1,13 Z M3,10 L5,10 L5,12 L3,12 L3,10 L3,10 Z" id="input-internal-Shape"
-        /> </g>
+        <path d="M11,16.4083077 C6.23553846,16.4083077 2.37246154,15.2064615 2.37246154,13.7041538 L2.37246154,16.9233846 C2.37246154,18.4256923 6.23553846,19.6275385 11,19.6275385 C15.7644615,19.6275385 19.6275385,18.4256923 19.6275385,16.9233846 L19.6275385,13.7041538 C19.6275385,15.2064615 15.7644615,16.4083077 11,16.4083077"
+        id="input-internal-bottom" />
+        <path d="M11,11.558 C6.23553846,11.558 2.37246154,10.3561538 2.37246154,8.85384615 L2.37246154,12.0730769 C2.37246154,13.5753846 6.23553846,14.7772308 11,14.7772308 C15.7644615,14.7772308 19.6275385,13.5753846 19.6275385,12.0730769 L19.6275385,8.85384615 C19.6275385,10.3132308 15.7644615,11.558 11,11.558"
+        id="input-internal-middle" />
+        <path d="M11,2.37246154 C6.23553846,2.37246154 2.37246154,3.57430769 2.37246154,5.07661538 L2.37246154,7.22276923 C2.37246154,8.72507692 6.23553846,9.92692308 11,9.92692308 C15.7644615,9.92692308 19.6275385,8.72507692 19.6275385,7.22276923 L19.6275385,5.07661538 C19.6275385,3.57430769 15.7644615,2.37246154 11,2.37246154"
+        id="input-internal-top" /> </g>
     </g>
   </symbol>
   <symbol viewBox="0 0 22 22" id="input-pdf">
