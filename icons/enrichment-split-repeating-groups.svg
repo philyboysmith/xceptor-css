@@ -3,7 +3,7 @@
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="enrichment-split-repeating-groups" fill="#000000">
-            <path d="M13,3 L15.29,5.29 L12.41,8.17 L13.83,9.59 L16.71,6.71 L19,9 L19,3 L13,3 Z M9,3 L3,3 L3,9 L5.29,6.71 L10,11.41 L10,19 L12,19 L12,10.59 L6.71,5.29 L9,3 Z" id="Shape"></path>
+            <path d="M13,3 L15.29,5.29 L12.41,8.17 L13.83,9.59 L16.71,6.71 L19,9 L19,3 L13,3 Z M9,3 L3,3 L3,9 L5.29,6.71 L10,11.41 L10,19 L12,19 L12,10.59 L6.71,5.29 L9,3 Z" id="Shape" transform="translate(11.000000, 11.000000) scale(1, -1) translate(-11.000000, -11.000000) "></path>
         </g>
     </g>
 </svg>
