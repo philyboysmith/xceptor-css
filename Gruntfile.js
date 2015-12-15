@@ -5,6 +5,7 @@ module.exports = function(grunt) {
   	pkg: grunt.file.readJSON('package.json'),
   	svgstore: {
   		options: {
+  		  prefix : 'svg-icon-', // This will prefix each ID
         cleanup: true,
         cleanupdefs: true,
         formatting : {
