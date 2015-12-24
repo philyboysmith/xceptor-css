@@ -2,6 +2,8 @@
 <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="reconciliation-rules"></g>
+        <g id="reconciliation-rules" fill="#000000">
+            <path d="M16.1311828,6.21290323 L14.9182796,5 L9.46451613,10.4537634 L10.6774194,11.6666667 L16.1311828,6.21290323 L16.1311828,6.21290323 Z M19.7784946,5 L10.6774194,14.1010753 L7.08172043,10.5139785 L5.8688172,11.7268817 L10.6774194,16.5354839 L21,6.21290323 L19.7784946,5 L19.7784946,5 Z M1,11.7268817 L5.80860215,16.5354839 L7.02150538,15.3225806 L2.22150538,10.5139785 L1,11.7268817 L1,11.7268817 Z" id="Shape"></path>
+        </g>
     </g>
 </svg>
