@@ -2,8 +2,8 @@
 <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="filter" fill="#000000">
-            <path d="M2,2 L20,2 L13,13.0001087 L9.10519791,13.0001087 L2,2 Z M9.5,18 L12.5,21 L12.5,15 L9.5,15 L9.5,18 Z" id="filter-2-icon"></path>
+        <g id="widths" fill="#000000">
+            <path d="M11,12 L5.99,12 L5.99,15 L2,11 L5.99,7 L5.99,10 L11,10 L16.01,10 L16.01,7 L20,11 L16.01,15 L16.01,12 L11,12 Z M11,12 L13,12 L13,10 L11,10 L9,10 L9,12 L11,12 Z" id="Shape"></path>
         </g>
     </g>
 </svg>
