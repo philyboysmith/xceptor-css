@@ -17,10 +17,23 @@ module.exports = function(grunt) {
           'img/svg-defs.svg': ['icons/*.svg'],
         }
       }
+    },
+    webfont: {
+      icons: {
+          src: 'icons/*.svg',
+          dest: 'fonts',
+          options: {
+            stylesheet: 'scss',
+            relativeFontPath: '../fonts'
+          }
+      }
     }
 
 
   });
   grunt.loadNpmTasks('grunt-svgstore');
-
+  grunt.loadNpmTasks('grunt-webfont');
+      
+    // Default task(s).
+  grunt.registerTask('default', ['webfont']);
 };
